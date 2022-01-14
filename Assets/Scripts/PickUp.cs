@@ -9,9 +9,9 @@ public class PickUp : MonoBehaviour
 
     private void Update()
     {
-        if (SelectionManager._selection != null)
+        if (Interaction.PointingItem != null)
         {
-            Transform selected = SelectionManager._selection;
+            Transform selected = Interaction.PointingItem;
 
             if (Input.GetKeyDown(KeyCode.E) && !selected.CompareTag("Terrain"))
             {
