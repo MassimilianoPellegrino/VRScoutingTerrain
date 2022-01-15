@@ -15,6 +15,8 @@ public class InventoryUI : MonoBehaviour
 
     InventorySlot[] slots;
 
+    public Text SpawnInstruction;
+
     void Start()
     {
         Cursor.visible = InventarioON;
@@ -48,6 +50,11 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateUI()
     {
+        if (inventory.items.Count > 0)
+        {
+            SpawnInstruction.GetComponent<Text>().enabled = true;
+        }
+
         for (int i = 0; i < slots.Length; i++)
         {
             if(i < inventory.items.Count)
@@ -58,6 +65,11 @@ public class InventoryUI : MonoBehaviour
             {
                 slots[i].ClearSlot();
             }
+        }
+
+        if (inventory.items.Count == 0)
+        {
+            SpawnInstruction.GetComponent<Text>().enabled = false;
         }
     }
 }

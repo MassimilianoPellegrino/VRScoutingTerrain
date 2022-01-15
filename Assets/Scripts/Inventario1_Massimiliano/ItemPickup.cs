@@ -21,8 +21,6 @@ public class ItemPickup : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && !Interaction.PointingItem.CompareTag("Terrain") && name == Interaction.PointingItem.name)
         {
-            Debug.Log(Interaction.PointingItem.name);
-            Debug.Log("Picking up " + item.name + " " + nome);
             bool wasPickedUp = Inventory.instance.Add(item);
 
             if (wasPickedUp)

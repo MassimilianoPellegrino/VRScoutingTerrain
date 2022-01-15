@@ -10,6 +10,7 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public int quantity = 0;
     public bool isDefaultItem = false;
+    public GameObject prefab = null;
 
 
 }

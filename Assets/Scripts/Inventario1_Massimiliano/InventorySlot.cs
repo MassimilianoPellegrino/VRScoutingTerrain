@@ -9,7 +9,6 @@ public class InventorySlot : MonoBehaviour
     public Image quantity;
 
     Item item;
-    
 
     public void AddItem (Item newItem)
     {
@@ -18,20 +17,36 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = item.icon;
         icon.enabled = true;
 
-        quantity.GetComponentInChildren<Text>().text = item.quantity.ToString();
-        quantity.enabled = true;
+        if (item.quantity > 1)
+        {
+            quantity.GetComponentInChildren<Text>().text = item.quantity.ToString();
+            quantity.enabled = true;
+        }
+        else
+        {
+            quantity.GetComponentInChildren<Text>().text = null;
+            quantity.enabled = false;
+        }
+
+        
     }
 
     public void ClearSlot()
     {
+        
         item = null;
 
         icon.sprite = null;
         icon.enabled = false;
+        quantity.enabled = false;
+
+        quantity.GetComponentInChildren<Text>().text = null;
+       
     }
 
-    public void OnRemoveButton()
+    public void OnClickButton()
     {
-        Inventory.instance.Remove(item);
+        if(item!=null)
+            Inventory.instance.Remove(item);
     }
 }

@@ -25,6 +25,8 @@ public class Inventory : MonoBehaviour
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
+    public GameObject GameManager;
+
     public int space = 15;
 
     public List<Item> items = new List<Item>();
@@ -57,7 +59,19 @@ public class Inventory : MonoBehaviour
 
     public void Remove(Item item)
     {
-        items.Remove(item);
+
+        GameManager.GetComponent<Instantiation>().Spawn(item);
+
+        if (item.quantity == 1)
+            items.Remove(item);
+
+        item.quantity--;
+
+        
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+             
+        
     }
 
 }
