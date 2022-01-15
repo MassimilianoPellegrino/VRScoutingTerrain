@@ -5,6 +5,12 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public Item item;
+    public string nome;
+
+    private void Start()
+    {
+        item.quantity = 0;
+    }
 
     void Update()
     {
@@ -13,12 +19,13 @@ public class ItemPickup : MonoBehaviour
     }
     void PickUp()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !Interaction.PointingItem.CompareTag("Terrain") && name == Interaction.PointingItem.name)
         {
-            Debug.Log("Picking up" + item.name);
+            Debug.Log(Interaction.PointingItem.name);
+            Debug.Log("Picking up " + item.name + " " + nome);
             bool wasPickedUp = Inventory.instance.Add(item);
 
-            if(wasPickedUp)
+            if (wasPickedUp)
                 Destroy(Interaction.PointingItem.gameObject);
         }
     }

@@ -3,20 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Interaction : MonoBehaviour
+public class Interaction1 : MonoBehaviour
 {
-   [SerializeField] private Image crosshair;
+    [SerializeField] private Image crosshair;
 
     public static Transform PointingItem = null;
+    private bool isPointing = false;
+
+    private Inventory1 inventory;
+    [SerializeField] private InventoryUI1 uiInventory;
 
 
     // Update is called once per frame
+
+    private void Awake()
+    {
+        inventory = new Inventory1();
+        uiInventory.SetInventory(inventory);
+    }
+
     void Update()
     {
-        if(PointingItem != null)
-            UnmarkSelectable();
-        
         CheckAndMarkSelectable();
+
+        if (!isPointing)
+            UnmarkSelectable();
     }
 
     void CheckAndMarkSelectable()
@@ -29,17 +40,28 @@ public class Interaction : MonoBehaviour
             if (pointing.CompareTag("Selectable"))
             {
                 crosshair.GetComponent<Image>().color = Color.red;
-                foreach(GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+                foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                 {
                     if (go.name == "PremiE")
                         go.GetComponent<Text>().enabled = true;
-                    
+
                 }
+                PointingItem = pointing;
+                isPointing = true;
             }
-            PointingItem = pointing;
+            else
+            {
+                PointingItem = null;
+                isPointing = false;
+            }
 
         }
-        
+        else
+        {
+            PointingItem = null;
+            isPointing = false;
+        }
+
     }
     void UnmarkSelectable()
     {
