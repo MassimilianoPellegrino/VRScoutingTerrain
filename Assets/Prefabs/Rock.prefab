@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 8769443036739218967}
   - component: {fileID: 8769443036739218962}
   - component: {fileID: 8725638111221187839}
+  - component: {fileID: 2775174539289077452}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Selectable
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 8e5745cfc26ee244f8e682521003e56a, type: 2}
-  nome: Roccia1
+  nome: Roccia
 --- !u!54 &8725638111221187839
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -188,6 +189,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2775174539289077452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768750895911578766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03688358b3a8a3840824136965f26649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 8e5745cfc26ee244f8e682521003e56a, type: 2}
+  radius: 10
+  bonefire: {fileID: 1243769505267686, guid: 794a85626ec3c0841b2c042202beb1ff, type: 3}
+  rocksNeeded: 5
+  branchesNeeded: 4
+  player: {fileID: 0}
 --- !u!1 &8768750897422464972
 GameObject:
   m_ObjectHideFlags: 0

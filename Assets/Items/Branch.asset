@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03137c8e682a2d04ab2e8dfe56ab5480, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  name: Branch
+  icon: {fileID: 21300000, guid: e783475e8cc4982489161afecb236929, type: 3}
+  quantity: 0
+  isDefaultItem: 0
+  prefab: {fileID: 2202412814857092638, guid: 1a5622f2e25f6cf4d9f0b0e8d285b5fb, type: 3}
