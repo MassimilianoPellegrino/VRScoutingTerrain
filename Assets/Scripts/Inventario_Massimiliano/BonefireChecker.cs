@@ -6,30 +6,28 @@ public class BonefireChecker : MonoBehaviour
 {
     public Item item;
     public float radius;
-    bool rock;
     public GameObject bonefire;
     public int rocksNeeded;
     public int branchesNeeded;
-    public GameObject player;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && Interaction.PointingItem != null)
-            CheckAround();
+        /*if (Input.GetKeyDown(KeyCode.Q) && Interaction.PointingItem != null)
+            CheckAround();*/
     }
 
-    void CheckAround()
+    public void CheckAround()
     {
         
         if (item.name.Equals("Branch"))
         {
-            rock = false;
+            branchesNeeded--;
         }
         else if (item.name.Equals("Rock"))
         {
-            rock = true;
+            rocksNeeded--;
         }
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
@@ -40,24 +38,31 @@ public class BonefireChecker : MonoBehaviour
 
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider != null && !hitCollider.CompareTag("Terrain") && !hitCollider.name.Equals("RigidBodyFPSController"))
+            if (hitCollider != null && hitCollider.GetComponent<ItemPickup>() != null 
+                && (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Branch") 
+                || hitCollider.GetComponent<ItemPickup>().item.name.Equals("Rock")))
             {
                 if (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Branch"))
                 {
-                    if ((rock && branches.Count < branchesNeeded) || (!rock && branches.Count < branchesNeeded - 1))
+                    if (branches.Count < branchesNeeded)
+                    {
                         branches.Add(hitCollider);
+                        Debug.Log("Branch");
+                    }
                 }
                 else if (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Rock"))
                 {
-                    if ((rock && rocks.Count < rocksNeeded - 1) || (!rock && branches.Count < branchesNeeded))
+                    if (rocks.Count < rocksNeeded)
+                    {
                         rocks.Add(hitCollider);
+                        Debug.Log("Rock");
+                    }
                 }
             }
         }
 
         
-        if((rock && rocks.Count>=rocksNeeded-1 && branches.Count >= branchesNeeded) 
-            || (!rock && rocks.Count >= rocksNeeded && branches.Count >= branchesNeeded - 1))
+        if(rocks.Count>=rocksNeeded && branches.Count >= branchesNeeded)
         {
             InstantiateBonefire(rocks, branches); 
         }   
@@ -66,6 +71,7 @@ public class BonefireChecker : MonoBehaviour
 
     void InstantiateBonefire(List<Collider> rocks, List<Collider> branches)
     {
+        
         Destroy(gameObject);
 
         foreach (var rock in rocks)
@@ -77,6 +83,7 @@ public class BonefireChecker : MonoBehaviour
             Destroy(branch.gameObject);
         }
 
-        Instantiate(bonefire, transform.position + (transform.forward * 2), transform.rotation);
+        //Instantiate(bonefire, transform.position + transform.forward*2 - transform.up*2, bonefire.transform.rotation);
+        Instantiate(bonefire, new Vector3(transform.position.x, 0.5f, transform.position.z+2f), bonefire.transform.rotation);
     }
 }

@@ -59,8 +59,10 @@ public class Inventory : MonoBehaviour
 
     public void Remove(Item item)
     {
-
-        GameManager.GetComponent<Instantiation>().Spawn(item);
+        if(item.name != "Lighter")
+            GameManager.GetComponent<Instantiation>().Spawn(item);
+        else
+            GameManager.GetComponent<Instantiation>().SpawnInHand(item);
 
         if (item.quantity == 1)
             items.Remove(item);

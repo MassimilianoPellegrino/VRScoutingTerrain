@@ -17,6 +17,8 @@ public class InventoryUI : MonoBehaviour
 
     public Text SpawnInstruction;
 
+    public Item lighter;
+
     void Start()
     {
         Cursor.visible = InventarioON;
@@ -27,6 +29,9 @@ public class InventoryUI : MonoBehaviour
         inventory.onItemChangedCallback += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>(true);
+
+        lighter.quantity = 0;
+        Inventory.instance.Add(lighter);        
     }
 
     // Update is called once per frame

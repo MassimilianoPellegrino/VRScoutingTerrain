@@ -417,3 +417,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 6294419097205146348}
   quantity: {fileID: 2386542404015543047}
+  lighter: {fileID: 11400000, guid: b79de9535467499408612bd927e7a038, type: 2}

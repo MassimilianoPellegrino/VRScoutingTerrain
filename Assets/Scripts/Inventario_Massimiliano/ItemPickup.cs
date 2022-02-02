@@ -16,6 +16,9 @@ public class ItemPickup : MonoBehaviour
     {
         if (Interaction.PointingItem != null)
             PickUp();
+        if (item.name == "Lighter")
+            PutBackInInventory();
+
     }
     void PickUp()
     {
@@ -25,6 +28,16 @@ public class ItemPickup : MonoBehaviour
 
             if (wasPickedUp)
                 Destroy(Interaction.PointingItem.gameObject);
+        }
+    }
+    void PutBackInInventory()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            bool wasPickedUp = Inventory.instance.Add(item);
+
+            if (wasPickedUp)
+                Destroy(gameObject);
         }
     }
 }
