@@ -12,7 +12,6 @@ public class Instantiation : MonoBehaviour
     {
         callFromInventory = true;
         Instantiate(item.prefab, player.transform.position + (player.transform.forward * 2), item.prefab.transform.rotation);
-        //callFromInventory = false;
     }
     public void SpawnInHand(Item item)
     {
