@@ -31,6 +31,7 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
+    
     public bool Add(Item item)
     {
         if (!item.isDefaultItem)
@@ -68,8 +69,7 @@ public class Inventory : MonoBehaviour
             items.Remove(item);
 
         item.quantity--;
-
-        
+                
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
              

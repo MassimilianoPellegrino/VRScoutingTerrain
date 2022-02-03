@@ -9,7 +9,10 @@ public class ItemPickup : MonoBehaviour
 
     private void Start()
     {
-        item.quantity = 0;
+        if (!Instantiation.CalledFromInventory())
+        {
+            item.quantity = 0;
+        }
     }
 
     void Update()

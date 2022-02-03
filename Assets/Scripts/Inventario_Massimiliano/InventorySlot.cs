@@ -46,7 +46,10 @@ public class InventorySlot : MonoBehaviour
 
     public void OnClickButton()
     {
-        if(item!=null)
+        if (item != null)
+        {
             Inventory.instance.Remove(item);
+        }
+            
     }
 }
