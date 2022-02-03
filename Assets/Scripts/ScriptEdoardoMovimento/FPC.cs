@@ -20,8 +20,8 @@ public class FPC : MonoBehaviour
 
    [Header("Controls")]
    [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
-   [SerializeField] private KeyCode jumpKey = KeyCode.Space;
-   [SerializeField] private KeyCode crouchKey = KeyCode.LeftControl;
+   [SerializeField] private KeyCode jumpKey = KeyCode.Alpha1;
+   [SerializeField] private KeyCode crouchKey = KeyCode.Space;
    [SerializeField] private KeyCode zoomKey = KeyCode.Mouse1;
   
 
@@ -88,8 +88,8 @@ public class FPC : MonoBehaviour
 
 
 
-   public Camera playerCamera;
-   public CharacterController characterController;
+   private Camera playerCamera;
+   private CharacterController characterController;
 
    private Vector3 moveDirection;
    private Vector2 currentInput;
