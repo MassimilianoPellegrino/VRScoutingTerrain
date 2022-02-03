@@ -95,7 +95,7 @@ MonoBehaviour:
   radius: 10
   bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
   rocksNeeded: 5
-  branchesNeeded: 4
+  branchesNeeded: 5
 --- !u!1 &2203318657080843818
 GameObject:
   m_ObjectHideFlags: 0

@@ -110,8 +110,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8768750895911578766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.01, y: 0.463, z: 1.48}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -4.0117, y: 0.46631, z: 1.48}
+  m_LocalScale: {x: 0.117372, y: 0.117372, z: 0.117372}
   m_Children:
   - {fileID: 8772277631766375032}
   - {fileID: 8772277633607752240}
@@ -205,7 +205,7 @@ MonoBehaviour:
   radius: 10
   bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
   rocksNeeded: 5
-  branchesNeeded: 4
+  branchesNeeded: 5
 --- !u!1 &8768750897422464972
 GameObject:
   m_ObjectHideFlags: 0
