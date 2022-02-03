@@ -9,27 +9,10 @@ public class BonefireChecker : MonoBehaviour
     public GameObject bonefire;
     public int rocksNeeded;
     public int branchesNeeded;
-
-
-    // Update is called once per frame
-    void Update()
+    
+    public bool CheckAround()
     {
-        /*if (Input.GetKeyDown(KeyCode.Q) && Interaction.PointingItem != null)
-            CheckAround();*/
-    }
-
-    public void CheckAround()
-    {
-        
-        if (item.name.Equals("Branch"))
-        {
-            branchesNeeded--;
-        }
-        else if (item.name.Equals("Rock"))
-        {
-            rocksNeeded--;
-        }
-
+               
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
 
         List<Collider> rocks = new List<Collider>();
@@ -46,8 +29,7 @@ public class BonefireChecker : MonoBehaviour
                 {
                     if (branches.Count < branchesNeeded)
                     {
-                        branches.Add(hitCollider);
-                        Debug.Log("Branch");
+                        branches.Add(hitCollider);                        
                     }
                 }
                 else if (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Rock"))
@@ -55,17 +37,21 @@ public class BonefireChecker : MonoBehaviour
                     if (rocks.Count < rocksNeeded)
                     {
                         rocks.Add(hitCollider);
-                        Debug.Log("Rock");
                     }
                 }
             }
         }
 
         
-        if(rocks.Count>=rocksNeeded && branches.Count >= branchesNeeded)
+        if(rocks.Count == rocksNeeded && branches.Count == branchesNeeded)
         {
-            InstantiateBonefire(rocks, branches); 
-        }   
+            InstantiateBonefire(rocks, branches);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
            
     }
 
@@ -83,7 +69,6 @@ public class BonefireChecker : MonoBehaviour
             Destroy(branch.gameObject);
         }
 
-        //Instantiate(bonefire, transform.position + transform.forward*2 - transform.up*2, bonefire.transform.rotation);
         Instantiate(bonefire, new Vector3(transform.position.x, 0.5f, transform.position.z+2f), bonefire.transform.rotation);
     }
 }

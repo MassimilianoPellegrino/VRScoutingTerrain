@@ -13,7 +13,9 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         CheckAndMarkSelectable();
+               
 
         if (!isPointing)
             UnmarkSelectable();
@@ -29,11 +31,23 @@ public class Interaction : MonoBehaviour
             if (pointing.CompareTag("Selectable"))
             {
                 crosshair.GetComponent<Image>().color = Color.red;
-                foreach(GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+                if (!CallBonefire.LighterIsInHand())
                 {
-                    if (go.name == "PremiE")
-                        go.GetComponent<Text>().enabled = true;
-                    
+                    foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+                    {
+                        if (go.name == "PremiE")
+                            go.GetComponent<Text>().enabled = true;
+
+                    }
+                }
+                else
+                {
+                    foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+                    {
+                        if (go.name == "PremiQ")
+                            go.GetComponent<Text>().enabled = true;
+
+                    }
                 }
                 PointingItem = pointing;
                 isPointing = true;
@@ -57,9 +71,21 @@ public class Interaction : MonoBehaviour
         crosshair.GetComponent<Image>().color = Color.white;
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
         {
-            if (go.name == "PremiE")
+            if (go.name == "PremiE" || go.name == "PremiQ" || go.name == "AvvisoFuoco")
                 go.GetComponent<Text>().enabled = false;
         }
         PointingItem = null;
     }
+
+    public static void DisplayBonfireWarning()
+    {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+        {
+            if (go.name == "PremiE" || go.name == "PremiQ")
+                go.GetComponent<Text>().enabled = false;
+            if(go.name == "AvvisoFuoco")
+                go.GetComponent<Text>().enabled = true;
+        }
+    }
+
 }

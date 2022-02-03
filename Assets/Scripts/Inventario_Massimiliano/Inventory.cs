@@ -59,7 +59,7 @@ public class Inventory : MonoBehaviour
 
     public void Remove(Item item)
     {
-        if(item.name != "Lighter")
+        if(!item.prefab.CompareTag("InHand"))
             GameManager.GetComponent<Instantiation>().Spawn(item);
         else
             GameManager.GetComponent<Instantiation>().SpawnInHand(item);

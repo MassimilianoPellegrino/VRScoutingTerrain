@@ -9,11 +9,11 @@ public class Instantiation : MonoBehaviour
 
     public void Spawn(Item item)
     {
-        Instantiate(item.prefab, player.transform.position + (player.transform.forward * 2), player.transform.rotation);      
+        Instantiate(item.prefab, player.transform.position + (player.transform.forward * 2), item.prefab.transform.rotation);      
     }
     public void SpawnInHand(Item item)
     {
-        GameObject lighter = Instantiate(item.prefab, player.transform.Find("ObjectInHand").position, player.transform.rotation);
-        lighter.transform.SetParent(player.transform);
+        GameObject itemInHand = Instantiate(item.prefab, player.transform.Find("ObjectInHand").position, item.prefab.transform.rotation);
+        itemInHand.transform.SetParent(player.transform);
     }
 }

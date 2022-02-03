@@ -16,7 +16,7 @@ public class ItemPickup : MonoBehaviour
     {
         if (Interaction.PointingItem != null)
             PickUp();
-        if (item.name == "Lighter")
+        if (item.prefab.CompareTag("InHand"))
             PutBackInInventory();
 
     }
