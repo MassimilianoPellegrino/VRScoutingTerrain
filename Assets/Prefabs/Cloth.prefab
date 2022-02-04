@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1283419985223581969}
   - component: {fileID: 6025223413919121609}
   - component: {fileID: -3185415428982814194}
+  - component: {fileID: -1315557912915902258}
   m_Layer: 0
   m_Name: Cloth
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,6 +78,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 0aaf7a386f702094687c9b117da93cd7, type: 2}
   nome: Telo
+--- !u!114 &-1315557912915902258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6706960577965856075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a285b1191123b1946a4a4e772b9fc12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 0aaf7a386f702094687c9b117da93cd7, type: 2}
+  radius: 10
+  tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
+  sticksNeeded: 5
 --- !u!1 &6706960577966074525
 GameObject:
   m_ObjectHideFlags: 0

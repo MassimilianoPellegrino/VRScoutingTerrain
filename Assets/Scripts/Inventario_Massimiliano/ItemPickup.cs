@@ -19,13 +19,14 @@ public class ItemPickup : MonoBehaviour
     {
         if (Interaction.PointingItem != null)
             PickUp();
-        if (item.prefab.CompareTag("InHand"))
+        if (item.toPlaceInHand)
             PutBackInInventory();
 
     }
     void PickUp()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !Interaction.PointingItem.CompareTag("Terrain") && name == Interaction.PointingItem.name)
+        if (Input.GetKeyDown(KeyCode.E) && !Interaction.PointingItem.CompareTag("Terrain") 
+            && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied)
         {
             bool wasPickedUp = Inventory.instance.Add(item);
 
@@ -35,12 +36,17 @@ public class ItemPickup : MonoBehaviour
     }
     void PutBackInInventory()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.R))
         {
+
+
             bool wasPickedUp = Inventory.instance.Add(item);
 
             if (wasPickedUp)
+            {
+                HandsOccupied.handsOccupied = false;
                 Destroy(gameObject);
+            }
         }
     }
 }

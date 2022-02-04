@@ -11,6 +11,9 @@ public class Item : ScriptableObject
     public int quantity = 0;
     public bool isDefaultItem = false;
     public GameObject prefab = null;
+    public bool toPlaceInHand = false;
+    public bool neededForBonfire = false;
+    public bool neededForTent = false;
 
 
 }

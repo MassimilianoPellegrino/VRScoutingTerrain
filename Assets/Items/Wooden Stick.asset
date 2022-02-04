@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03137c8e682a2d04ab2e8dfe56ab5480, type: 3}
-  m_Name: Rope
+  m_Name: Wooden Stick
   m_EditorClassIdentifier: 
-  name: Rope
-  icon: {fileID: 21300000, guid: ad32d0e161ebd1741b9d858ea19c40ed, type: 3}
+  name: Wooden Stick
+  icon: {fileID: 21300000, guid: ee4dd4b7cb7a7384989da73d35c5d403, type: 3}
   quantity: 0
   isDefaultItem: 0
-  prefab: {fileID: 6620139339928737990, guid: af7d775ea302e974fb6cf183147ff3ae, type: 3}
-  toPlaceInHand: 1
+  prefab: {fileID: 7294585435176191168, guid: ada96f62880156e4fb5bf590a7cb7dce, type: 3}
+  toPlaceInHand: 0
   neededForBonfire: 0
-  neededForTent: 0
+  neededForTent: 1

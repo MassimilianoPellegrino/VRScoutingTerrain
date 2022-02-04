@@ -48,6 +48,16 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
+            if (item.toPlaceInHand && !HandsOccupied.handsOccupied)
+            {
+                HandsOccupied.handsOccupied = true;
+            }
+            else if (item.toPlaceInHand && HandsOccupied.handsOccupied)
+            {
+                Inventory.instance.DisplayHandsWarning();
+                return;
+            }
+
             Inventory.instance.Remove(item);
         }
             

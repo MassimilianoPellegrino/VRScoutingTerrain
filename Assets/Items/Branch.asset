@@ -17,3 +17,6 @@ MonoBehaviour:
   quantity: 0
   isDefaultItem: 0
   prefab: {fileID: 7523401368274589550, guid: b55ea5799462efd4599073591bc08043, type: 3}
+  toPlaceInHand: 0
+  neededForBonfire: 1
+  neededForTent: 0

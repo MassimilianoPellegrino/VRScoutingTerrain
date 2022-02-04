@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
-    
+    public Text handsWarning;
     public bool Add(Item item)
     {
         if (!item.isDefaultItem)
@@ -74,6 +75,11 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
              
         
+    }
+
+    public void DisplayHandsWarning()
+    {
+        handsWarning.GetComponent<Text>().enabled = true;
     }
 
 }

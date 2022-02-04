@@ -283,9 +283,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5806447286296429180}
   - component: {fileID: -8143925182166953735}
+  - component: {fileID: -5584129895258267205}
   m_Layer: 0
   m_Name: Rope
-  m_TagString: Untagged
+  m_TagString: InHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,5 +321,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108ca0cf7d1afc04aaf4237838cb51a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 2380dd36a8885f34c881eea7f3878527, type: 2}
   nome: Corda
+--- !u!114 &-5584129895258267205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6620139339928737990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1cc5ab103019041b667ce99f1055c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

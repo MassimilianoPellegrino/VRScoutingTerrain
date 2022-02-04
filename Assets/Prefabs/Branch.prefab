@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5232206966332269319}
   - component: {fileID: 2683221469879874991}
   - component: {fileID: 3255960547140776345}
-  - component: {fileID: 7493762610308104823}
+  - component: {fileID: 4582368292628256979}
   m_Layer: 0
   m_Name: Branch
   m_TagString: Selectable
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7523401368274589550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03688358b3a8a3840824136965f26649, type: 3}
+  m_Script: {fileID: 11500000, guid: 9afc434450c5f6e4298bd1b668155a30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: d6d9dca100980af42a44824cc4984445, type: 2}
@@ -132,8 +132,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &7493762610308104823
-CapsuleCollider:
+--- !u!65 &4582368292628256979
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -142,7 +142,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.037
-  m_Height: 0.178
-  m_Direction: 0
-  m_Center: {x: -0.059, y: 0.006450639, z: 0.097}
+  serializedVersion: 2
+  m_Size: {x: 0.16064063, y: 0.05580826, z: 0.058112822}
+  m_Center: {x: -0.053468496, y: 0.006450639, z: 0.099794805}

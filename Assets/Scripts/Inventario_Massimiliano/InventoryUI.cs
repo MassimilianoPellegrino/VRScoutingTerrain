@@ -16,8 +16,11 @@ public class InventoryUI : MonoBehaviour
     InventorySlot[] slots;
 
     public Text SpawnInstruction;
+    public Text HandsWarning;
 
     public Item lighter;
+    public Item cloth;
+    public Item rope;
 
     void Start()
     {
@@ -31,7 +34,13 @@ public class InventoryUI : MonoBehaviour
         slots = itemsParent.GetComponentsInChildren<InventorySlot>(true);
 
         lighter.quantity = 0;
-        Inventory.instance.Add(lighter);        
+        Inventory.instance.Add(lighter);
+
+        cloth.quantity = 0;
+        Inventory.instance.Add(cloth);
+
+        rope.quantity = 0;
+        Inventory.instance.Add(rope);
     }
 
     // Update is called once per frame
@@ -40,6 +49,8 @@ public class InventoryUI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            HandsWarning.GetComponent<Text>().enabled = false;
+
             InventarioON = !InventarioON;
             inventario.gameObject.SetActive(InventarioON);
             Cursor.visible = InventarioON;

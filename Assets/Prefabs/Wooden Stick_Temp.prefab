@@ -31,51 +31,6 @@ Transform:
   m_Father: {fileID: 7957933532751994490}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1908658874932465694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1350400962508816110}
-  - component: {fileID: 4198839260841663065}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1350400962508816110
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908658874932465694}
-  m_LocalRotation: {x: 0.020114401, y: -0.06343338, z: -0.014102156, w: 0.9976837}
-  m_LocalPosition: {x: 0.0341, y: 0.0071, z: 0.00986}
-  m_LocalScale: {x: 1, y: 1, z: 0.8486174}
-  m_Children: []
-  m_Father: {fileID: 2770083282463981775}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.198, y: -7.31, z: -1.76}
---- !u!136 &4198839260841663065
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908658874932465694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.008
-  m_Height: 0.07
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7294585435176191168
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,9 +41,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7957933532751994490}
   - component: {fileID: 3123783497348221405}
+  - component: {fileID: 7143769847810042165}
+  - component: {fileID: 4426279720462518372}
+  - component: {fileID: 1776063918379007914}
   m_Layer: 0
-  m_Name: Wooden Sticks
-  m_TagString: Untagged
+  m_Name: Wooden Stick_Temp
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +82,49 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7143769847810042165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294585435176191168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108ca0cf7d1afc04aaf4237838cb51a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 9542f100ea2c5e44684e9340fd896031, type: 2}
+  nome: Bastone
+--- !u!114 &4426279720462518372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294585435176191168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a285b1191123b1946a4a4e772b9fc12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 9542f100ea2c5e44684e9340fd896031, type: 2}
+  radius: 10
+  tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
+  sticksNeeded: 5
+--- !u!65 &1776063918379007914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294585435176191168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21, y: 0.07, z: 0.25}
+  m_Center: {x: 0.03, y: 0.01, z: 0.01}
 --- !u!1 &7482629588244125696
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,8 +153,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1350400962508816110}
+  m_Children: []
   m_Father: {fileID: 8968978733411632314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
