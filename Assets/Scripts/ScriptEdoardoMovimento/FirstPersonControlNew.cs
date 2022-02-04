@@ -16,6 +16,7 @@ public class FirstPersonCcontrolNew : MonoBehaviour
    [SerializeField] private bool canUseHeadbob = true;
    [SerializeField] private bool WillSlideOnSlopes = true;
    [SerializeField] private bool canZoom = true;
+   [SerializeField] private bool useFootSteps = true;
 
 
    [Header("Controls")]
@@ -60,11 +61,27 @@ public class FirstPersonCcontrolNew : MonoBehaviour
    private float defaultYPos = 0;
    private float timer;
 
-   [Header("Headbob Parameters")]
+   [Header("Zoom Parameters")]
    [SerializeField] private float timeToZoom = 0.3f;
    [SerializeField] private float zoomFOV = 30f;
    private float defaultFOV;
    private Coroutine zoomRoutine;
+
+   [Header("Footstep Parameters")]
+   [SerializeField] private float baseStepSpeed = 0.5f;
+   [SerializeField] private float crouchStepMultipler = 1.5f;
+   [SerializeField] private float sprintStepMultipler = 0.6f;
+   [SerializeField] private AudioSource footstepAudioSource = default;
+   [SerializeField] private AudioClip[] grassClips = default;
+   [SerializeField] private AudioClip[] metalClips = default;
+   [SerializeField] private AudioClip[] woodClips = default;
+   [SerializeField] private AudioClip[] terrainClips = default;
+   [SerializeField] private AudioClip[] gravelClips = default;
+   [SerializeField] private AudioClip[] sandClips = default;
+
+   private float footstepTimer = 0;
+   private float GetCurrentOffset => isCrouching ? baseStepSpeed * crouchStepMultipler : IsSprinting ? baseStepSpeed * sprintStepMultipler : baseStepSpeed;
+
 
    //SLIDING PARAMETERS
    private Vector3 hitPointNormal; // normal position della superficie, angolo floor
@@ -126,6 +143,8 @@ public class FirstPersonCcontrolNew : MonoBehaviour
             if(canZoom)
               HandleZoom();
 
+            if(useFootSteps)
+              Handle_Footsteps();
          
           
             ApplyFinalMovement();
@@ -210,6 +229,47 @@ public class FirstPersonCcontrolNew : MonoBehaviour
 
         characterController.Move(moveDirection * Time.deltaTime);
 
+    }
+
+    private void Handle_Footsteps()
+    {
+        if(!characterController.isGrounded) return;
+        if(currentInput == Vector2.zero) return;
+
+        footstepTimer -= Time.deltaTime;
+
+        if(footstepTimer <= 0)
+        {
+            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit,3))
+            {
+                switch(hit.collider.tag)
+                {
+                    case "Footsteps/WOOD":
+                    footstepAudioSource.PlayOneShot(woodClips[Random.Range(0,woodClips.Length-1)]);
+                    break;
+                    case "Footsteps/GRAVEL":
+                    footstepAudioSource.PlayOneShot(gravelClips[Random.Range(0,gravelClips.Length-1)]);
+                    break;
+                    case "Footsteps/METAL":
+                    footstepAudioSource.PlayOneShot(metalClips[Random.Range(0,metalClips.Length-1)]);
+                    break;
+                    case "Footsteps/TERRAIN":
+                    footstepAudioSource.PlayOneShot(terrainClips[Random.Range(0,terrainClips.Length-1)]);
+                    break;
+                    case "Footsteps/SAND":
+                    footstepAudioSource.PlayOneShot(sandClips[Random.Range(0,sandClips.Length-1)]);
+                    break;
+                    case "Footsteps/GRASS":
+                    footstepAudioSource.PlayOneShot(grassClips[Random.Range(0,grassClips.Length-1)]);
+                    break;
+                    default:
+                    footstepAudioSource.PlayOneShot(grassClips[Random.Range(0,grassClips.Length-1)]);
+                    break;
+                }
+            }
+
+         footstepTimer = GetCurrentOffset;
+        }
     }
 
     private IEnumerator CrouchStand()

@@ -8,6 +8,12 @@ TagManager:
   - Terrain
   - Indicazione
   - InHand
+  - Footsteps/GRASS
+  - Footsteps/METAL
+  - Footsteps/WOOD
+  - Footsteps/GRAVEL
+  - Footsteps/SAND
+  - Footsteps/TERRAIN
   layers:
   - Default
   - TransparentFX
