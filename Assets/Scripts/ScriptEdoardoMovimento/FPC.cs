@@ -188,7 +188,12 @@ public class FPC : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX,0,0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
        }
-       
+       else if(isSleeping)
+       {
+        playerCamera.transform.localRotation = Quaternion.Euler(-90,0,0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
+       }
+
     } 
 
     private void HandleJump()
@@ -338,7 +343,7 @@ public class FPC : MonoBehaviour
            yield break;
 
         duringSleepAnimation = true;
-        float rotationXSleep = 0;
+
         float timeElapsed = 0;
         float targetHeight = isSleeping ? standingHeightNotSleep : sleepHeight;
         float currentHeight = characterController.height;
