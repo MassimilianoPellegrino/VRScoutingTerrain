@@ -8,11 +8,13 @@ public class FPC : MonoBehaviour
    private bool IsSprinting => canSprint && Input.GetKey(sprintKey);
    private bool ShouldJump=> Input.GetKey(jumpKey) && characterController.isGrounded;
    private bool ShouldCrouch => Input.GetKey(crouchKey) && !duringCrouchAnimation && characterController.isGrounded;
-
+   private bool ShouldSleep => Input.GetKey(sleepKey) && !duringSleepAnimation && characterController.isGrounded;
+   
    [Header("Functional Options")]
    [SerializeField] private bool canSprint = true;
    [SerializeField] private bool canJump = true;
    [SerializeField] private bool canCrouch = true;
+   [SerializeField] private bool canSleep = true;
    [SerializeField] private bool canUseHeadbob = true;
    [SerializeField] private bool WillSlideOnSlopes = true;
    [SerializeField] private bool canZoom = true;
@@ -23,6 +25,7 @@ public class FPC : MonoBehaviour
    [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
    [SerializeField] private KeyCode jumpKey = KeyCode.Alpha1;
    [SerializeField] private KeyCode crouchKey = KeyCode.Space;
+   [SerializeField] private KeyCode sleepKey = KeyCode.Z;
    [SerializeField] private KeyCode zoomKey = KeyCode.Mouse1;
   
 
@@ -37,6 +40,7 @@ public class FPC : MonoBehaviour
    [SerializeField, Range(1,10)] private float lookSpeedY = 2.0f;
    [SerializeField, Range(1,100)] private float upperLookLimit = 80.0f;
    [SerializeField, Range(1,100)] private float lowerLookLimit = 80.0f;
+ 
 
    [Header("Jumping Parameters")]
    [SerializeField] private float jumpForce = 8.0f;
@@ -51,6 +55,16 @@ public class FPC : MonoBehaviour
    [SerializeField] private Vector3 standingCenter = new Vector3(0,0,0);  //standing center point
    [SerializeField] private Vector3 crouchingCenter = new Vector3(0,0.5f,0); // crouching center point
 
+   [Header("Sleep Parameters")]
+   [SerializeField] private float sleepHeight = 0.1f;    //Sleep height
+   [SerializeField] private float standingHeightNotSleep = 2f;     // Stand Height
+   private bool isSleeping;    // Is sleeping
+   private bool duringSleepAnimation;    //Is in sleep animation
+   [SerializeField] private float timeToSleep = 0.5f;  //Time to sleep/stand
+   [SerializeField] private Vector3 standingCenterNotSleep = new Vector3(0,0,0);  //standing center point
+   [SerializeField] private Vector3 sleepingCenter = new Vector3(0,0.1f,0); // sleeping center point
+   
+
    [Header("Headbob Parameters")]
    [SerializeField] private float walkBobSpeed = 14f;
    [SerializeField] private float walkBobAmount = 0.05f;
@@ -58,10 +72,11 @@ public class FPC : MonoBehaviour
    [SerializeField] private float springBobAmount = 0.1f;
    [SerializeField] private float crouchBobSpeed = 8f;
    [SerializeField] private float crouchBobAmount = 0.025f;
+   [SerializeField] private float sleepBobAmount = 0.025f;
    private float defaultYPos = 0;
    private float timer;
 
-   [Header("Headbob Parameters")]
+   [Header("Zoom Parameters")]
    [SerializeField] private float timeToZoom = 0.3f;
    [SerializeField] private float zoomFOV = 30f;
    private float defaultFOV;
@@ -136,6 +151,9 @@ public class FPC : MonoBehaviour
 
             if(canCrouch)
               HandleCrouch();
+            
+            if(canSleep)
+              HandleSleep();
 
             if(canUseHeadbob)
               HandleHeadbob();
@@ -163,11 +181,15 @@ public class FPC : MonoBehaviour
 
     private void HandleMouseLock()
     {
+       if(!isSleeping)
+       {
         rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
         rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX,0,0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
-    }
+       }
+       
+    } 
 
     private void HandleJump()
     {
@@ -181,17 +203,24 @@ public class FPC : MonoBehaviour
         StartCoroutine(CrouchStand());
     }
 
+    private void HandleSleep()
+    {
+        if(ShouldSleep)
+        StartCoroutine(SleepStand());
+    
+    }
+
     private void HandleHeadbob()
     {
         if(!characterController.isGrounded) return;
 
         if(Mathf.Abs(moveDirection.x) > 0.1f || Mathf.Abs(moveDirection.z) > 0.1f)
         {
-            timer += Time.deltaTime * (isCrouching ? crouchBobSpeed : IsSprinting ? springBobSpeed : walkBobSpeed);
+            timer += Time.deltaTime * (isCrouching ? crouchBobSpeed : IsSprinting ? springBobSpeed : isSleeping ? sleepBobAmount : walkBobSpeed );
             playerCamera.transform.localPosition = new Vector3(
-                playerCamera.transform.localPosition.x,
-                defaultYPos + Mathf.Sin(timer) * (isCrouching ? crouchBobAmount : IsSprinting ? springBobAmount : walkBobAmount),
-                playerCamera.transform.localPosition.z);
+            playerCamera.transform.localPosition.x,
+            defaultYPos + Mathf.Sin(timer) * (isCrouching ? crouchBobAmount : IsSprinting ? springBobAmount : isSleeping ? sleepBobAmount : walkBobAmount),
+            playerCamera.transform.localPosition.z);
         }
     }
 
@@ -301,6 +330,38 @@ public class FPC : MonoBehaviour
 
 
         duringCrouchAnimation = false;
+    }
+
+     private IEnumerator SleepStand()
+    {
+        if(isSleeping && Physics.Raycast(Vector3.up, playerCamera.transform.position, 1f))
+           yield break;
+
+        duringSleepAnimation = true;
+        float rotationXSleep = 0;
+        float timeElapsed = 0;
+        float targetHeight = isSleeping ? standingHeightNotSleep : sleepHeight;
+        float currentHeight = characterController.height;
+        Vector3 targetCenter = isSleeping ? standingCenterNotSleep : sleepingCenter;
+        Vector3 currentCenter = characterController.center;
+
+        while(timeElapsed < timeToSleep)
+        {
+            characterController.height = Mathf.Lerp(currentHeight, targetHeight, timeElapsed/timeToSleep);
+            characterController.center = Vector3.Lerp(currentCenter, targetCenter, timeElapsed/timeToSleep);
+            timeElapsed += Time.deltaTime;
+            
+            yield return null;
+        }
+
+        characterController.height = targetHeight;
+        characterController.center = targetCenter;
+
+        isSleeping = !isSleeping;
+
+
+        duringSleepAnimation = false;
+       
     }
 
     private IEnumerator ToggleZoom(bool isEnter)
