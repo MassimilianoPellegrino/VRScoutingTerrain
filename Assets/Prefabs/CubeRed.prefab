@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 821959623425475324}
   - component: {fileID: 821959623425475325}
   - component: {fileID: 821959623425475320}
-  - component: {fileID: 821959623425475321}
-  - component: {fileID: -3305600425418998576}
+  - component: {fileID: -7587763323723459737}
   m_Layer: 0
   m_Name: CubeRed
   m_TagString: Selectable
@@ -114,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &821959623425475321
+--- !u!114 &-7587763323723459737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,21 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 02507e8b04f7c46498cca83f54be097d, type: 2}
-  nome: CuboRosso1
---- !u!114 &-3305600425418998576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821959623425475314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03688358b3a8a3840824136965f26649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 02507e8b04f7c46498cca83f54be097d, type: 2}
-  radius: 10
-  bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
-  rocksNeeded: 5
-  branchesNeeded: 4
+  nome: Cubo rosso

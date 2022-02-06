@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    bool InventarioON = false;
+    public static bool InventarioON = false;
     Transform inventario;
 
 
@@ -47,7 +47,7 @@ public class InventoryUI : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !Diary.DiarioON)
         {
             HandsWarning.GetComponent<Text>().enabled = false;
 

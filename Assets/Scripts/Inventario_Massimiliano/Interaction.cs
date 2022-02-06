@@ -10,6 +10,8 @@ public class Interaction : MonoBehaviour
     public static Transform PointingItem = null;
     private bool isPointing = false;
 
+    public static Item item = null;
+
     // Update is called once per frame
     void Update()
     {
@@ -29,12 +31,23 @@ public class Interaction : MonoBehaviour
         {
             Transform pointing = hit.transform;
 
-            if (pointing.CompareTag("Selectable"))
+            if (pointing.CompareTag("Selectable") && pointing.GetComponent<ItemPickup>()!= null)
             {
-                Item item = pointing.GetComponent<ItemPickup>().item;
+
+                item = pointing.GetComponent<ItemPickup>().item;
 
                 crosshair.GetComponent<Image>().color = Color.red;
-                if (!CallBonefire.LighterIsInHand() && !CallTent.RopeIsInHand())
+
+                if (item.isFlower)
+                {
+                    foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+                    {
+                        if (go.name == "PremiF")
+                            go.GetComponent<Text>().enabled = true;
+
+                    }
+                }
+                else if (!CallBonefire.LighterIsInHand() && !CallTent.RopeIsInHand())
                 {
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {

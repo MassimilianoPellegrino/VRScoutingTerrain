@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5430864050626286517}
   - component: {fileID: 5430864050626286522}
   - component: {fileID: 5430864050626286513}
-  - component: {fileID: 5430864050626286518}
+  - component: {fileID: 6838966008456742386}
   m_Layer: 0
   m_Name: CubeYellow
   m_TagString: Selectable
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5430864050626286518
+--- !u!114 &6838966008456742386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,4 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: c40e6d05b180e904e9d15ad80ce183c7, type: 2}
-  nome: CuboGiallo1
+  nome: Cubo Giallo

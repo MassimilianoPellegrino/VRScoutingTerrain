@@ -17,11 +17,12 @@ public class ItemPickup : MonoBehaviour
 
     void Update()
     {
-        if (Interaction.PointingItem != null)
+        if (Interaction.PointingItem != null && !Interaction.item.isFlower)
             PickUp();
         if (item.toPlaceInHand)
             PutBackInInventory();
-
+        if (Interaction.PointingItem != null && Interaction.item.isFlower)
+            ShowFlowerInfo();
     }
     void PickUp()
     {
@@ -47,6 +48,16 @@ public class ItemPickup : MonoBehaviour
                 HandsOccupied.handsOccupied = false;
                 Destroy(gameObject);
             }
+        }
+    }
+
+    void ShowFlowerInfo()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && !Interaction.PointingItem.CompareTag("Terrain")
+            && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied)
+        {
+            //Debug.Log(item.name);
+            Diary.instance.Add(item);
         }
     }
 }

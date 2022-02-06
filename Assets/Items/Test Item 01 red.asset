@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03137c8e682a2d04ab2e8dfe56ab5480, type: 3}
   m_Name: Test Item 01 red
   m_EditorClassIdentifier: 
-  name: Branch
+  name: Flower1
   icon: {fileID: 21300000, guid: a8137cb54701a3448a89a2ec364d062d, type: 3}
   quantity: 0
   isDefaultItem: 0
   prefab: {fileID: 821959623425475314, guid: 8b700900065fd29458e40f167ab81381, type: 3}
+  toPlaceInHand: 0
+  neededForBonfire: 0
+  neededForTent: 0
+  isFlower: 1
+  image: {fileID: 0}
