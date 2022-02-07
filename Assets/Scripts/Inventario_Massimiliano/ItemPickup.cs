@@ -53,11 +53,16 @@ public class ItemPickup : MonoBehaviour
 
     void ShowFlowerInfo()
     {
-        if (Input.GetKeyDown(KeyCode.C) && !Interaction.PointingItem.CompareTag("Terrain")
-            && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied)
+        if (Input.GetKeyDown(KeyCode.F) && !Interaction.PointingItem.CompareTag("Terrain")
+            && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied && !Diary.DiarioON)
         {
             //Debug.Log(item.name);
-            Diary.instance.Add(item);
+            bool pageAdded = Diary.instance.Add(item);
+
+            if (pageAdded)
+            {
+                Diary.instance.ShowDiary();
+            }
         }
     }
 }

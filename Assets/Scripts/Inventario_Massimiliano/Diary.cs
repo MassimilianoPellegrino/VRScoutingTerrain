@@ -41,7 +41,7 @@ public class Diary : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !InventoryUI.InventarioON)
+        if (Input.GetKeyDown(KeyCode.F) && !InventoryUI.InventarioON && Interaction.PointingItem == null)
         {
             DiarioON = !DiarioON;
             sfondo.gameObject.SetActive(DiarioON);
@@ -127,6 +127,23 @@ public class Diary : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void ShowDiary()
+    {
+        if (!InventoryUI.InventarioON)
+        {
+            DiarioON = !DiarioON;
+            sfondo.gameObject.SetActive(DiarioON);
+            diario.gameObject.SetActive(DiarioON);
+
+            Cursor.visible = DiarioON;
+
+            if (DiarioON)
+                Cursor.lockState = CursorLockMode.Confined;
+            else
+                Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
 

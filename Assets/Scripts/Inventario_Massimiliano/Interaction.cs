@@ -31,7 +31,7 @@ public class Interaction : MonoBehaviour
         {
             Transform pointing = hit.transform;
 
-            if (pointing.CompareTag("Selectable") && pointing.GetComponent<ItemPickup>()!= null)
+            if (pointing.CompareTag("Selectable") && pointing.GetComponent<ItemPickup>()!= null && !Diary.DiarioON && !InventoryUI.InventarioON)
             {
 
                 item = pointing.GetComponent<ItemPickup>().item;
