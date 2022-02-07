@@ -123,10 +123,12 @@ public class Diary : MonoBehaviour
                 scriptDiario.bookPages = temp;
 
                 //scriptDiario.bookPages[scriptDiario.bookPages.Length] = page;
+
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     public void ShowDiary()

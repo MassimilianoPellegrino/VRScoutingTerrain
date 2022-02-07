@@ -21,8 +21,9 @@ public class ItemPickup : MonoBehaviour
             PickUp();
         if (item.toPlaceInHand)
             PutBackInInventory();
-        if (Interaction.PointingItem != null && Interaction.item.isFlower)
-            ShowFlowerInfo();
+        if (Interaction.PointingItem != null && (Interaction.item.isFlower || Interaction.item.isConstellation))
+            ShowInfoOnDiary();
+   
     }
     void PickUp()
     {
@@ -51,7 +52,7 @@ public class ItemPickup : MonoBehaviour
         }
     }
 
-    void ShowFlowerInfo()
+    void ShowInfoOnDiary()
     {
         if (Input.GetKeyDown(KeyCode.F) && !Interaction.PointingItem.CompareTag("Terrain")
             && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied && !Diary.DiarioON)
@@ -65,4 +66,6 @@ public class ItemPickup : MonoBehaviour
             }
         }
     }
+
+
 }

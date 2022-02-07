@@ -42,7 +42,7 @@ public class Interaction : MonoBehaviour
                 {
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
-                        if (go.name == "PremiF")
+                        if (go.name == "PremiF_fiore")
                             go.GetComponent<Text>().enabled = true;
 
                     }
@@ -84,6 +84,37 @@ public class Interaction : MonoBehaviour
             }
 
         }
+        else if (Physics.Raycast(ray, out hit))
+        {
+            Transform pointing = hit.transform;
+            
+
+            if (pointing.CompareTag("Constellation") && pointing.GetComponent<ItemPickup>() != null && !Diary.DiarioON && !InventoryUI.InventarioON)
+            {
+
+                item = pointing.GetComponent<ItemPickup>().item;
+
+                crosshair.GetComponent<Image>().color = Color.red;
+
+                if (item.isConstellation)
+                {
+                    //Debug.Log("Ennamo");
+                    foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+                    {
+                        if (go.name == "PremiF_costellazione")
+                            go.GetComponent<Text>().enabled = true;
+
+                    }
+                }
+                PointingItem = pointing;
+                isPointing = true;
+            }
+            else
+            {
+                PointingItem = null;
+                isPointing = false;
+            } 
+        }
         else
         {
             PointingItem = null;
@@ -93,13 +124,16 @@ public class Interaction : MonoBehaviour
     }
     void UnmarkSelectable()
     {
-        crosshair.GetComponent<Image>().color = Color.white;
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+        if (PointingItem == null)
         {
-            //if (go.name == "PremiE" || go.name == "PremiQ" || go.name == "AvvisoFuoco")
+            crosshair.GetComponent<Image>().color = Color.white;
+            foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+            {
+                //if (go.name == "PremiE" || go.name == "PremiQ" || go.name == "AvvisoFuoco")
                 go.GetComponent<Text>().enabled = false;
+            }
+            PointingItem = null;
         }
-        PointingItem = null;
     }
 
     public static void DisplayWarning(string warning)
