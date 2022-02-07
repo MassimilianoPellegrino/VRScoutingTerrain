@@ -53,7 +53,7 @@ public class ItemPickup : MonoBehaviour
 
     void ShowFlowerInfo()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !Interaction.PointingItem.CompareTag("Terrain")
+        if (Input.GetKeyDown(KeyCode.C) && !Interaction.PointingItem.CompareTag("Terrain")
             && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied)
         {
             //Debug.Log(item.name);
