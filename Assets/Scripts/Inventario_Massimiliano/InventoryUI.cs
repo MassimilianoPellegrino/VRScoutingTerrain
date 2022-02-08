@@ -47,7 +47,7 @@ public class InventoryUI : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Tab) && !Diary.DiarioON)
+        if (Input.GetKeyDown(KeyCode.Tab) && !Diary.DiarioON && !ShowMouse.isLaying)
         {
             HandsWarning.GetComponent<Text>().enabled = false;
 

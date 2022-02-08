@@ -89,7 +89,7 @@ public class Interaction : MonoBehaviour
             Transform pointing = hit.transform;
             
 
-            if (pointing.CompareTag("Constellation") && pointing.GetComponent<ItemPickup>() != null && !Diary.DiarioON && !InventoryUI.InventarioON)
+            if (pointing.CompareTag("Constellation") && pointing.GetComponent<ItemPickup>() != null && !Diary.DiarioON && !InventoryUI.InventarioON && ShowMouse.isLaying)
             {
 
                 item = pointing.GetComponent<ItemPickup>().item;
@@ -101,7 +101,7 @@ public class Interaction : MonoBehaviour
                     //Debug.Log("Ennamo");
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
-                        if (go.name == "PremiF_costellazione")
+                        if (go.name == "Click_costellazione")
                             go.GetComponent<Text>().enabled = true;
 
                     }

@@ -54,8 +54,10 @@ public class ItemPickup : MonoBehaviour
 
     void ShowInfoOnDiary()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !Interaction.PointingItem.CompareTag("Terrain")
-            && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied && !Diary.DiarioON)
+        if (((Input.GetKeyDown(KeyCode.F) && Interaction.item.isFlower) || (Input.GetMouseButtonDown(0) && Interaction.item.isConstellation)) 
+            && !Interaction.PointingItem.CompareTag("Terrain")
+            && name == Interaction.PointingItem.name 
+            && !HandsOccupied.handsOccupied && !Diary.DiarioON)
         {
             //Debug.Log(item.name);
             bool pageAdded = Diary.instance.Add(item);
