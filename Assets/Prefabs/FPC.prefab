@@ -234,6 +234,7 @@ MonoBehaviour:
   lowerLookLimit: 80
   upperLookLimitSleep: 40
   lowerLookLimitSleep: 40
+  LookSleep: 56
   jumpForce: 8
   gravity: 30
   crouchHeight: 0.5
