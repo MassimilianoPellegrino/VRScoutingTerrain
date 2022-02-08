@@ -197,9 +197,10 @@ public class FPC : MonoBehaviour
       {
         rotationY -= Input.GetAxis("Mouse X") * lookSpeedX;
         rotationY = Mathf.Clamp(-upperLookLimitSleep, lowerLookLimitSleep, rotationY);
-        playerCamera.transform.localRotation = Quaternion.Euler(-LookSleep,rotationY,0);
-        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse Y") * lookSpeedY,0);
+        playerCamera.transform.localRotation = Quaternion.Euler(-LookSleep,0,0);
+        transform.rotation *= Quaternion.Euler(0, 0,0);
        }
+     
         
 
 

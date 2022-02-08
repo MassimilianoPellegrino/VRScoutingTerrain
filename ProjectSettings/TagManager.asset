@@ -15,6 +15,7 @@ TagManager:
   - Footsteps/SAND
   - Footsteps/TERRAIN
   - Constellation
+  - Interactable Object
   layers:
   - Default
   - TransparentFX
