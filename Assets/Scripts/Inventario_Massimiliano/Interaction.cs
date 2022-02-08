@@ -98,7 +98,7 @@ public class Interaction : MonoBehaviour
 
                 if (item.isConstellation)
                 {
-                    //Debug.Log("Ennamo");
+                    
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
                         if (go.name == "Click_costellazione")
@@ -129,7 +129,6 @@ public class Interaction : MonoBehaviour
             crosshair.GetComponent<Image>().color = Color.white;
             foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
             {
-                //if (go.name == "PremiE" || go.name == "PremiQ" || go.name == "AvvisoFuoco")
                 go.GetComponent<Text>().enabled = false;
             }
             PointingItem = null;
@@ -140,8 +139,6 @@ public class Interaction : MonoBehaviour
     {
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
         {
-            /*if (go.name == "PremiE" || go.name == "PremiQ")
-                go.GetComponent<Text>().enabled = false;*/
             if(go.name == warning)
                 go.GetComponent<Text>().enabled = true;
         }
@@ -151,8 +148,6 @@ public class Interaction : MonoBehaviour
     {
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
         {
-            /*if (go.name == "PremiE" || go.name == "PremiQ")
-                go.GetComponent<Text>().enabled = false;*/
             if (go.name == "AvvisoTenda")
                 go.GetComponent<Text>().enabled = true;
         }

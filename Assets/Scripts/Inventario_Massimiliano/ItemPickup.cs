@@ -59,7 +59,6 @@ public class ItemPickup : MonoBehaviour
             && name == Interaction.PointingItem.name 
             && !HandsOccupied.handsOccupied && !Diary.DiarioON)
         {
-            //Debug.Log(item.name);
             bool pageAdded = Diary.instance.Add(item);
 
             if (pageAdded)

@@ -16,7 +16,6 @@ public class Item : ScriptableObject
     public bool neededForBonfire = false;
     public bool neededForTent = false;
     public bool isFlower = false;
-    public Image image = null;
     public bool isConstellation = false;
 
 }
