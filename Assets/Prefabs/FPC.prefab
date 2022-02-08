@@ -214,13 +214,15 @@ MonoBehaviour:
   canSprint: 1
   canJump: 1
   canCrouch: 1
+  canSleep: 1
   canUseHeadbob: 1
   WillSlideOnSlopes: 1
   canZoom: 1
   useFootSteps: 1
   sprintKey: 304
   jumpKey: 32
-  crouchKey: 8
+  crouchKey: 306
+  sleepKey: 122
   zoomKey: 324
   walkSpeed: 3
   sprintSpeed: 6
@@ -230,6 +232,8 @@ MonoBehaviour:
   lookSpeedY: 2
   upperLookLimit: 80
   lowerLookLimit: 80
+  upperLookLimitSleep: 40
+  lowerLookLimitSleep: 40
   jumpForce: 8
   gravity: 30
   crouchHeight: 0.5
@@ -237,12 +241,18 @@ MonoBehaviour:
   timeToCrouch: 0.25
   standingCenter: {x: 0, y: 0, z: 0}
   crouchingCenter: {x: 0, y: 0.5, z: 0}
+  sleepHeight: 0.1
+  standingHeightNotSleep: 2
+  timeToSleep: 0.5
+  standingCenterNotSleep: {x: 0, y: 0, z: 0}
+  sleepingCenter: {x: 0, y: 0.1, z: 0}
   walkBobSpeed: 14
   walkBobAmount: 0.05
   springBobSpeed: 18
   springBobAmount: 0.1
   crouchBobSpeed: 8
   crouchBobAmount: 0.025
+  sleepBobAmount: 0.025
   timeToZoom: 0.3
   zoomFOV: 30
   baseStepSpeed: 0.5

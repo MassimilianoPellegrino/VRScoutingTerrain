@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FPC : MonoBehaviour
 {
    public bool CanMove {get; private set; } = true;
@@ -40,7 +41,9 @@ public class FPC : MonoBehaviour
    [SerializeField, Range(1,10)] private float lookSpeedY = 2.0f;
    [SerializeField, Range(1,100)] private float upperLookLimit = 80.0f;
    [SerializeField, Range(1,100)] private float lowerLookLimit = 80.0f;
- 
+   [SerializeField, Range(1,100)] private float upperLookLimitSleep = 40.0f;
+   [SerializeField, Range(1,100)] private float lowerLookLimitSleep = 40.0f;
+   [SerializeField, Range(1,100)] private float LookSleep = 40.0f;
 
    [Header("Jumping Parameters")]
    [SerializeField] private float jumpForce = 8.0f;
@@ -127,6 +130,8 @@ public class FPC : MonoBehaviour
    private Vector2 currentInput;
 
    private float rotationX = 0;
+   private float rotationY = 0;
+
 
     void Awake()
     {
@@ -152,7 +157,7 @@ public class FPC : MonoBehaviour
             if(canCrouch)
               HandleCrouch();
             
-            if(canSleep)
+           if(canSleep)
               HandleSleep();
 
             if(canUseHeadbob)
@@ -181,21 +186,22 @@ public class FPC : MonoBehaviour
 
     private void HandleMouseLock()
     {
-       if(!isSleeping)
+      if(!isSleeping)
        {
         rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
         rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX,0,0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
        }
-       else if(isSleeping)
-       {
-        playerCamera.transform.localRotation = Quaternion.Euler(-90,0,0);
-        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
-        CanMove = false;
+      else if(isSleeping)
+      {
+        rotationY -= Input.GetAxis("Mouse X") * lookSpeedX;
+        rotationY = Mathf.Clamp(-upperLookLimitSleep, lowerLookLimitSleep, rotationY);
+        playerCamera.transform.localRotation = Quaternion.Euler(-LookSleep,rotationY,0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse Y") * lookSpeedY,0);
        }
+        
 
-       CanMove = true;
 
     } 
 
@@ -277,7 +283,7 @@ public class FPC : MonoBehaviour
 
         if(footstepTimer <= 0)
         {
-            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit,3))
+            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit,2))
             {
                 switch(hit.collider.tag)
                 {
@@ -340,7 +346,7 @@ public class FPC : MonoBehaviour
         duringCrouchAnimation = false;
     }
 
-     private IEnumerator SleepStand()
+    private IEnumerator SleepStand()
     {
         if(isSleeping && Physics.Raycast(Vector3.up, playerCamera.transform.position, 1f))
            yield break;
