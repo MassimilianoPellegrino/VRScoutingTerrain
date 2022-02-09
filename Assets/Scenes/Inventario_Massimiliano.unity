@@ -3892,8 +3892,6 @@ GameObject:
   - component: {fileID: 1653532598}
   - component: {fileID: 1653532599}
   - component: {fileID: 1653532600}
-  - component: {fileID: 1653532601}
-  - component: {fileID: 1653532603}
   - component: {fileID: 1653532602}
   - component: {fileID: 1653532605}
   - component: {fileID: 1653532604}
@@ -3998,18 +3996,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
   Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
---- !u!114 &1653532601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49800e752bc8fb342a5bbe083d11825d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1653532602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4024,18 +4010,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TentMedal: {fileID: 11400000, guid: 8ec3fb4ed036c394cbda92fca1f9869f, type: 2}
   Tent: {fileID: 11400000, guid: bcdf2033ca18327499d59d4d39359ee8, type: 2}
---- !u!114 &1653532603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749ca300bfd2ae44bb8f4fcc1b602bbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1653532604
 MonoBehaviour:
   m_ObjectHideFlags: 0

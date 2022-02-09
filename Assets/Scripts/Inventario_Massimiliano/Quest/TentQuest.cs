@@ -13,6 +13,7 @@ public class TentQuest : MyQuest
         QuestName = "Monta la tenda";
         Description = "Trova dei rami lunghi e posiziona il telo";
         Medal = TentMedal;
+
         Goals.Add(new InstantiateGoal(this, Tent, "Monta la tenda", false, 0, 1));
 
         Goals.ForEach(g => g.Init());

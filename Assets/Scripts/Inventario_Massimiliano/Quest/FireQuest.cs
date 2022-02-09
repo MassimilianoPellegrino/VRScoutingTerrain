@@ -13,6 +13,7 @@ public class FireQuest : MyQuest
         QuestName = "Accendi il fuoco";
         Description = "Trova alcuni rami e alcune rocce per accendere il fuoco";
         Medal = FireMedal;
+
         Goals.Add(new InstantiateGoal(this, Bonfire, "Accendi il fuoco", false, 0, 1));
 
         Goals.ForEach(g => g.Init());

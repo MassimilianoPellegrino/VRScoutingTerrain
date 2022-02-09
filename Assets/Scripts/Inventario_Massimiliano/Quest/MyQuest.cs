@@ -17,7 +17,7 @@ public class MyQuest : MonoBehaviour
         if (Completed) GiveReward();
     }
 
-    void GiveReward()
+    public void GiveReward()
     {
         if (Medal != null)
         {

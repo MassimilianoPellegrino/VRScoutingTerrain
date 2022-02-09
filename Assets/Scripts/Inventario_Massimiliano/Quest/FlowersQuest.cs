@@ -13,6 +13,7 @@ public class FlowersQuest : MyQuest
         QuestName = "Cataloga i fiori";
         Description = "Trova qualche fiore e raccogli le informazioni sul diario";
         Medal = FlowerMedal;
+
         Goals.Add(new CollectGoal(this, Flower, "Cataloga i fiori", false, 0, 4));
 
         Goals.ForEach(g => g.Init());

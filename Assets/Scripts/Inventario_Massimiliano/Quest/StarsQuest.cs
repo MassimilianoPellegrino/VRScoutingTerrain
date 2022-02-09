@@ -13,7 +13,8 @@ public class StarsQuest : MyQuest
         QuestName = "Cataloga le costellazioni";
         Description = "Trova le costellazioni in cielo raccogli le informazioni sul diario";
         Medal = StarMedal;
-        Goals.Add(new CollectGoal(this, Star, "Cataloga le costellazioni", false, 0, 5));
+
+        Goals.Add(new CollectGoal(this, Star, "Cataloga le costellazioni", false, 0, 5));        
 
         Goals.ForEach(g => g.Init());
     }

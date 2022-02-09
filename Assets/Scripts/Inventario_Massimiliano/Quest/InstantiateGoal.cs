@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InstantiateGoal : Goal
 {
-
     public Item Item { get; set; }
     
     public InstantiateGoal(MyQuest quest, Item item, string description, bool completed, int currentAmount, int requiredAmount)
