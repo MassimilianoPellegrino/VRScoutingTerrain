@@ -10,6 +10,8 @@ public class Interaction : MonoBehaviour
     public static Transform PointingItem = null;
     private bool isPointing = false;
 
+    Transform PointingNPC = null;
+
     public static Item item = null;
 
     // Update is called once per frame
@@ -79,9 +81,25 @@ public class Interaction : MonoBehaviour
                 PointingItem = pointing;
                 isPointing = true;
             }
+            else if(pointing.CompareTag("NPC") /*&& pointing.GetComponent<InteractableNPC>() != null*/ && !Diary.DiarioON && !InventoryUI.InventarioON)
+            {
+                crosshair.GetComponent<Image>().color = Color.red;
+                PointingNPC = pointing;
+                isPointing = true;
+
+                PointingNPC.GetComponent<MyNPC>().Interact();
+
+                foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+                {
+                    if (go.name == "PremiE_npc")
+                        go.GetComponent<Text>().enabled = true;
+
+                }
+            }
             else
             {
                 PointingItem = null;
+                PointingNPC = null;
                 isPointing = false;
             }
 
@@ -126,7 +144,7 @@ public class Interaction : MonoBehaviour
     }
     void UnmarkSelectable()
     {
-        if (PointingItem == null)
+        if (PointingItem == null && PointingNPC == null)
         {
             crosshair.GetComponent<Image>().color = Color.white;
             foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
