@@ -5,14 +5,14 @@ using UnityEngine;
 public class InteractableNPC : MonoBehaviour
 {
     public GameObject player;
-    private bool hasInteracted;
+    //private bool hasInteracted;
 
     private void Update()
     {
-        if (!hasInteracted && Input.GetKeyDown(KeyCode.E) && Interaction.PointingNPC != null)
+        if (/*!hasInteracted &&*/ Input.GetKeyDown(KeyCode.E) && Interaction.PointingNPC != null)
         {
             Interact();
-            hasInteracted = true;
+            //hasInteracted = true;
         }
     }
 

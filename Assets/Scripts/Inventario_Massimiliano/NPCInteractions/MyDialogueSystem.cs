@@ -38,12 +38,16 @@ public class MyDialogueSystem : MonoBehaviour
 
     private void Update()
     {
-        Cursor.visible = dialogueON;
+        if (!InventoryUI.InventarioON && !Diary.DiarioON && !ShowMouse.isLaying)
+        {
+            Cursor.visible = dialogueON;
 
-        if (dialogueON)
-            Cursor.lockState = CursorLockMode.Confined;
-        else
-            Cursor.lockState = CursorLockMode.Locked;
+            if (dialogueON)
+                Cursor.lockState = CursorLockMode.Confined;
+            else
+                Cursor.lockState = CursorLockMode.Locked;
+        }
+        
     }
 
     public void AddNewDialogue(string[] lines)

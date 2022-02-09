@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0007337726, g: 0.010893414, b: 0.05191856, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2530,6 +2530,7 @@ GameObject:
   - component: {fileID: 1088616908}
   - component: {fileID: 1088616907}
   - component: {fileID: 1088616911}
+  - component: {fileID: 1088616912}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -2620,9 +2621,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088616906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6e0a40692f74d44f99bbc51a43f5b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 546705727}
+  dialogue: []
+--- !u!114 &1088616912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088616906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540512b90e3924248bafc44fd48e1cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 546705727}
@@ -2632,6 +2647,8 @@ MonoBehaviour:
   - "Nello zaino hai gi\xE0 della corda e un telo, ma avrai bisogno di alcuni rami
     per sorreggere la tenda."
   - Vai a cercare 5 rami nel bosco e torna qua quando li avrai trovati.
+  GameManager: {fileID: 1653532593}
+  questType: TentQuest
 --- !u!224 &1111096040 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6294419097664845484, guid: 45bc5c5c765edd74abcbfa2c79ff6686, type: 3}
@@ -4369,10 +4386,10 @@ GameObject:
   - component: {fileID: 1653532597}
   - component: {fileID: 1653532598}
   - component: {fileID: 1653532599}
-  - component: {fileID: 1653532600}
+  - component: {fileID: 1653532603}
   - component: {fileID: 1653532602}
-  - component: {fileID: 1653532605}
-  - component: {fileID: 1653532604}
+  - component: {fileID: 1653532601}
+  - component: {fileID: 1653532600}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4467,13 +4484,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 982a9ee196793894094513c6e0a6eecf, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e84297d70d3d6741acefc5dfcd10808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
-  Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
+  StarMedal: {fileID: 11400000, guid: 9724ff68560291842822d9935166e61f, type: 2}
+  Star: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
+--- !u!114 &1653532601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653532593}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e49d5f74a02c204d85e3635e042459e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlowerMedal: {fileID: 11400000, guid: bcda2da1541e3c14fb9d5a6f7ab913b7, type: 2}
+  Flower: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}
 --- !u!114 &1653532602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4481,41 +4512,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982a9ee196793894094513c6e0a6eecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
+  Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
+--- !u!114 &1653532603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653532593}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78f83db90c8435b44a8e4cb1e8111438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TentMedal: {fileID: 11400000, guid: 8ec3fb4ed036c394cbda92fca1f9869f, type: 2}
   Tent: {fileID: 11400000, guid: bcdf2033ca18327499d59d4d39359ee8, type: 2}
---- !u!114 &1653532604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e84297d70d3d6741acefc5dfcd10808, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StarMedal: {fileID: 11400000, guid: 9724ff68560291842822d9935166e61f, type: 2}
-  Star: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
---- !u!114 &1653532605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e49d5f74a02c204d85e3635e042459e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FlowerMedal: {fileID: 11400000, guid: bcda2da1541e3c14fb9d5a6f7ab913b7, type: 2}
-  Flower: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}
 --- !u!224 &1778256245 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6294419097664845484, guid: 45bc5c5c765edd74abcbfa2c79ff6686, type: 3}

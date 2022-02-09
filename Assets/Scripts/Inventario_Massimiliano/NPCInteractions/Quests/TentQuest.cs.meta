@@ -3,7 +3,9 @@ guid: 78f83db90c8435b44a8e4cb1e8111438
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - TentMedal: {fileID: 11400000, guid: 8ec3fb4ed036c394cbda92fca1f9869f, type: 2}
+  - Tent: {fileID: 11400000, guid: bcdf2033ca18327499d59d4d39359ee8, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

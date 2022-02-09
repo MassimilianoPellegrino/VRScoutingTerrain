@@ -14,7 +14,7 @@ public class MyQuest : MonoBehaviour
     public void CheckGoals()
     {
         Completed = Goals.All(g => g.Completed);
-        if (Completed) GiveReward();
+        //if (Completed) GiveReward();
     }
 
     public void GiveReward()

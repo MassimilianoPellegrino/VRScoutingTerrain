@@ -3,7 +3,9 @@ guid: 4e84297d70d3d6741acefc5dfcd10808
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - StarMedal: {fileID: 11400000, guid: 9724ff68560291842822d9935166e61f, type: 2}
+  - Star: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

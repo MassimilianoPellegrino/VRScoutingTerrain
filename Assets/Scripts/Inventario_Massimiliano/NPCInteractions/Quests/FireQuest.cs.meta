@@ -3,7 +3,9 @@ guid: 982a9ee196793894094513c6e0a6eecf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
+  - Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
