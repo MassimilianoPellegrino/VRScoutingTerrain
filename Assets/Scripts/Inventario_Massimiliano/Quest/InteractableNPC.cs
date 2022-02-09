@@ -5,12 +5,19 @@ using UnityEngine;
 public class InteractableNPC : MonoBehaviour
 {
     public GameObject player;
+    private bool hasInteracted;
+
+    private void Update()
+    {
+        if (!hasInteracted && Input.GetKeyDown(KeyCode.E) && Interaction.PointingNPC != null)
+        {
+            Interact();
+            hasInteracted = true;
+        }
+    }
 
     public virtual void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Interacting with base class.");
-        }
+        Debug.Log("Interacting with base class.");
     }
 }

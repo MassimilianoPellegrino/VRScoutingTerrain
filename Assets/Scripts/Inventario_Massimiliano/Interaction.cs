@@ -10,7 +10,7 @@ public class Interaction : MonoBehaviour
     public static Transform PointingItem = null;
     private bool isPointing = false;
 
-    Transform PointingNPC = null;
+    public static Transform PointingNPC = null;
 
     public static Item item = null;
 
@@ -86,8 +86,6 @@ public class Interaction : MonoBehaviour
                 crosshair.GetComponent<Image>().color = Color.red;
                 PointingNPC = pointing;
                 isPointing = true;
-
-                PointingNPC.GetComponent<MyNPC>().Interact();
 
                 foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                 {
