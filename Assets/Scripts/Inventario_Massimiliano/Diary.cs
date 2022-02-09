@@ -134,5 +134,10 @@ public class Diary : MonoBehaviour
         }
     }
 
+    public void GiveMedal(Item medal)
+    {
+
+    }
+
 
 }

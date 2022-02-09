@@ -8,7 +8,7 @@ public class MyQuest : MonoBehaviour
     public List<Goal> Goals { get; set; } = new List<Goal>();
     public string QuestName { get; set; }
     public string Description { get; set; }
-    public Item ItemReward { get; set; }
+    public Item Medal { get; set; }
     public bool Completed { get; set; }
 
     public void CheckGoals()
@@ -19,9 +19,9 @@ public class MyQuest : MonoBehaviour
 
     void GiveReward()
     {
-        if(ItemReward != null)
+        if(Medal != null)
         {
-            RewardsController.instance.GiveItem(ItemReward);
+            Diary.instance.GiveMedal(Medal);
         }
     }
 

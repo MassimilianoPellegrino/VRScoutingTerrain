@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocksGoal : Goal
+public class PickUpGoal : Goal
 {
 
-    public Item Rock { get; set; }
+    public Item Item { get; set; }
     
-    public RocksGoal(Item rock, string description, bool completed, int requiredAmount)
+    public PickUpGoal(Item item, string description, bool completed, int currentAmount, int requiredAmount)
     {
-        this.Rock = rock;
+        this.Item = item;
         this.Description = description;
         this.Completed = completed;
-        this.CurrentAmount = rock.quantity;
+        this.CurrentAmount = currentAmount;
         this.RequiredAmount = requiredAmount;
     }
 
@@ -24,7 +24,7 @@ public class RocksGoal : Goal
 
     void RockPickedUp(Item item)
     {
-        if (item.Equals(Rock))
+        if (item.Equals(this.Item))
         {
             this.CurrentAmount++;
             Evaluate();
