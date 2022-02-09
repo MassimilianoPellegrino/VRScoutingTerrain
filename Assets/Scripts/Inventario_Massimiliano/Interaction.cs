@@ -42,7 +42,7 @@ public class Interaction : MonoBehaviour
 
                 crosshair.GetComponent<Image>().color = Color.red;
 
-                if (item.isFlower)
+                if (item.isFlower && GetComponent<FlowersQuest>().enabled)
                 {
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
@@ -60,7 +60,7 @@ public class Interaction : MonoBehaviour
 
                     }
                 }
-                else if(CallBonefire.LighterIsInHand() && item.neededForBonfire)
+                else if(CallBonefire.LighterIsInHand() && item.neededForBonfire && GetComponent<FireQuest>().enabled)
                 {
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
@@ -69,7 +69,7 @@ public class Interaction : MonoBehaviour
 
                     }
                 }
-                else if (CallTent.RopeIsInHand() && item.neededForTent)
+                else if (CallTent.RopeIsInHand() && item.neededForTent && GetComponent<TentQuest>().enabled)
                 {
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
@@ -81,7 +81,7 @@ public class Interaction : MonoBehaviour
                 PointingItem = pointing;
                 isPointing = true;
             }
-            else if(pointing.CompareTag("NPC") /*&& pointing.GetComponent<InteractableNPC>() != null*/ && !Diary.DiarioON && !InventoryUI.InventarioON)
+            else if(pointing.CompareTag("NPC") && !Diary.DiarioON && !InventoryUI.InventarioON && !MyDialogueSystem.dialogueON)
             {
                 crosshair.GetComponent<Image>().color = Color.red;
                 PointingNPC = pointing;
@@ -114,7 +114,7 @@ public class Interaction : MonoBehaviour
 
                 crosshair.GetComponent<Image>().color = Color.red;
 
-                if (item.isConstellation)
+                if (item.isConstellation && GetComponent<StarsQuest>().enabled)
                 {
                     
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))

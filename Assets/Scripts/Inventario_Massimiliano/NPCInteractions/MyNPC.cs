@@ -2,13 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MyNPC : InteractableNPC
+public class MyNPC : MonoBehaviour
 {
-    public string[] dialogue;
+    private string[] dialogue;
 
-    public override void Interact()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && Interaction.PointingNPC != null)
+        {
+            Interact();
+        }
+    }
+
+    public void AssignDialogue(string[] dialogue)
+    {
+        this.dialogue = dialogue;
+    }
+
+    public virtual void Interact()
     {
         MyDialogueSystem.Instance.AddNewDialogue(dialogue);
-        Debug.Log("Interacting with NPC.");
     }
 }

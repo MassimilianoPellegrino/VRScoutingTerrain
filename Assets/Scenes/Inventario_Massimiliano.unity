@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 0.99998933, b: 0.99998254, a: 1}
-  m_AmbientEquatorColor: {r: 1, g: 0.99998933, b: 0.99998254, a: 1}
-  m_AmbientGroundColor: {r: 1, g: 0.99998933, b: 0.99998254, a: 1}
+  m_AmbientSkyColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
+  m_AmbientEquatorColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
+  m_AmbientGroundColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.17516503, g: 0.2353498, b: 0.3004114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2529,7 +2529,6 @@ GameObject:
   - component: {fileID: 1088616909}
   - component: {fileID: 1088616908}
   - component: {fileID: 1088616907}
-  - component: {fileID: 1088616911}
   - component: {fileID: 1088616912}
   m_Layer: 0
   m_Name: NPC
@@ -2614,20 +2613,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1088616911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088616906}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e0a40692f74d44f99bbc51a43f5b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 546705727}
-  dialogue: []
 --- !u!114 &1088616912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,15 +2625,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540512b90e3924248bafc44fd48e1cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 546705727}
-  dialogue:
-  - "Salve giovane scout, io sar\xF2 la tua guida in questo bosco."
-  - Per cominciare hai bisogno di una tenda in cui riposarti.
-  - "Nello zaino hai gi\xE0 della corda e un telo, ma avrai bisogno di alcuni rami
-    per sorreggere la tenda."
-  - Vai a cercare 5 rami nel bosco e torna qua quando li avrai trovati.
   GameManager: {fileID: 1653532593}
-  questType: TentQuest
+  Quests:
+  - {fileID: 1653532603}
+  - {fileID: 1653532601}
+  - {fileID: 1653532602}
+  - {fileID: 1653532600}
+  AllQuestsCompleted: 0
 --- !u!224 &1111096040 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6294419097664845484, guid: 45bc5c5c765edd74abcbfa2c79ff6686, type: 3}
@@ -3541,35 +3524,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667763776847, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.000000030908623
+      value: -0.000000043337433
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667763776847, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000030908623
+      value: -0.0000000057054814
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667763776847, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.9914449
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667763776847, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: -0.1305262
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667921975984, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.9914449
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667921975984, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.1305262
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667921975984, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 2.0673652e-15
+      value: 8.32544e-16
       objectReference: {fileID: 0}
     - target: {fileID: 3571982667921975984, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000061817246
+      value: 0.000000011410963
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668138255856, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: rainColor.b
@@ -3685,7 +3668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668138255869, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_hour
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668138255869, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_year
@@ -3705,7 +3688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668138255869, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_timeline
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668138255869, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_selectedCalendarDay
@@ -4097,11 +4080,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668178255960, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.3940014
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668178255960, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.70744896
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668178255960, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_Color.r
@@ -4113,19 +4096,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668178255961, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: -0.000000043337426
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668178255961, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: -0.0000000057054805
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668178255961, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9914449
       objectReference: {fileID: 0}
     - target: {fileID: 3571982668178255961, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.13052619
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3e532011e2f7d4aaf0dedd092b74ca, type: 3}
@@ -4387,8 +4370,8 @@ GameObject:
   - component: {fileID: 1653532598}
   - component: {fileID: 1653532599}
   - component: {fileID: 1653532603}
-  - component: {fileID: 1653532602}
   - component: {fileID: 1653532601}
+  - component: {fileID: 1653532602}
   - component: {fileID: 1653532600}
   m_Layer: 0
   m_Name: GameManager
@@ -4451,6 +4434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727a1f1e07160814e9dcb8dc2b5e29e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crosshair: {fileID: 1793594529}
 --- !u!114 &1653532598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4463,8 +4447,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a7280dea839d842a648b5060af0b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MorningTime: 7
+  NoonTime: 12
+  AfternoonTime: 17
+  NightTime: 22
   azt: {fileID: 989259007}
   constellations: {fileID: 1199576199}
+  questGiver: {fileID: 1088616912}
 --- !u!114 &1653532599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4489,6 +4478,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e84297d70d3d6741acefc5dfcd10808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - Giovane scout. E' ormai notte, guarda quante stelle.
+  - Le stelle si raggruppano in costellazioni, individuane 5.
+  - "Per fare ci\xF2 premi Z cos' da coricarti e guardare all'ins\xF9."
+  - Scruta il cielo e leggi le informazioni delle costellazioni sul diario.
   StarMedal: {fileID: 11400000, guid: 9724ff68560291842822d9935166e61f, type: 2}
   Star: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!114 &1653532601
@@ -4503,6 +4497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e49d5f74a02c204d85e3635e042459e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - "Il tuo prossimo compito sar\xE0 catalogare 4 fiori."
+  - Cercali nel bosco e leggi le informazioni che appariranno sul diario.
   FlowerMedal: {fileID: 11400000, guid: bcda2da1541e3c14fb9d5a6f7ab913b7, type: 2}
   Flower: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}
 --- !u!114 &1653532602
@@ -4517,6 +4514,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982a9ee196793894094513c6e0a6eecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - "Giovane scout! A breve sar\xE0 buio, quindi devi accendere un fuoco per riscaldarti
+    e allontanare gli animali."
+  - Cerca 5 rami e 5 rocce, e una volta trovati posali nel terreno vicini a loro.
+  - A questo punto prendi l'accendino e premi Q per accendere il fuoco.
   FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
   Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
 --- !u!114 &1653532603
@@ -4531,6 +4533,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f83db90c8435b44a8e4cb1e8111438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - "Salve giovane scout! Io sar\xF2 la tua guida nel bosco."
+  - "Ti assegner\xF2 alcuni compiti grazie ai quali imparerai ad essere un vero esploratore."
+  - Per cominciare hai bisogno di una tenda per riposare.
+  - "Nel tuo zaino troverai gi\xE0 un telo e una corda, vai nel bosco a cercare 5
+    bastoni"
+  - Una volta trovati posali sul terreno vicino a loro, posa anche il telo e prendi
+    la corda in mano.
+  - Ora premendo Q riuscirai a montare la tua tenda.
   TentMedal: {fileID: 11400000, guid: 8ec3fb4ed036c394cbda92fca1f9869f, type: 2}
   Tent: {fileID: 11400000, guid: bcdf2033ca18327499d59d4d39359ee8, type: 2}
 --- !u!224 &1778256245 stripped

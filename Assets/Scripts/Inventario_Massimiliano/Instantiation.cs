@@ -44,43 +44,47 @@ public class Instantiation : MonoBehaviour
 
     public void InstantiateBonefire(GameObject go, List<Collider> rocks, List<Collider> branches)
     {
-
-        Destroy(go);
-
-        foreach (var rock in rocks)
+        if(GetComponent<FireQuest>().enabled)
         {
-            Destroy(rock.gameObject);
-        }
-        foreach (var branch in branches)
-        {
-            Destroy(branch.gameObject);
-        }
+            Destroy(go);
 
-        var fire = Instantiate(bonefire, new Vector3(player.transform.position.x +2f, 0.5f, player.transform.position.z + 4f), bonefire.transform.rotation);
+            foreach (var rock in rocks)
+            {
+                Destroy(rock.gameObject);
+            }
+            foreach (var branch in branches)
+            {
+                Destroy(branch.gameObject);
+            }
 
-        if (fire.GetComponent<AssignItem>() != null)
-        {
-            QuestManager.MakeBonfire(fire.GetComponent<AssignItem>().item);
+            var fire = Instantiate(bonefire, new Vector3(player.transform.position.x + 2f, 0.5f, player.transform.position.z + 4f), bonefire.transform.rotation);
+
+            if (fire.GetComponent<AssignItem>() != null)
+            {
+                QuestManager.MakeBonfire(fire.GetComponent<AssignItem>().item);
+            }
         }
     }
 
     public void InstantiateTent(GameObject go, List<Collider> sticks, Collider cloth)
     {
-
-        Destroy(go);
-
-        foreach (var stick in sticks)
+        if (GetComponent<TentQuest>().enabled) 
         {
-            Destroy(stick.gameObject);
-        }
+            Destroy(go);
 
-        Destroy(cloth.gameObject);
+            foreach (var stick in sticks)
+            {
+                Destroy(stick.gameObject);
+            }
 
-        var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + 4f), bonefire.transform.rotation);
+            Destroy(cloth.gameObject);
 
-        if (hut.GetComponent<AssignItem>() != null)
-        {
-            QuestManager.MakeBonfire(hut.GetComponent<AssignItem>().item);
+            var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + 4f), bonefire.transform.rotation);
+
+            if (hut.GetComponent<AssignItem>() != null)
+            {
+                QuestManager.MakeBonfire(hut.GetComponent<AssignItem>().item);
+            }
         }
     }
 }

@@ -5,28 +5,36 @@ using UnityEngine;
 public class MyQuestGiver : MyNPC
 {
     public bool AssignedQuest { get; set; }
-    public bool Helped { get; set; }
+    //public bool Helped { get; set; }
 
     [SerializeField] private GameObject GameManager;
 
-    [SerializeField] private string questType;
-
     private MyQuest Quest { get; set; }
+
+    public MyQuest[] Quests;
+
+    private int questIndex = -1;
+
+    [HideInInspector] public bool AllQuestsCompleted;
 
     public override void Interact()
     {
-        if(!AssignedQuest && !Helped)
+        if(!AssignedQuest && questIndex < Quests.Length-1 )
         {
+            questIndex++;
+            Quests[questIndex].enabled = true;
+            base.AssignDialogue(Quests[questIndex].IntroductionDialogue);
             base.Interact();
             AssignQuest();
         }
-        else if(AssignedQuest && !Helped)
+        else if(AssignedQuest)
         {
             CheckQuest();
         }
-        else
+        else if(questIndex == Quests.Length- 1)
         {
-            MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Ancora complimenti per il lavoro svolto" });
+            MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Congratulazione hai svolto tutti i tuoi compiti. Ora sei un vero esploratore!" });
+            AllQuestsCompleted = true;
         }
 
     }
@@ -34,9 +42,7 @@ public class MyQuestGiver : MyNPC
     void AssignQuest()
     {
         AssignedQuest = true;
-        //Quest = (MyQuest)GameManager.AddComponent(System.Type.GetType(questType));
-        GameManager.GetComponent <TentQuest>().enabled = true;
-        Quest = GameManager.GetComponent<TentQuest>();
+        Quest = Quests[questIndex];
     }
 
     void CheckQuest()
@@ -44,13 +50,13 @@ public class MyQuestGiver : MyNPC
         if (Quest.Completed)
         {
             Quest.GiveReward();
-            Helped = true;
             AssignedQuest = false;
-            MyDialogueSystem.Instance.AddNewDialogue(new string[] {"Ottimo! Sei riuscito a montare la tenda"});
+            Quests[questIndex].enabled = false;
+            MyDialogueSystem.Instance.AddNewDialogue(new string[] {"Ottimo! Sei riuscito a svolgere il compito che ti ho assegnato"});
         }
         else
         {
-            MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Non hai ancora il materiale per mondare la tenda" });
+            MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Non hai ancora completato il tuo compito" });
         }
     }
 }

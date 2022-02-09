@@ -10,11 +10,11 @@ public class MyQuest : MonoBehaviour
     public string Description { get; set; }
     public Item Medal { get; set; }
     public bool Completed { get; set; }
+    public string[] IntroductionDialogue;
 
     public void CheckGoals()
     {
         Completed = Goals.All(g => g.Completed);
-        //if (Completed) GiveReward();
     }
 
     public void GiveReward()

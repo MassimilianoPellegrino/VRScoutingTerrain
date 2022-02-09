@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sky
-  m_Shader: {fileID: 4800000, guid: 393eeedcaf332f84b8024772d7025edb, type: 3}
+  m_Shader: {fileID: 4800000, guid: 72d5b23032cc2cc468f16969b9cb4b6d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

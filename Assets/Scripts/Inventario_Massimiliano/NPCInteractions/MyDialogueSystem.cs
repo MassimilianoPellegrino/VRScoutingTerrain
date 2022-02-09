@@ -14,7 +14,7 @@ public class MyDialogueSystem : MonoBehaviour
     Text dialogueText;
     int dialogueIndex;
 
-    bool dialogueON;
+    public static bool dialogueON;
 
     // Start is called before the first frame update
     void Awake()
@@ -43,7 +43,9 @@ public class MyDialogueSystem : MonoBehaviour
             Cursor.visible = dialogueON;
 
             if (dialogueON)
+            {
                 Cursor.lockState = CursorLockMode.Confined;
+            }
             else
                 Cursor.lockState = CursorLockMode.Locked;
         }

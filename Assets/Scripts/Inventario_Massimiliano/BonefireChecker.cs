@@ -12,6 +12,7 @@ public class BonefireChecker : MonoBehaviour
     List<Collider> rocks;
     List<Collider> branches;
 
+
     public bool CheckAround()
     {
                
