@@ -89,6 +89,7 @@ public class FPC : MonoBehaviour
    [SerializeField] private float baseStepSpeed = 0.5f;
    [SerializeField] private float crouchStepMultipler = 1.5f;
    [SerializeField] private float sprintStepMultipler = 0.6f;
+   [SerializeField] private float sleepStepMultipler = 2f;
    [SerializeField] private AudioSource footstepAudioSource = default;
    [SerializeField] private AudioClip[] grassClips = default;
    [SerializeField] private AudioClip[] metalClips = default;
@@ -98,7 +99,7 @@ public class FPC : MonoBehaviour
    [SerializeField] private AudioClip[] sandClips = default;
 
    private float footstepTimer = 0;
-   private float GetCurrentOffset => isCrouching ? baseStepSpeed * crouchStepMultipler : IsSprinting ? baseStepSpeed * sprintStepMultipler : baseStepSpeed;
+   private float GetCurrentOffset => isCrouching ? baseStepSpeed * crouchStepMultipler : IsSprinting ? baseStepSpeed * sprintStepMultipler : isSleeping ? baseStepSpeed*sleepStepMultipler : baseStepSpeed;
 
 
    //SLIDING PARAMETERS

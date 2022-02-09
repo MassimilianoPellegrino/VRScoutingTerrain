@@ -234,7 +234,7 @@ MonoBehaviour:
   lowerLookLimit: 80
   upperLookLimitSleep: 40
   lowerLookLimitSleep: 40
-  LookSleep: 56
+  LookSleep: 100
   jumpForce: 8
   gravity: 30
   crouchHeight: 0.5
@@ -259,6 +259,7 @@ MonoBehaviour:
   baseStepSpeed: 0.5
   crouchStepMultipler: 1.5
   sprintStepMultipler: 0.6
+  sleepStepMultipler: 3
   footstepAudioSource: {fileID: 1153545583663789483}
   grassClips:
   - {fileID: 8300000, guid: 18f1ff003e8fbdb44aba8266f6e1d168, type: 3}

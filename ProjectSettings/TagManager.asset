@@ -16,6 +16,7 @@ TagManager:
   - Footsteps/TERRAIN
   - Constellation
   - Interactable Object
+  - NPC
   layers:
   - Default
   - TransparentFX
