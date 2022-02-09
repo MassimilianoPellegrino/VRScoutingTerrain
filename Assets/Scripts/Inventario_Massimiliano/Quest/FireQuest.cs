@@ -6,7 +6,6 @@ public class FireQuest : MyQuest
 {
     public Item FireMedal;
     public Item Bonfire;
-    public BonefireChecker fireInfo;
 
     // Start is called before the first frame update
     void Start()

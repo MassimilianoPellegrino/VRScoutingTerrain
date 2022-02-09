@@ -76,6 +76,11 @@ public class Instantiation : MonoBehaviour
 
         Destroy(cloth.gameObject);
 
-        Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + 4f), bonefire.transform.rotation);
+        var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + 4f), bonefire.transform.rotation);
+
+        if (hut.GetComponent<AssignItem>() != null)
+        {
+            QuestManager.MakeBonfire(hut.GetComponent<AssignItem>().item);
+        }
     }
 }

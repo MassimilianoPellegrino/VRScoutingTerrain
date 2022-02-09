@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 6576624227828806570}
   - component: {fileID: -2006684983295361465}
   - component: {fileID: 2245296991371130849}
+  - component: {fileID: 3122266409120391942}
   m_Layer: 0
   m_Name: Hibiscus
   m_TagString: Selectable
@@ -147,3 +148,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.61, z: 0.46}
   m_Center: {x: 0, y: 0.44, z: 0.47}
+--- !u!114 &3122266409120391942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768843153516194064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}

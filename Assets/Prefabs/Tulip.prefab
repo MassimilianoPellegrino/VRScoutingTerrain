@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2095258004339216573}
   - component: {fileID: -7045636482419476602}
   - component: {fileID: 2090448584500342204}
+  - component: {fileID: 4839965064689555804}
   m_Layer: 0
   m_Name: Tulip
   m_TagString: Selectable
@@ -143,3 +144,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22, y: 0.32, z: 0.08}
   m_Center: {x: 0.14, y: 0.475, z: 0.09}
+--- !u!114 &4839965064689555804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610048554999384583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}

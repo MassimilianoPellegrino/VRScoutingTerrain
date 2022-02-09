@@ -65,6 +65,11 @@ public class ItemPickup : MonoBehaviour
 
             if (pageAdded)
             {
+                if (Interaction.PointingItem.GetComponent<AssignItem>() != null)
+                {
+                    QuestManager.IncreaseItem(Interaction.PointingItem.GetComponent<AssignItem>().item);
+                }
+
                 Diary.instance.ShowDiary();
             }
         }
