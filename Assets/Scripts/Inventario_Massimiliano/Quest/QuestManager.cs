@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public delegate void OnItemPickedUp(Item item);
-    public static OnItemPickedUp onItemPickedUpCallback;
+    public delegate void OnItemInstatiated(Item item);
+    public static OnItemInstatiated onItemInstantiatedCallback;
 
-    public static void IncreaseAmount(Item item)
+    public static void MakeBonfire(Item bonfire)
     {
-        if (onItemPickedUpCallback != null)
-            onItemPickedUpCallback.Invoke(item);
+        if (onItemInstantiatedCallback != null)
+        {
+            onItemInstantiatedCallback.Invoke(bonfire);
+        }
     }
 }

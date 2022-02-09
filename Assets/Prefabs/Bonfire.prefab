@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3822295961051842775}
   - component: {fileID: 3832211857929673797}
   - component: {fileID: 2854183140062781529}
+  - component: {fileID: 1913547228290818191}
   m_Layer: 0
   m_Name: Bonfire
   m_TagString: Untagged
@@ -95,3 +96,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.68
   m_Center: {x: 0, y: -0.18, z: 0}
+--- !u!114 &1913547228290818191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3853028513862226227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}

@@ -4,9 +4,27 @@ using UnityEngine;
 
 public class Instantiation : MonoBehaviour
 {
+    #region Singleton
+
+    public static Instantiation instance;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of Diary found!");
+            return;
+        }
+
+        instance = this;
+    }
+
+    #endregion
 
     public GameObject player;
     static bool callFromInventory;
+    public GameObject bonefire;
+    public GameObject tent;
 
     public void Spawn(Item item)
     {
@@ -22,5 +40,42 @@ public class Instantiation : MonoBehaviour
     public static bool CalledFromInventory()
     {
         return callFromInventory;
+    }
+
+    public void InstantiateBonefire(GameObject go, List<Collider> rocks, List<Collider> branches)
+    {
+
+        Destroy(go);
+
+        foreach (var rock in rocks)
+        {
+            Destroy(rock.gameObject);
+        }
+        foreach (var branch in branches)
+        {
+            Destroy(branch.gameObject);
+        }
+
+        var fire = Instantiate(bonefire, new Vector3(player.transform.position.x +2f, 0.5f, player.transform.position.z + 4f), bonefire.transform.rotation);
+
+        if (fire.GetComponent<AssignItem>() != null)
+        {
+            QuestManager.MakeBonfire(fire.GetComponent<AssignItem>().item);
+        }
+    }
+
+    public void InstantiateTent(GameObject go, List<Collider> sticks, Collider cloth)
+    {
+
+        Destroy(go);
+
+        foreach (var stick in sticks)
+        {
+            Destroy(stick.gameObject);
+        }
+
+        Destroy(cloth.gameObject);
+
+        Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + 4f), bonefire.transform.rotation);
     }
 }

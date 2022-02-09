@@ -19,7 +19,7 @@ public class MyQuest : MonoBehaviour
 
     void GiveReward()
     {
-        if(Medal != null)
+        if (Medal != null)
         {
             Diary.instance.GiveMedal(Medal);
         }

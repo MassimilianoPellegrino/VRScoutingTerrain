@@ -5078,6 +5078,7 @@ GameObject:
   - component: {fileID: 1653532598}
   - component: {fileID: 1653532599}
   - component: {fileID: 1653532600}
+  - component: {fileID: 1653532601}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5098,6 +5099,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 546705727}
+  bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
+  tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
 --- !u!114 &1653532595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5176,9 +5179,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
-  Rock: {fileID: 11400000, guid: 8e5745cfc26ee244f8e682521003e56a, type: 2}
-  Branch: {fileID: 11400000, guid: d6d9dca100980af42a44824cc4984445, type: 2}
+  Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
   fireInfo: {fileID: 2775174539289077452, guid: d63b2d313ac20c64d8a081a645adfe1b, type: 3}
+--- !u!114 &1653532601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653532593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49800e752bc8fb342a5bbe083d11825d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1778256245 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6294419097664845484, guid: 45bc5c5c765edd74abcbfa2c79ff6686, type: 3}

@@ -34,7 +34,6 @@ public class ItemPickup : MonoBehaviour
 
             if (wasPickedUp)
             {
-                QuestManager.IncreaseAmount(Interaction.item);
                 Destroy(Interaction.PointingItem.gameObject);
             }
         }

@@ -136,7 +136,7 @@ public class Diary : MonoBehaviour
 
     public void GiveMedal(Item medal)
     {
-
+        Debug.Log("Hai completato la missione fuoco!");
     }
 
 

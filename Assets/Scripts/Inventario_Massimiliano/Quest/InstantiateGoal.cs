@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpGoal : Goal
+public class InstantiateGoal : Goal
 {
 
     public Item Item { get; set; }
     
-    public PickUpGoal(Item item, string description, bool completed, int currentAmount, int requiredAmount)
+    public InstantiateGoal(MyQuest quest, Item item, string description, bool completed, int currentAmount, int requiredAmount)
     {
+        this.Quest = quest;
         this.Item = item;
         this.Description = description;
         this.Completed = completed;
@@ -19,10 +20,10 @@ public class PickUpGoal : Goal
     public override void Init()
     {
         base.Init();
-        QuestManager.onItemPickedUpCallback += RockPickedUp;
+        QuestManager.onItemInstantiatedCallback += FireMade;
     }
 
-    void RockPickedUp(Item item)
+    void FireMade(Item item)
     {
         if (item.Equals(this.Item))
         {

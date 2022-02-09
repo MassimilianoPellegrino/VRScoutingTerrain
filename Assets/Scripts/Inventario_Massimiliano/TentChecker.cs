@@ -6,7 +6,6 @@ public class TentChecker : MonoBehaviour
 {
     public Item item;
     public float radius;
-    public GameObject tent;
     public int sticksNeeded;
     bool gotCloth = false;
 
@@ -45,7 +44,7 @@ public class TentChecker : MonoBehaviour
 
         if (sticks.Count == sticksNeeded && gotCloth)
         {
-            InstantiateTent(sticks, cloth);
+           Instantiation.instance.InstantiateTent(this.gameObject, sticks, cloth);
             return true;
         }
         else
@@ -55,18 +54,4 @@ public class TentChecker : MonoBehaviour
 
     }
 
-    void InstantiateTent(List<Collider> sticks, Collider cloth)
-    {
-
-        Destroy(gameObject);
-
-        foreach (var stick in sticks)
-        {
-            Destroy(stick.gameObject);
-        }
-
-        Destroy(cloth.gameObject);
-
-        Instantiate(tent, new Vector3(transform.position.x, 0f, transform.position.z + 2f), tent.transform.rotation);
-    }
 }
