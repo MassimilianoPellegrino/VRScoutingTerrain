@@ -15,7 +15,9 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        crosshair.enabled = !ShowMouse.isLaying;
+
         CheckAndMarkSelectable();
                
 

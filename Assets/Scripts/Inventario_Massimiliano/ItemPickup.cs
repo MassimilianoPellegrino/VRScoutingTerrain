@@ -33,7 +33,10 @@ public class ItemPickup : MonoBehaviour
             bool wasPickedUp = Inventory.instance.Add(item);
 
             if (wasPickedUp)
+            {
+                QuestManager.IncreaseAmount(Interaction.item);
                 Destroy(Interaction.PointingItem.gameObject);
+            }
         }
     }
     void PutBackInInventory()
