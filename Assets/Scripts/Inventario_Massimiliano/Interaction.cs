@@ -131,6 +131,7 @@ public class Interaction : MonoBehaviour
             }
             else
             {
+                PointingNPC = null;
                 PointingItem = null;
                 isPointing = false;
             } 
@@ -152,6 +153,7 @@ public class Interaction : MonoBehaviour
                 go.GetComponent<Text>().enabled = false;
             }
             PointingItem = null;
+            PointingNPC = null;
         }
     }
 

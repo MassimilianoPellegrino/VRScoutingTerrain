@@ -8,6 +8,9 @@ public class InteractableNPC : MonoBehaviour
 
     public virtual void Interact()
     {
-        Debug.Log("Interacting with base class.");
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Interacting with base class.");
+        }
     }
 }
