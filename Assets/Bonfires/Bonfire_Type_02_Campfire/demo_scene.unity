@@ -684,10 +684,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 855c8c87ceb13e646ba786d71f26527c, type: 2}
-    - target: {fileID: 82474287581620536, guid: 4f0aae79e721daf438937dd6be687918, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 199472058042745710, guid: 4f0aae79e721daf438937dd6be687918, type: 3}
       propertyPath: m_SortingLayer
       value: 1
