@@ -12,15 +12,15 @@ public class CallNightAndDay : MonoBehaviour
     bool isAfternoon;
     bool isNight;*/
 
-    bool MorningCalled;
     bool NoonCalled;
     bool AfternoonCalled;
     bool NightCalled;
+    bool AfterGameTimeCalled;
 
-    public int MorningTime;
     public int NoonTime;
     public int AfternoonTime;
     public int NightTime;
+    public int AfterGameTime;
 
     public AzureTimeController azt;
     public GameObject constellations;
@@ -31,36 +31,6 @@ public class CallNightAndDay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        /*if (Input.GetKeyDown(KeyCode.N))
-        {
-            if (!isNight && azt.enabled == false)
-            {
-                azt.enabled = true;
-                azt.StartTimelineTransition(24, 00, 100, AzureTimeDirection.Forward);               
-            }
-            else if(isNight && azt.enabled == false)
-            {
-                azt.enabled = true;
-                azt.StartTimelineTransition(12, 00, 100, AzureTimeDirection.Backward);
-            }
-        }
-
-        if(!isNight && azt.GetTimeline() > 23 && azt.GetTimeline()<24)
-        {
-            constellations.SetActive(true);
-            azt.enabled = false;            
-            isNight = true;
-        }
-
-
-        if(isNight && azt.GetTimeline() > 12 && azt.GetTimeline() <13)
-        {
-            constellations.SetActive(false);
-            azt.enabled = false;            
-            isNight = false;
-        }*/
-
         if (!NoonCalled && GetComponent<FlowersQuest>().enabled)
         {
             azt.enabled = true;
@@ -104,17 +74,17 @@ public class CallNightAndDay : MonoBehaviour
         }
 
 
-        if(!MorningCalled && questGiver.AllQuestsCompleted)
+        if(!AfterGameTimeCalled && questGiver.AllQuestsCompleted)
         {
             azt.enabled = true;
             constellations.SetActive(false);
-            azt.StartTimelineTransition(MorningTime - 1, 00, 100, AzureTimeDirection.Backward);
+            azt.StartTimelineTransition(AfterGameTime - 1, 00, 100, AzureTimeDirection.Backward);
 
-            MorningCalled = true;
+            AfterGameTimeCalled = true;
         }
-        if(MorningCalled && azt.GetTimeline() < MorningTime)
+        if(AfterGameTimeCalled && azt.GetTimeline() < AfterGameTime)
         {
-            MorningCalled = false;
+            AfterGameTimeCalled = false;
             azt.enabled = false;
         }
 

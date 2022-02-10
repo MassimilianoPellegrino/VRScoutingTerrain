@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.17516503, g: 0.2353498, b: 0.3004114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4447,10 +4447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a7280dea839d842a648b5060af0b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MorningTime: 7
   NoonTime: 12
   AfternoonTime: 17
   NightTime: 22
+  AfterGameTime: 12
   azt: {fileID: 989259007}
   constellations: {fileID: 1199576199}
   questGiver: {fileID: 1088616912}
