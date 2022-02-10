@@ -36,7 +36,7 @@ public class ItemPickup : MonoBehaviour
             PickUp();
         if (item.toPlaceInHand)
             PutBackInInventory();
-        if (Interaction.PointingItem != null && ((Interaction.item.isFlower && FlowersQuest != null && FlowersQuest.enabled) || (Interaction.item.isConstellation && StarsQuest != null && StarsQuest.enabled)))
+        if (Interaction.PointingItem != null && !Diary.DiarioON  && ((Interaction.item.isFlower && FlowersQuest != null && FlowersQuest.enabled) || (Interaction.item.isConstellation && StarsQuest != null && StarsQuest.enabled)))
             ShowInfoOnDiary();
    
     }

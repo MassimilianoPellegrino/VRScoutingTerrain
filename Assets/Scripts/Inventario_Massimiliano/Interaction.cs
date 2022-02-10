@@ -35,9 +35,8 @@ public class Interaction : MonoBehaviour
         {
             Transform pointing = hit.transform;
 
-            if (pointing.CompareTag("Selectable") && pointing.GetComponent<ItemPickup>()!= null && !Diary.DiarioON && !InventoryUI.InventarioON)
+            if (pointing.CompareTag("Selectable") && pointing.GetComponent<ItemPickup>()!= null && !InventoryUI.InventarioON)
             {
-
                 item = pointing.GetComponent<ItemPickup>().item;
 
                 crosshair.GetComponent<Image>().color = Color.red;

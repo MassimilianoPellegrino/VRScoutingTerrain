@@ -41,6 +41,7 @@ public class Diary : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.F) && !InventoryUI.InventarioON && (Interaction.PointingItem == null || ShowMouse.isLaying))
         {
             scriptDiario.UpdateSprites();
@@ -105,7 +106,6 @@ public class Diary : MonoBehaviour
                     scriptDiario.bookPages[scriptDiario.bookPages.Count - 1] = page;
                 }
 
-
                 return true;
             }
         }
@@ -123,6 +123,7 @@ public class Diary : MonoBehaviour
             sfondo.gameObject.SetActive(DiarioON);
             diario.gameObject.SetActive(DiarioON);
 
+
             if (!ShowMouse.isLaying)
             {
                 Cursor.visible = DiarioON;
@@ -131,6 +132,9 @@ public class Diary : MonoBehaviour
                     Cursor.lockState = CursorLockMode.Confined;
                 else
                     Cursor.lockState = CursorLockMode.Locked;
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
             }
         }
     }
