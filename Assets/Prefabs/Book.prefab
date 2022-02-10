@@ -232,7 +232,9 @@ MonoBehaviour:
   canvas: {fileID: 0}
   BookPanel: {fileID: 7012680666694381556}
   background: {fileID: 21300000, guid: 3ba936e07ab796e40ac8366971033232, type: 3}
-  bookPages: []
+  bookPages:
+  - {fileID: 21300000, guid: 30b6a809660bcaa47b89f3d7c585ba99, type: 3}
+  - {fileID: 21300000, guid: a95228268fe7f6144aff597c74853ff1, type: 3}
   interactable: 1
   enableShadowEffect: 1
   currentPage: 0

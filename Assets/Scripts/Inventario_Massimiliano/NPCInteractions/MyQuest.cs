@@ -17,11 +17,11 @@ public class MyQuest : MonoBehaviour
         Completed = Goals.All(g => g.Completed);
     }
 
-    public void GiveReward()
+    public void GiveReward(int questIndex)
     {
         if (Medal != null)
         {
-            Diary.instance.GiveMedal(Medal);
+            Diary.instance.GiveBadge(questIndex);
         }
     }
 

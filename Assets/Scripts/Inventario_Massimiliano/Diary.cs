@@ -28,6 +28,7 @@ public class Diary : MonoBehaviour
 
     public List<Sprite> Pages;
     public List<Sprite> pagesForNow;
+    public List<Sprite> BadgePages;
 
     public Sprite white_left;
 
@@ -134,9 +135,9 @@ public class Diary : MonoBehaviour
         }
     }
 
-    public void GiveMedal(Item medal)
+    public void GiveBadge(int questIndex)
     {
-        Debug.Log("Hai completato la missione "+medal.name);
+        scriptDiario.bookPages[1] = BadgePages[questIndex];
     }
 
 

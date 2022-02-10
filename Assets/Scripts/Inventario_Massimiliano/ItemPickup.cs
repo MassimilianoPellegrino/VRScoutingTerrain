@@ -7,12 +7,27 @@ public class ItemPickup : MonoBehaviour
     public Item item;
     public string nome;
 
+    MyQuest FlowersQuest;
+    MyQuest StarsQuest;
+
     private void Start()
     {
         if (!Instantiation.CalledFromInventory())
         {
             item.quantity = 0;
         }
+
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Manager"))
+        {
+            if (go.name == "GameManager")
+            {
+                FlowersQuest = go.GetComponent<FlowersQuest>();
+                StarsQuest = go.GetComponent<StarsQuest>();
+            }
+
+        }
+
+
     }
 
     void Update()
@@ -21,7 +36,7 @@ public class ItemPickup : MonoBehaviour
             PickUp();
         if (item.toPlaceInHand)
             PutBackInInventory();
-        if (Interaction.PointingItem != null && (Interaction.item.isFlower || Interaction.item.isConstellation))
+        if (Interaction.PointingItem != null && ((Interaction.item.isFlower && FlowersQuest != null && FlowersQuest.enabled) || (Interaction.item.isConstellation && StarsQuest != null && StarsQuest.enabled)))
             ShowInfoOnDiary();
    
     }

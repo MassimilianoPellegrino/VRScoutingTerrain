@@ -51,7 +51,7 @@ public class Interaction : MonoBehaviour
 
                     }
                 }
-                else if (!CallBonefire.LighterIsInHand() && !CallTent.RopeIsInHand())
+                else if (!HandsOccupied.handsOccupied && !item.isFlower)
                 {
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {

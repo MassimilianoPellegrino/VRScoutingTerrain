@@ -49,10 +49,10 @@ public class MyQuestGiver : MyNPC
     {
         if (Quest.Completed)
         {
-            Quest.GiveReward();
+            Quest.GiveReward(questIndex);
             AssignedQuest = false;
             Quests[questIndex].enabled = false;
-            MyDialogueSystem.Instance.AddNewDialogue(new string[] {"Ottimo! Sei riuscito a svolgere il compito che ti ho assegnato"});
+            MyDialogueSystem.Instance.AddNewDialogue(new string[] {"Ottimo! Sei riuscito a svolgere il compito che ti ho assegnato. Eccoti un distintivo, premi F per vederlo sul diario."});
         }
         else
         {

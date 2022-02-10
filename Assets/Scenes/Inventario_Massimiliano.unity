@@ -1528,6 +1528,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1e9706ddf9b7f6e4c8f349bfea7291a2, type: 3}
   - {fileID: 21300000, guid: 4c244b4bf3a67e24fa0e66c578d9579f, type: 3}
   pagesForNow: []
+  BadgePages:
+  - {fileID: 21300000, guid: 462ac70240c594548a2062a3740f5bb9, type: 3}
+  - {fileID: 21300000, guid: f9ff37cfc5bf9b844a5a5d12f8e2d222, type: 3}
+  - {fileID: 21300000, guid: c0ab9166a7e5f9541bdb7dbe95413089, type: 3}
+  - {fileID: 21300000, guid: b317eacd3ba9961439f2ddf2a64fdf68, type: 3}
   white_left: {fileID: 21300000, guid: a95228268fe7f6144aff597c74853ff1, type: 3}
 --- !u!1001 &668017151
 PrefabInstance:
@@ -4355,122 +4360,15 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6294419097664845484, guid: 45bc5c5c765edd74abcbfa2c79ff6686, type: 3}
   m_PrefabInstance: {fileID: 1272274687}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1653532593
+--- !u!1 &1653532593 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 212509344695766257, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+  m_PrefabInstance: {fileID: 212509346280778560}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1653532596}
-  - component: {fileID: 1653532595}
-  - component: {fileID: 1653532594}
-  - component: {fileID: 1653532597}
-  - component: {fileID: 1653532598}
-  - component: {fileID: 1653532599}
-  - component: {fileID: 1653532603}
-  - component: {fileID: 1653532601}
-  - component: {fileID: 1653532602}
-  - component: {fileID: 1653532600}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1653532594
+--- !u!114 &1653532600 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1335ad4726143ab4b8e68fd395ba64de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 546705727}
-  bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
-  tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
---- !u!114 &1653532595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0722d041f6c664fbb6bbcaeaa1f794, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 1793594529}
---- !u!4 &1653532596
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1653532597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727a1f1e07160814e9dcb8dc2b5e29e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 1793594529}
---- !u!114 &1653532598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22a7280dea839d842a648b5060af0b1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NoonTime: 12
-  AfternoonTime: 17
-  NightTime: 22
-  AfterGameTime: 12
-  azt: {fileID: 989259007}
-  constellations: {fileID: 1199576199}
-  questGiver: {fileID: 1088616912}
---- !u!114 &1653532599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653532593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ed4c36ef2ef9d240bb49d2571168c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1653532600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 212509344695766264, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+  m_PrefabInstance: {fileID: 212509346280778560}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653532593}
   m_Enabled: 0
@@ -4478,18 +4376,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e84297d70d3d6741acefc5dfcd10808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IntroductionDialogue:
-  - Giovane scout. E' ormai notte, guarda quante stelle.
-  - Le stelle si raggruppano in costellazioni, individuane 5.
-  - "Per fare ci\xF2 premi Z cos' da coricarti e guardare all'ins\xF9."
-  - Scruta il cielo e leggi le informazioni delle costellazioni sul diario.
-  StarMedal: {fileID: 11400000, guid: 9724ff68560291842822d9935166e61f, type: 2}
-  Star: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
---- !u!114 &1653532601
+--- !u!114 &1653532601 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 212509344695766265, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+  m_PrefabInstance: {fileID: 212509346280778560}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653532593}
   m_Enabled: 0
@@ -4497,16 +4387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e49d5f74a02c204d85e3635e042459e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IntroductionDialogue:
-  - "Il tuo prossimo compito sar\xE0 catalogare 4 fiori."
-  - Cercali nel bosco e leggi le informazioni che appariranno sul diario.
-  FlowerMedal: {fileID: 11400000, guid: bcda2da1541e3c14fb9d5a6f7ab913b7, type: 2}
-  Flower: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}
---- !u!114 &1653532602
+--- !u!114 &1653532602 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 212509344695766266, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+  m_PrefabInstance: {fileID: 212509346280778560}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653532593}
   m_Enabled: 0
@@ -4514,18 +4398,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982a9ee196793894094513c6e0a6eecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IntroductionDialogue:
-  - "Giovane scout! A breve sar\xE0 buio, quindi devi accendere un fuoco per riscaldarti
-    e allontanare gli animali."
-  - Cerca 5 rami e 5 rocce, e una volta trovati posali nel terreno vicini a loro.
-  - A questo punto prendi l'accendino e premi Q per accendere il fuoco.
-  FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
-  Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
---- !u!114 &1653532603
+--- !u!114 &1653532603 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 212509344695766267, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+  m_PrefabInstance: {fileID: 212509346280778560}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653532593}
   m_Enabled: 0
@@ -4533,17 +4409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f83db90c8435b44a8e4cb1e8111438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IntroductionDialogue:
-  - "Salve giovane scout! Io sar\xF2 la tua guida nel bosco."
-  - "Ti assegner\xF2 alcuni compiti grazie ai quali imparerai ad essere un vero esploratore."
-  - Per cominciare hai bisogno di una tenda per riposare.
-  - "Nel tuo zaino troverai gi\xE0 un telo e una corda, vai nel bosco a cercare 5
-    bastoni"
-  - Una volta trovati posali sul terreno vicino a loro, posa anche il telo e prendi
-    la corda in mano.
-  - Ora premendo Q riuscirai a montare la tua tenda.
-  TentMedal: {fileID: 11400000, guid: 8ec3fb4ed036c394cbda92fca1f9869f, type: 2}
-  Tent: {fileID: 11400000, guid: bcdf2033ca18327499d59d4d39359ee8, type: 2}
 --- !u!224 &1778256245 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6294419097664845484, guid: 45bc5c5c765edd74abcbfa2c79ff6686, type: 3}
@@ -5672,6 +5537,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45bc5c5c765edd74abcbfa2c79ff6686, type: 3}
+--- !u!1001 &212509346280778560
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 212509344695766257, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766258, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 546705727}
+    - target: {fileID: 212509344695766259, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1793594529}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766260, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212509344695766261, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1793594529}
+    - target: {fileID: 212509344695766262, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: azt
+      value: 
+      objectReference: {fileID: 989259007}
+    - target: {fileID: 212509344695766262, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: questGiver
+      value: 
+      objectReference: {fileID: 1088616912}
+    - target: {fileID: 212509344695766262, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
+      propertyPath: constellations
+      value: 
+      objectReference: {fileID: 1199576199}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
 --- !u!1001 &878072072650841201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6150,6 +6096,14 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 623566999}
+    - target: {fileID: 7012680666119961589, guid: e7a9091c20e0909449e031d0faa32940, type: 3}
+      propertyPath: bookPages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: f75ea5449edbb4c4c811d5ef0a9bf54f, type: 3}
+    - target: {fileID: 7012680666119961589, guid: e7a9091c20e0909449e031d0faa32940, type: 3}
+      propertyPath: bookPages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51ad2a328e24aab4c90a0935d8f4262a, type: 3}
     - target: {fileID: 7012680666674912708, guid: e7a9091c20e0909449e031d0faa32940, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

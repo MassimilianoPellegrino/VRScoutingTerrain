@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &212509344695766257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 212509344695766260}
+  - component: {fileID: 212509344695766259}
+  - component: {fileID: 212509344695766258}
+  - component: {fileID: 212509344695766261}
+  - component: {fileID: 212509344695766262}
+  - component: {fileID: 212509344695766263}
+  - component: {fileID: 212509344695766267}
+  - component: {fileID: 212509344695766265}
+  - component: {fileID: 212509344695766266}
+  - component: {fileID: 212509344695766264}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &212509344695766260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &212509344695766259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0722d041f6c664fbb6bbcaeaa1f794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 0}
+--- !u!114 &212509344695766258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1335ad4726143ab4b8e68fd395ba64de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
+  tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
+--- !u!114 &212509344695766261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727a1f1e07160814e9dcb8dc2b5e29e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 0}
+--- !u!114 &212509344695766262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a7280dea839d842a648b5060af0b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoonTime: 12
+  AfternoonTime: 17
+  NightTime: 22
+  AfterGameTime: 12
+  azt: {fileID: 0}
+  constellations: {fileID: 0}
+  questGiver: {fileID: 0}
+--- !u!114 &212509344695766263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed4c36ef2ef9d240bb49d2571168c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &212509344695766267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f83db90c8435b44a8e4cb1e8111438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - "Salve giovane scout! Io sar\xF2 la tua guida nel bosco."
+  - "Ti assegner\xF2 alcuni compiti grazie ai quali imparerai ad essere un vero esploratore."
+  - Per cominciare hai bisogno di una tenda per riposare.
+  - "Nel tuo zaino troverai gi\xE0 un telo e una corda, vai nel bosco a cercare 5
+    bastoni"
+  - Una volta trovati posali sul terreno vicino a loro, posa anche il telo e prendi
+    la corda in mano.
+  - Ora premendo Q riuscirai a montare la tua tenda.
+  TentMedal: {fileID: 11400000, guid: 8ec3fb4ed036c394cbda92fca1f9869f, type: 2}
+  Tent: {fileID: 11400000, guid: bcdf2033ca18327499d59d4d39359ee8, type: 2}
+--- !u!114 &212509344695766265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e49d5f74a02c204d85e3635e042459e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - "Il tuo prossimo compito sar\xE0 catalogare 4 fiori."
+  - Cercali nel bosco e leggi le informazioni che appariranno sul diario.
+  FlowerMedal: {fileID: 11400000, guid: bcda2da1541e3c14fb9d5a6f7ab913b7, type: 2}
+  Flower: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}
+--- !u!114 &212509344695766266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982a9ee196793894094513c6e0a6eecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - "Giovane scout! A breve sar\xE0 buio, quindi devi accendere un fuoco per riscaldarti
+    e allontanare gli animali."
+  - Cerca 5 rami e 5 rocce, e una volta trovati posali nel terreno vicini a loro.
+  - A questo punto prendi l'accendino e premi Q per accendere il fuoco.
+  FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
+  Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
+--- !u!114 &212509344695766264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e84297d70d3d6741acefc5dfcd10808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntroductionDialogue:
+  - Giovane scout. E' ormai notte, guarda quante stelle.
+  - Le stelle si raggruppano in costellazioni, individuane 5.
+  - "Per fare ci\xF2 premi Z cos' da coricarti e guardare all'ins\xF9."
+  - Scruta il cielo e leggi le informazioni delle costellazioni sul diario.
+  StarMedal: {fileID: 11400000, guid: 9724ff68560291842822d9935166e61f, type: 2}
+  Star: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
