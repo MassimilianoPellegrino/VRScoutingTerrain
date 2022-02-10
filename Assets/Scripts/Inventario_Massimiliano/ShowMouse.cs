@@ -8,8 +8,10 @@ public class ShowMouse : MonoBehaviour
     [SerializeField] private Image crosshair;
 
     public static bool isLaying = false;
+    public static bool gamePaused = false;
     void Update()
     {
+        
         if (Cursor.visible)
         {
             crosshair.enabled = false;
