@@ -39,7 +39,6 @@ public class Inventory : MonoBehaviour
         {
             if (items.Contains(item))
             {
-                Debug.Log("Ma che fai");
                 item.quantity++;
             }
             else if (items.Count >= space)
