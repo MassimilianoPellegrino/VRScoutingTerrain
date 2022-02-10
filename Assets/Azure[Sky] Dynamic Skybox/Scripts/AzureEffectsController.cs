@@ -22,10 +22,10 @@ namespace UnityEngine.AzureSky
         public AudioSource lightWindAudioSource;
         public AudioSource mediumWindAudioSource;
         public AudioSource heavyWindAudioSource;
-        public Material defaultRainMaterial;
+        /*public Material defaultRainMaterial;
         public Material heavyRainMaterial;
         public Material snowMaterial;
-        public Material rippleMaterial;
+        public Material rippleMaterial;*/
         public ParticleSystem lightRainParticle;
         public ParticleSystem mediumRainParticle;
         public ParticleSystem heavyRainParticle;
@@ -57,12 +57,12 @@ namespace UnityEngine.AzureSky
 
 		private void Start()
 		{
-			UpdateParticlesMaterials();
+			//UpdateParticlesMaterials();
 		}
 
 		private void Update()
 		{
-			UpdateParticlesMaterials();
+			//UpdateParticlesMaterials();
 			if (Application.isPlaying)
 			{
 				SoundEffectController(lightRainSoundFx, lightRainAudioSource);
@@ -112,13 +112,13 @@ namespace UnityEngine.AzureSky
 		/// <summary>
 		/// Updates the particles color.
 		/// </summary>
-		private void UpdateParticlesMaterials()
+		/*private void UpdateParticlesMaterials()
 		{
 			defaultRainMaterial.SetColor("_TintColor", rainColor);
 			heavyRainMaterial.SetColor("_TintColor", rainColor);
 			snowMaterial.SetColor("_TintColor", snowColor);
 			rippleMaterial.SetColor("_TintColor", rainColor);
-		}
+		}*/
 
 		/// <summary>
 		/// Create a thunder effect in the scene. When the thunder sound is over, the instance is automatically deleted.
