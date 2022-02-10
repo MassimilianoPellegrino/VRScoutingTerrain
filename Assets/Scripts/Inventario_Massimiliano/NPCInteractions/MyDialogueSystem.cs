@@ -38,7 +38,7 @@ public class MyDialogueSystem : MonoBehaviour
 
     private void Update()
     {
-        if (!InventoryUI.InventarioON && !Diary.DiarioON && !ShowMouse.isLaying)
+        if (!InventoryUI.InventarioON && !Diary.DiarioON && !ShowMouse.isLaying && !ShowMouse.gamePaused)
         {
             Cursor.visible = dialogueON;
 
