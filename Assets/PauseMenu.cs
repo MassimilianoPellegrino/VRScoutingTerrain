@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
    public static bool GameIsPaused = false;
    public GameObject pauseMenuUI;
+   private bool mouseAttivo;
 
    void Update()
    {
@@ -14,7 +15,7 @@ public class PauseMenu : MonoBehaviour
        {
            if(GameIsPaused)
            {
-                Resume();
+            Resume();
            }
            else
            {
@@ -25,14 +26,26 @@ public class PauseMenu : MonoBehaviour
 
    public void Resume()
    {
+       mouseAttivo = !mouseAttivo;
+       Cursor.visible = mouseAttivo;
+       if (mouseAttivo)
+        Cursor.lockState = CursorLockMode.Confined;
+       else
+        Cursor.lockState = CursorLockMode.Locked;
        pauseMenuUI.SetActive(false);
        Time.timeScale = 1f;
        GameIsPaused = false;
-
    }
 
    void Pause()
    {
+       mouseAttivo = !mouseAttivo;
+       Cursor.visible = mouseAttivo;
+       if (mouseAttivo)
+        Cursor.lockState = CursorLockMode.Confined;
+       else
+        Cursor.lockState = CursorLockMode.Locked;
+
        pauseMenuUI.SetActive(true);
        Time.timeScale = 0f;
        GameIsPaused = true;

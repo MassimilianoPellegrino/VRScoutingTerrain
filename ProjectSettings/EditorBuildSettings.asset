@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 1103e0a69e6f4aa48b34df6805d37adc
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: a61267e7cc8be754f8c401d20c273a2d
+    path: Assets/Scenes/Movimeno_Edoardo.unity
+    guid: b458f6583cbd5e04bae9a04e21f2fb0e
   m_configObjects: {}
