@@ -43,7 +43,7 @@ public class ItemPickup : MonoBehaviour
     void PickUp()
     {
         if (Input.GetKeyDown(KeyCode.E) && !Interaction.PointingItem.CompareTag("Terrain") 
-            && name == Interaction.PointingItem.name && !HandsOccupied.handsOccupied)
+            && this.gameObject.Equals(Interaction.PointingItem.gameObject) && !HandsOccupied.handsOccupied)
         {
             bool wasPickedUp = Inventory.instance.Add(item);
 

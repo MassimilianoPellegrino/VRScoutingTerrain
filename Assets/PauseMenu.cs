@@ -5,61 +5,68 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-   public static bool GameIsPaused = false;
-   public GameObject pauseMenuUI;
-   private bool mouseAttivo;
+    public static bool GameIsPaused = false;
+    public GameObject pauseMenuUI;
 
-   void Update()
-   {
-       if(Input.GetKeyDown(KeyCode.Escape))
-       {
-           if(GameIsPaused)
-           {
-            Resume();
-           }
-           else
-           {
-           Pause();
-           } 
-       } 
-   }
+    void Update()
+    {
 
-   public void Resume()
-   {
-       mouseAttivo = !mouseAttivo;
-       Cursor.visible = mouseAttivo;
-       if (mouseAttivo)
-        Cursor.lockState = CursorLockMode.Confined;
-       else
-        Cursor.lockState = CursorLockMode.Locked;
-       pauseMenuUI.SetActive(false);
-       Time.timeScale = 1f;
-       GameIsPaused = false;
-   }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
 
-   void Pause()
-   {
-       mouseAttivo = !mouseAttivo;
-       Cursor.visible = mouseAttivo;
-       if (mouseAttivo)
-        Cursor.lockState = CursorLockMode.Confined;
-       else
-        Cursor.lockState = CursorLockMode.Locked;
-       pauseMenuUI.SetActive(true);
-       Time.timeScale = 0f;
-       GameIsPaused = true;
+    }
 
-   }
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
 
-   public void LoadMenu()
-   {
-     Time.timeScale = 1f;  
-     SceneManager.LoadScene("StartMenu");
-   }
+        GameIsPaused = false;
 
-   public void QuitGame()
-   {
-       Application.Quit();
-       Debug.Log("Quitting");
-   }
+        ShowMouse.gamePaused = !ShowMouse.gamePaused;
+
+        Cursor.visible = GameIsPaused;
+        if (GameIsPaused)
+            Cursor.lockState = CursorLockMode.Confined;
+        else
+            Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+
+        GameIsPaused = true;
+
+        ShowMouse.gamePaused = !ShowMouse.gamePaused;
+
+        Cursor.visible = GameIsPaused;
+        if (GameIsPaused)
+            Cursor.lockState = CursorLockMode.Confined;
+        else
+            Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
+    public void LoadMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("StartMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quitting");
+    }
 }
