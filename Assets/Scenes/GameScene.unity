@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.2572374, g: 0.37769598, b: 0.5040727, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2473,7 +2473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &652750276
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7289,6 +7289,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1e9706ddf9b7f6e4c8f349bfea7291a2, type: 3}
   - {fileID: 21300000, guid: 4c244b4bf3a67e24fa0e66c578d9579f, type: 3}
   pagesForNow: []
+  BadgePages: []
   white_left: {fileID: 21300000, guid: a95228268fe7f6144aff597c74853ff1, type: 3}
 --- !u!114 &2016918868
 MonoBehaviour:

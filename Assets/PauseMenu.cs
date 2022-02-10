@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
@@ -60,7 +60,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 1f;  
         SceneManager.LoadScene("StartMenu");
     }
 
