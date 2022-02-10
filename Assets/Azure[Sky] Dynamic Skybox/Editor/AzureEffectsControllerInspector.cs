@@ -191,10 +191,10 @@ namespace UnityEditor.AzureSky
                 EditorGUILayout.PropertyField(m_lightWindAudioSource);
                 EditorGUILayout.PropertyField(m_mediumWindAudioSource);
                 EditorGUILayout.PropertyField(m_heavyWindAudioSource);
-                EditorGUILayout.PropertyField(m_defaultRainMaterial);
+                /*EditorGUILayout.PropertyField(m_defaultRainMaterial);
                 EditorGUILayout.PropertyField(m_heavyRainMaterial);
                 EditorGUILayout.PropertyField(m_snowMaterial);
-                EditorGUILayout.PropertyField(m_rippleMaterial);
+                EditorGUILayout.PropertyField(m_rippleMaterial);*/
                 EditorGUILayout.PropertyField(m_lightRainParticle);
                 EditorGUILayout.PropertyField(m_mediumRainParticle);
                 EditorGUILayout.PropertyField(m_heavyRainParticle);
