@@ -187,6 +187,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4182401630109926296, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -56.379982
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182401630109926296, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.295774
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182401630109926296, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.9761
+      objectReference: {fileID: 0}
     - target: {fileID: 5768843153516194064, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
       propertyPath: m_Name
       value: Hibiscus
@@ -197,15 +209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576624227828806570, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.364
+      value: 721.04614
       objectReference: {fileID: 0}
     - target: {fileID: 6576624227828806570, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.001190126
+      value: 84.62
       objectReference: {fileID: 0}
     - target: {fileID: 6576624227828806570, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.943
+      value: 484.81815
       objectReference: {fileID: 0}
     - target: {fileID: 6576624227828806570, guid: eba0527d0353a2846bad8de1d2080d65, type: 3}
       propertyPath: m_LocalRotation.w
@@ -250,15 +262,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914973523291781707, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 653.817
+      value: 646.7321
       objectReference: {fileID: 0}
     - target: {fileID: 4914973523291781707, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 51.211334
+      value: 54.4221
       objectReference: {fileID: 0}
     - target: {fileID: 4914973523291781707, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 480.1804
+      value: 466.96854
       objectReference: {fileID: 0}
     - target: {fileID: 4914973523291781707, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -291,6 +303,22 @@ PrefabInstance:
     - target: {fileID: 5728207968918429937, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
       propertyPath: m_Name
       value: 'Ranunculus '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585584580459463086, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.33330598
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585584580459463086, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585584580459463086, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585584580459463086, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
+      propertyPath: m_Center.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cdf5d4c88c64b941bf8f0a72998fea8, type: 3}
