@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class UniqueID : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string ID { get; set; }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        ID = transform.position.sqrMagnitude + "-" + name + "-" + transform.GetSiblingIndex();
+        Debug.Log("ID for " + name + "is" + ID);
     }
 }
