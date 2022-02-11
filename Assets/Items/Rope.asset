@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rope
   icon: {fileID: 21300000, guid: ad32d0e161ebd1741b9d858ea19c40ed, type: 3}
-  quantity: 0
+  quantity: 1
   isDefaultItem: 0
   prefab: {fileID: 6620139339928737990, guid: af7d775ea302e974fb6cf183147ff3ae, type: 3}
   toPlaceInHand: 1
   neededForBonfire: 0
   neededForTent: 0
+  isFlower: 0
+  isConstellation: 0

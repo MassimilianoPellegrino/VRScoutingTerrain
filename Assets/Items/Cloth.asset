@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cloth
   icon: {fileID: 21300000, guid: 76e4516d993da8c44b59dbab2c39bc75, type: 3}
-  quantity: 0
+  quantity: 1
   isDefaultItem: 0
   prefab: {fileID: 6706960577965856075, guid: 75e0ae14371811e47a6c7d14adb4cc96, type: 3}
   toPlaceInHand: 0
   neededForBonfire: 0
   neededForTent: 1
+  isFlower: 0
+  isConstellation: 0

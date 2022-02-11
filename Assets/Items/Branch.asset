@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Branch
   icon: {fileID: 21300000, guid: e783475e8cc4982489161afecb236929, type: 3}
-  quantity: 0
+  quantity: 2
   isDefaultItem: 0
   prefab: {fileID: 7523401368274589550, guid: b55ea5799462efd4599073591bc08043, type: 3}
   toPlaceInHand: 0
   neededForBonfire: 1
   neededForTent: 0
+  isFlower: 0
+  isConstellation: 0

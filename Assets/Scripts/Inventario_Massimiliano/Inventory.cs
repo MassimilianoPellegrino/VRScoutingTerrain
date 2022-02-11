@@ -33,6 +33,7 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     public Text handsWarning;
+
     public bool Add(Item item)
     {
         if (!item.isDefaultItem)

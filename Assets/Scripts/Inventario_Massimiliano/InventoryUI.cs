@@ -18,9 +18,7 @@ public class InventoryUI : MonoBehaviour
     public Text SpawnInstruction;
     public Text HandsWarning;
 
-    public Item lighter;
-    public Item cloth;
-    public Item rope;
+    public List<Item> defaultItems;
 
     void Start()
     {
@@ -33,14 +31,11 @@ public class InventoryUI : MonoBehaviour
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>(true);
 
-        lighter.quantity = 0;
-        Inventory.instance.Add(lighter);
-
-        cloth.quantity = 0;
-        Inventory.instance.Add(cloth);
-
-        rope.quantity = 0;
-        Inventory.instance.Add(rope);
+        foreach(Item item in defaultItems)
+        {
+            item.quantity = 0;
+            Inventory.instance.Add(item);
+        }
     }
 
     // Update is called once per frame
