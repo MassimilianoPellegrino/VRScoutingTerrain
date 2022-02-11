@@ -5,7 +5,8 @@ using UnityEngine;
 public class TentChecker : MonoBehaviour
 {
     public Item item;
-    public float radius;
+    public float radiusItems;
+    public float radiusNPC;
     public int sticksNeeded;
     bool gotCloth = false;
     bool gotNPC = false;
@@ -13,36 +14,45 @@ public class TentChecker : MonoBehaviour
     public int CheckAround()
     {
 
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
+        Collider[] hitItems = Physics.OverlapSphere(transform.position, radiusItems);
+        Collider[] hitNPCs = Physics.OverlapSphere(transform.position, radiusNPC);
 
         List<Collider> sticks = new List<Collider>();
         Collider cloth = null;
 
-        foreach (var hitCollider in hitColliders)
+        foreach (var hitItem in hitItems)
         {
-            if ((hitCollider != null && hitCollider.GetComponent<ItemPickup>() != null
-                && (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Wooden Stick")
-                || hitCollider.GetComponent<ItemPickup>().item.name.Equals("Cloth"))) || hitCollider.CompareTag("NPC"))
+            if (hitItem != null && hitItem.GetComponent<ItemPickup>() != null
+                && (hitItem.GetComponent<ItemPickup>().item.name.Equals("Wooden Stick")
+                || hitItem.GetComponent<ItemPickup>().item.name.Equals("Cloth")))
             {
-                if (hitCollider.CompareTag("NPC"))
+                if (hitItem.CompareTag("NPC"))
                 {
                     gotNPC = true;
                 }
-                else if (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Wooden Stick"))
+                else if (hitItem.GetComponent<ItemPickup>().item.name.Equals("Wooden Stick"))
                 {
                     if (sticks.Count < sticksNeeded)
                     {
-                        sticks.Add(hitCollider);
+                        sticks.Add(hitItem);
                     }
                 }
-                else if (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Cloth"))
+                else if (hitItem.GetComponent<ItemPickup>().item.name.Equals("Cloth"))
                 {
                     if (gotCloth == false)
                     {
                         gotCloth = true;
-                        cloth = hitCollider;
+                        cloth = hitItem;
                     }
                 }
+            }
+        }
+
+        foreach(var hitNPC in hitNPCs)
+        {
+            if (hitNPC.CompareTag("NPC"))
+            {
+                gotNPC = true;
             }
         }
 

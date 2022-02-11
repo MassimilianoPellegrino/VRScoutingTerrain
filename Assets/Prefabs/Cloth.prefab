@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 0aaf7a386f702094687c9b117da93cd7, type: 2}
-  radius: 10
-  tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
+  radiusItems: 10
+  radiusNPC: 20
   sticksNeeded: 5
 --- !u!1 &6706960577966074525
 GameObject:
