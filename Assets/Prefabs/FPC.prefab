@@ -24,11 +24,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7620560943861552107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.297, y: 0.4, z: 1.05}
+  m_LocalPosition: {x: 0.73, y: 0, z: 0.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7620560945572738548}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7620560944467044117
 GameObject:
@@ -57,11 +57,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7620560944467044117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32567, y: 0.57, z: 0.65}
+  m_LocalPosition: {x: 0.39, y: 0.4, z: -0.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7620560945572738548}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &7620560944467044121
 Camera:
@@ -176,8 +176,8 @@ Transform:
   m_LocalPosition: {x: -3.06, y: 0.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7620560943861552106}
   - {fileID: 7620560944467044116}
+  - {fileID: 7620560943861552106}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,7 +193,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -234,7 +234,7 @@ MonoBehaviour:
   lowerLookLimit: 80
   upperLookLimitSleep: 40
   lowerLookLimitSleep: 40
-  LookSleep: 100
+  LookSleep: 56
   jumpForce: 8
   gravity: 30
   crouchHeight: 0.5
@@ -292,11 +292,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6cb3eace11794c84db4995aa0a617ad1, type: 3}
   - {fileID: 8300000, guid: 4437bc80104f4f84a9149c54a918b984, type: 3}
   - {fileID: 8300000, guid: 592e7903575792e48aed4b7e5b699e71, type: 3}
-  - {fileID: 8300000, guid: a028be27b3c28494592f11a6ae991669, type: 3}
-  - {fileID: 8300000, guid: aa6430dc92a010541b66a0b86cd9815d, type: 3}
-  - {fileID: 8300000, guid: d848f6efc7d8df1469775a21c5a7846a, type: 3}
-  - {fileID: 8300000, guid: d34dc405a253cf843883e624f19048d5, type: 3}
-  - {fileID: 8300000, guid: a3e270d3a40da90458c342f9eb6d13da, type: 3}
   - {fileID: 8300000, guid: 0056868aff218604e8b0c859b2f72e32, type: 3}
   - {fileID: 8300000, guid: 8d93736d3c6baf341bc47a2953f63663, type: 3}
   - {fileID: 8300000, guid: 5443e371be091954f8902a4fc731c903, type: 3}
