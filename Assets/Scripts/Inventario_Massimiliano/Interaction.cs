@@ -14,6 +14,8 @@ public class Interaction : MonoBehaviour
 
     public static Item item = null;
 
+    public float PickUpDistance;
+
     // Update is called once per frame
     void Update()
     {
@@ -31,7 +33,7 @@ public class Interaction : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3f))
+        if (Physics.Raycast(ray, out hit, PickUpDistance))
         {
             Transform pointing = hit.transform;
 
