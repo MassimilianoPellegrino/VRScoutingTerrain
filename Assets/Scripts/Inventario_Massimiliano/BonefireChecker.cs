@@ -8,12 +8,13 @@ public class BonefireChecker : MonoBehaviour
     public float radius;
     public int rocksNeeded;
     public int branchesNeeded;
+    bool gotNPC = false;
 
     List<Collider> rocks;
     List<Collider> branches;
 
 
-    public bool CheckAround()
+    public int CheckAround()
     {
                
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
@@ -24,11 +25,15 @@ public class BonefireChecker : MonoBehaviour
 
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider != null && hitCollider.GetComponent<ItemPickup>() != null 
+            if ((hitCollider != null && hitCollider.GetComponent<ItemPickup>() != null 
                 && (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Branch") 
-                || hitCollider.GetComponent<ItemPickup>().item.name.Equals("Rock")))
+                || hitCollider.GetComponent<ItemPickup>().item.name.Equals("Rock"))) || hitCollider.CompareTag("NPC"))
             {
-                if (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Branch"))
+                if (hitCollider.CompareTag("NPC"))
+                {
+                    gotNPC = true;
+                }
+                else if (hitCollider.GetComponent<ItemPickup>().item.name.Equals("Branch"))
                 {
                     if (branches.Count < branchesNeeded)
                     {
@@ -45,15 +50,18 @@ public class BonefireChecker : MonoBehaviour
             }
         }
 
-        
-        if(rocks.Count == rocksNeeded && branches.Count == branchesNeeded)
+        if (rocks.Count == rocksNeeded && branches.Count == branchesNeeded && gotNPC)
         {
             Instantiation.instance.InstantiateBonefire(this.gameObject, rocks, branches);
-            return true;
+            return 1;
+        }
+        else if(rocks.Count == rocksNeeded && branches.Count == branchesNeeded)
+        {
+            return 0;
         }
         else
         {
-            return false;
+            return -1;
         }
            
     }
