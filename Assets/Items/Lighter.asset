@@ -20,3 +20,5 @@ MonoBehaviour:
   toPlaceInHand: 1
   neededForBonfire: 0
   neededForTent: 0
+  isFlower: 0
+  isConstellation: 0
