@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 8e5745cfc26ee244f8e682521003e56a, type: 2}
-  radius: 10
-  bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
+  radiusItems: 10
+  radiusNPC: 20
   rocksNeeded: 5
   branchesNeeded: 5
 --- !u!1 &8768750897422464972
