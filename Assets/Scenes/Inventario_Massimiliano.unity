@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.31986156, g: 0.26925722, b: 0.323443, a: 1}
-  m_AmbientEquatorColor: {r: 0.31986156, g: 0.26925722, b: 0.323443, a: 1}
-  m_AmbientGroundColor: {r: 0.31986156, g: 0.26925722, b: 0.323443, a: 1}
+  m_AmbientSkyColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
+  m_AmbientEquatorColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
+  m_AmbientGroundColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17516503, g: 0.2353498, b: 0.3004114, a: 1}
+  m_IndirectSpecularColor: {r: 0.2572374, g: 0.37769598, b: 0.5040727, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1804,9 +1804,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 701075258573319580, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 701075259278164001, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Save
+      objectReference: {fileID: 0}
+    - target: {fileID: 701075259278164003, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 701075259279738534, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
       propertyPath: m_Name
@@ -1976,6 +1984,10 @@ PrefabInstance:
       propertyPath: collectibleItems.Array.data[5]
       value: 
       objectReference: {fileID: 11400000, guid: 9542f100ea2c5e44684e9340fd896031, type: 2}
+    - target: {fileID: 701075259371623945, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1572015704693557349, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
       propertyPath: m_Enabled
       value: 0
