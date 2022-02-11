@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5267398875640827498}
   - component: {fileID: 5267398875640827496}
   - component: {fileID: 5267398875640827497}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 5267398875692797320}
   - component: {fileID: 5267398875692797318}
   - component: {fileID: 5267398875692797319}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5267398875731978549}
   - component: {fileID: 5267398875731978548}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5267398875871699755}
   - component: {fileID: 5267398875871699754}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 5267398876182333005}
   - component: {fileID: 5267398876182333003}
   - component: {fileID: 5267398876182333004}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5267398876720948298}
   - component: {fileID: 5267398876720948297}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 5267398876983836520}
   - component: {fileID: 5267398876983836518}
   - component: {fileID: 5267398876983836519}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5267398877165508911}
   - component: {fileID: 5267398877165508910}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5267398877277814829}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MapBounderies
   m_TagString: Untagged
   m_Icon: {fileID: 0}

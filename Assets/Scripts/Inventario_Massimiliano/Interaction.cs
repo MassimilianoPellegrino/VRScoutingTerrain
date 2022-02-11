@@ -105,8 +105,8 @@ public class Interaction : MonoBehaviour
         }
         else if (Physics.Raycast(ray, out hit))
         {
+
             Transform pointing = hit.transform;
-            
 
             if (pointing.CompareTag("Constellation") && pointing.GetComponent<ItemPickup>() != null && !Diary.DiarioON && !InventoryUI.InventarioON && ShowMouse.isLaying)
             {

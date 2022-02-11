@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5595824784997875759
 Transform:
   m_ObjectHideFlags: 0
@@ -23,8 +23,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5595824784997875744}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -295.19998, y: 200, z: 123.299995}
+  m_LocalRotation: {x: 0.6113275, y: -0.3553572, z: 0.6174222, w: 0.3446589}
+  m_LocalPosition: {x: -134.299, y: 231.6096, z: 167.89223}
   m_LocalScale: {x: 220.31561, y: 218.53697, z: 207.23247}
   m_Children:
   - {fileID: 5342084460885750217}
@@ -39,7 +39,7 @@ Transform:
   - {fileID: 5342084460337389020}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 59.34, y: 90, z: -179.002}
 --- !u!1001 &5595824783014529650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,6 +168,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07806017, y: 0.13879788, z: 0.052187126}
   m_Center: {x: 0.025964566, y: 0.056333352, z: -0.013027959}
+--- !u!114 &4895488301206228572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713356964839929635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!114 &5595824784871453261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,19 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 8b7e0282bebf84d45a68463fe0bc3d3a, type: 2}
   nome: StellaPolare
---- !u!114 &4895488301206228572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4713356964839929635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!1001 &5595824783092078114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -466,6 +466,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07277192, y: 0.11665929, z: 0.032983426}
   m_Center: {x: -0.0008777347, y: -0.02399174, z: 0.010241712}
+--- !u!114 &2890494146778525880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713356964224763750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!114 &5595824783746344348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,19 +493,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: ae809438463dd7945b3c422508a3b2a1, type: 2}
   nome: LeoneMinore
---- !u!114 &2890494146778525880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4713356964224763750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!1001 &5595824783628191802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1011,6 +1011,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25151002, y: 0.19203746, z: 0.031263407}
   m_Center: {x: 0.07977032, y: -0.08601871, z: -0.0015870364}
+--- !u!114 &5059438114645791567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713356963719593907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!114 &5595824783890317832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,19 +1038,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 6a0e8eb8bb746c6439951a974ca295cd, type: 2}
   nome: Cigno
---- !u!114 &5059438114645791567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4713356963719593907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!1001 &5595824784329348847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1349,6 +1349,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12060862, y: 0.045564543, z: 0.01869984}
   m_Center: {x: 0.054054305, y: 0.00962405, z: 0.0030999156}
+--- !u!114 &1236395698385076331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713356964032348841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!114 &5595824783557644364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1363,19 +1376,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cd11c93e8b94eef43b9028b3ae2edf31, type: 2}
   nome: Lucertola
---- !u!114 &1236395698385076331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4713356964032348841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737eb4f0ab5f36f4087639b7d201f78b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
 --- !u!1001 &5595824784735231327
 PrefabInstance:
   m_ObjectHideFlags: 0
