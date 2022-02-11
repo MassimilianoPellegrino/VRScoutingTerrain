@@ -144,7 +144,7 @@ public class Interaction : MonoBehaviour
     }
     void UnmarkSelectable()
     {
-        if (PointingItem == null && PointingNPC == null)
+        if (PointingItem == null && PointingNPC == null && !MapEnd.endReached)
         {
             crosshair.GetComponent<Image>().color = Color.white;
             foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
