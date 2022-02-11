@@ -26,13 +26,32 @@ public class Instantiation : MonoBehaviour
     public GameObject bonefire;
     public GameObject tent;
 
-    public float TentForward;
-    public float FireForward;
+    public Item cloth;
+
+    //public float TentForward;
+    //public float FireForward;
+
+    public Transform NPC;
+    Transform TentPosition;
+    Transform FirePosition;
+
+
+    private void Start()
+    {
+        TentPosition = NPC.GetChild(0);
+        FirePosition = TentPosition.GetChild(0);
+
+    }
+
 
     public void Spawn(Item item)
     {
         callFromInventory = true;
-        Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x -2f, player.transform.position.x +2f), 1f, Random.Range(player.transform.position.z + 1f, player.transform.position.z + 4f)), item.prefab.transform.rotation);
+
+        if(item.Equals(cloth))
+            Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x - 1f, player.transform.position.x + 1f), 1f, Random.Range(player.transform.position.z + 4f, player.transform.position.z + 6f)), item.prefab.transform.rotation);
+        else
+            Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x -2f, player.transform.position.x +2f), 1f, Random.Range(player.transform.position.z + 1f, player.transform.position.z + 4f)), item.prefab.transform.rotation);
     }
     public void SpawnInHand(Item item)
     {
@@ -60,7 +79,9 @@ public class Instantiation : MonoBehaviour
                 Destroy(branch.gameObject);
             }
 
-            var fire = Instantiate(bonefire, new Vector3(player.transform.position.x + 2f, 0.5f, player.transform.position.z + FireForward), bonefire.transform.rotation);
+            //var fire = Instantiate(bonefire, new Vector3(player.transform.position.x + 2f, 0.5f, player.transform.position.z + FireForward), bonefire.transform.rotation);
+
+            var fire = Instantiate(bonefire, FirePosition.position, bonefire.transform.rotation);
 
             if (fire.GetComponent<AssignItem>() != null)
             {
@@ -82,7 +103,9 @@ public class Instantiation : MonoBehaviour
 
             Destroy(cloth.gameObject);
 
-            var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + TentForward), tent.transform.rotation);
+            //var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + TentForward), tent.transform.rotation);
+
+            var hut = Instantiate(tent, TentPosition.position, tent.transform.rotation);
 
             if (hut.GetComponent<AssignItem>() != null)
             {
