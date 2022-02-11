@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7092266829712145413}
   - component: {fileID: 6179801322922455968}
   - component: {fileID: 8225798083101378410}
+  - component: {fileID: 4722762984986188796}
   m_Layer: 0
   m_Name: Camomilla
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7577055368584849087}
-  m_LocalRotation: {x: 0.018944774, y: 0.8785399, z: 0.13259324, w: 0.45850602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.2623496, y: 0.35913444, z: -0.44152015}
-  m_LocalScale: {x: 0.034132693, y: 0.0341327, z: 0.0341327}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4722762984986188796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577055368584849087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2699156, y: 10.398422, z: 3.767552}
+  m_Center: {x: 0.68182826, y: -4.619313, z: -1.2768131}
