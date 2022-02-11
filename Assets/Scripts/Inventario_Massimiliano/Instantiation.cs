@@ -26,10 +26,13 @@ public class Instantiation : MonoBehaviour
     public GameObject bonefire;
     public GameObject tent;
 
+    public float TentForward;
+    public float FireForward;
+
     public void Spawn(Item item)
     {
         callFromInventory = true;
-        Instantiate(item.prefab, player.transform.position + (player.transform.forward * 2), item.prefab.transform.rotation);
+        Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x -2f, player.transform.position.x +2f), 1f, Random.Range(player.transform.position.z + 1f, player.transform.position.z + 4f)), item.prefab.transform.rotation);
     }
     public void SpawnInHand(Item item)
     {
@@ -57,7 +60,7 @@ public class Instantiation : MonoBehaviour
                 Destroy(branch.gameObject);
             }
 
-            var fire = Instantiate(bonefire, new Vector3(player.transform.position.x + 2f, 0.5f, player.transform.position.z + 4f), bonefire.transform.rotation);
+            var fire = Instantiate(bonefire, new Vector3(player.transform.position.x + 2f, 0.5f, player.transform.position.z + FireForward), bonefire.transform.rotation);
 
             if (fire.GetComponent<AssignItem>() != null)
             {
@@ -79,7 +82,7 @@ public class Instantiation : MonoBehaviour
 
             Destroy(cloth.gameObject);
 
-            var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + 4f), bonefire.transform.rotation);
+            var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + TentForward), tent.transform.rotation);
 
             if (hut.GetComponent<AssignItem>() != null)
             {

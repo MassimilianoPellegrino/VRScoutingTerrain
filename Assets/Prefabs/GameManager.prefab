@@ -67,6 +67,8 @@ MonoBehaviour:
   player: {fileID: 0}
   bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
   tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
+  TentForward: 10
+  FireForward: 4
 --- !u!114 &212509344695766261
 MonoBehaviour:
   m_ObjectHideFlags: 0
