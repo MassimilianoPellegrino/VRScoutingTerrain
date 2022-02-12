@@ -19,12 +19,8 @@ public class ItemPickup : MonoBehaviour
 
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Manager"))
         {
-            if (go.name == "GameManager")
-            {
-                FlowersQuest = go.GetComponent<FlowersQuest>();
-                StarsQuest = go.GetComponent<StarsQuest>();
-            }
-
+            FlowersQuest = go.GetComponent<FlowersQuest>();
+            StarsQuest = go.GetComponent<StarsQuest>();
         }
 
 
@@ -71,6 +67,8 @@ public class ItemPickup : MonoBehaviour
 
     void ShowInfoOnDiary()
     {
+        Debug.Log(Interaction.PointingItem.name);
+
         if (((Input.GetKeyDown(KeyCode.F) && Interaction.item.isFlower) || (Input.GetMouseButtonDown(0) && Interaction.item.isConstellation)) 
             && !Interaction.PointingItem.CompareTag("Terrain")
             && name == Interaction.PointingItem.name 

@@ -14,10 +14,7 @@ public class CallBonefire : MonoBehaviour
 
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Manager"))
         {
-            if (go.name == "GameManager")
-            {
-                FireQuest = go.GetComponent<FireQuest>();
-            }
+            FireQuest = go.GetComponent<FireQuest>();
         }
     }
 

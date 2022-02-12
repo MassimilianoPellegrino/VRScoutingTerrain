@@ -14,10 +14,7 @@ public class CallTent : MonoBehaviour
 
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Manager"))
         {
-            if (go.name == "GameManager")
-            {
-                TentQuest = go.GetComponent<TentQuest>();
-            }
+            TentQuest = go.GetComponent<TentQuest>();
         }
     }
 
