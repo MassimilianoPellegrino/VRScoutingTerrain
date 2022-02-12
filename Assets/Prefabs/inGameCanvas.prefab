@@ -5521,7 +5521,10 @@ MonoBehaviour:
   itemsParent: {fileID: 701075258547279921}
   SpawnInstruction: {fileID: 701075258772661549}
   HandsWarning: {fileID: 701075258762728470}
-  defaultItems: []
+  defaultItems:
+  - {fileID: 11400000, guid: 2380dd36a8885f34c881eea7f3878527, type: 2}
+  - {fileID: 11400000, guid: b79de9535467499408612bd927e7a038, type: 2}
+  - {fileID: 11400000, guid: 0aaf7a386f702094687c9b117da93cd7, type: 2}
 --- !u!114 &701075259279738536
 MonoBehaviour:
   m_ObjectHideFlags: 0

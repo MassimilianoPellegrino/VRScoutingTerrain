@@ -35,6 +35,7 @@ public class Instantiation : MonoBehaviour
     Transform TentPosition;
     Transform FirePosition;
 
+    public float spawnHeight;
 
     private void Start()
     {
@@ -49,9 +50,9 @@ public class Instantiation : MonoBehaviour
         callFromInventory = true;
 
         if(item.Equals(cloth))
-            Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x - 1f, player.transform.position.x + 1f), 1f, Random.Range(player.transform.position.z + 4f, player.transform.position.z + 6f)), item.prefab.transform.rotation);
+            Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x - 1f, player.transform.position.x + 1f), player.transform.position.y - spawnHeight, Random.Range(player.transform.position.z + 4f, player.transform.position.z + 6f)), item.prefab.transform.rotation);
         else
-            Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x -2f, player.transform.position.x +2f), 1f, Random.Range(player.transform.position.z + 1f, player.transform.position.z + 4f)), item.prefab.transform.rotation);
+            Instantiate(item.prefab, new Vector3(Random.Range(player.transform.position.x -2f, player.transform.position.x +2f), player.transform.position.y - spawnHeight, Random.Range(player.transform.position.z + 1f, player.transform.position.z + 4f)), item.prefab.transform.rotation);
     }
     public void SpawnInHand(Item item)
     {
