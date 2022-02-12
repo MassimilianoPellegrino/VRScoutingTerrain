@@ -67,7 +67,6 @@ public class ItemPickup : MonoBehaviour
 
     void ShowInfoOnDiary()
     {
-        Debug.Log(Interaction.PointingItem.name);
 
         if (((Input.GetKeyDown(KeyCode.F) && Interaction.item.isFlower) || (Input.GetMouseButtonDown(0) && Interaction.item.isConstellation)) 
             && !Interaction.PointingItem.CompareTag("Terrain")
