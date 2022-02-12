@@ -2,8 +2,6 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
-
-
 public class AudioManager2 : MonoBehaviour
 {
 
@@ -22,6 +20,7 @@ public class AudioManager2 : MonoBehaviour
         	return;
     	}
 
+        DontDestroyOnLoad(gameObject);
 
         foreach (Sound s in sounds)
         {
@@ -31,13 +30,12 @@ public class AudioManager2 : MonoBehaviour
         	s.source.volume = s.volume;
         	s.source.pitch = s.pitch;
         	s.source.loop = s.loop;
-
     	}
     }
 
     void Start () {
      	
-        Play("Wind");
+     	Play("Wind");
 
     }
 
@@ -48,5 +46,4 @@ public class AudioManager2 : MonoBehaviour
         	return;
         s.source.Play();
     }
-
 }
