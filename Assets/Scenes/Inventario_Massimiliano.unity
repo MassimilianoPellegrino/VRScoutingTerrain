@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2572374, g: 0.37769598, b: 0.5040727, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1834,6 +1834,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 100.3
       objectReference: {fileID: 0}
+    - target: {fileID: 701075257905048297, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 701075258186482813, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2052,10 +2056,34 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 9542f100ea2c5e44684e9340fd896031, type: 2}
     - target: {fileID: 701075259371623945, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 701075259564670188, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 701075259564670188, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 701075259781198523, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 701075259781198523, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 701075259781198523, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1572015704693557349, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847724462658241945, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4143732950814376574, guid: 3b9093859ba3ae34fb5b42024bcff63e, type: 3}
