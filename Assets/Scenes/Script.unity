@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 0.9416643, b: 0.9046602, a: 1}
-  m_AmbientEquatorColor: {r: 1, g: 0.9416643, b: 0.9046602, a: 1}
-  m_AmbientGroundColor: {r: 1, g: 0.9416643, b: 0.9046602, a: 1}
+  m_AmbientSkyColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
+  m_AmbientEquatorColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
+  m_AmbientGroundColor: {r: 0.8865571, g: 0.6448519, b: 0.50592333, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -780,17 +780,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
---- !u!114 &476822057 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8349894031263845826, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
-  m_PrefabInstance: {fileID: 476822056}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540512b90e3924248bafc44fd48e1cff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &476822058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8349894031263845852, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
@@ -1505,12 +1494,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540512b90e3924248bafc44fd48e1cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 0}
+  GameManager: {fileID: 1249171917}
   Quests:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1249171921}
+  - {fileID: 1249171920}
+  - {fileID: 1249171919}
+  - {fileID: 1249171918}
   AllQuestsCompleted: 0
 --- !u!114 &1132022851
 MonoBehaviour:
@@ -2003,7 +1992,7 @@ PrefabInstance:
     - target: {fileID: 212509344695766258, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
       propertyPath: NPC
       value: 
-      objectReference: {fileID: 476822058}
+      objectReference: {fileID: 1132022849}
     - target: {fileID: 212509344695766258, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
       propertyPath: cloth
       value: 
@@ -2075,7 +2064,7 @@ PrefabInstance:
     - target: {fileID: 212509344695766262, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
       propertyPath: questGiver
       value: 
-      objectReference: {fileID: 476822057}
+      objectReference: {fileID: 1132022850}
     - target: {fileID: 212509344695766262, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
       propertyPath: AfternoonTime
       value: 14
