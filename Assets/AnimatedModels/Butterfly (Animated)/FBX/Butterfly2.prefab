@@ -980,6 +980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2477448542017798554}
+  - component: {fileID: 3969272287258564346}
   m_Layer: 0
   m_Name: Butterfly2
   m_TagString: Untagged
@@ -1004,6 +1005,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!65 &3969272287258564346
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2477448542017314234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.5, y: 27.8, z: 27.1}
+  m_Center: {x: -1.8, y: -0.36, z: 10.9}
 --- !u!1 &2477448542017314236
 GameObject:
   m_ObjectHideFlags: 0
