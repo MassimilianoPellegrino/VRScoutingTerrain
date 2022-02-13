@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: -0.0016487818, y: 0.71836066, z: 0.14884222}
   m_LocalScale: {x: 0.39171198, y: 0.5339412, z: 0.5032082}
   m_Children: []
-  m_Father: {fileID: 6507754665236773510}
+  m_Father: {fileID: 7433553885579805144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7028755952362730080
@@ -89,8 +89,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6507754665236773510}
+  - component: {fileID: 7433553885579805144}
   - component: {fileID: 4672245221594809323}
+  - component: {fileID: 7367619342310497125}
+  - component: {fileID: 575361644322615867}
   m_Layer: 0
   m_Name: Cartello_indicazioni
   m_TagString: Untagged
@@ -98,15 +100,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6507754665236773510
-Transform:
+--- !u!224 &7433553885579805144
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5844512125005094972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.647, y: 1.312, z: 0}
+  m_LocalRotation: {x: -0, y: -0.678036, z: -0, w: 0.7350288}
+  m_LocalPosition: {x: 0, y: 0, z: 475.19034}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 9028217242188115539}
@@ -114,7 +116,12 @@ Transform:
   - {fileID: 4804316031970164825}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -85.381, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 269.78085, y: 5.075}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &4672245221594809323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128,6 +135,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3961537, y: 2.4662712, z: 1.0745908}
   m_Center: {x: -0.0001335002, y: -0.3861103, z: 0.15422153}
+--- !u!222 &7367619342310497125
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844512125005094972}
+  m_CullTransparentMesh: 1
+--- !u!114 &575361644322615867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844512125005094972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 42
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'CAMPO '
 --- !u!1 &7698035147941388892
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,10 +201,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7698035147941388892}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6507754665236773510}
+  m_Father: {fileID: 7433553885579805144}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8026437663729013613
@@ -187,7 +236,7 @@ Transform:
   m_LocalPosition: {x: -0.036609802, y: 0.15526828, z: 0.2944677}
   m_LocalScale: {x: 0.015, y: 0.59353006, z: 0.015}
   m_Children: []
-  m_Father: {fileID: 6507754665236773510}
+  m_Father: {fileID: 7433553885579805144}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1703174905091269928
