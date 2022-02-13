@@ -5,45 +5,21 @@ using UnityEngine;
 public class AudioManager2 : MonoBehaviour
 {
 
-	public Sound[] sounds;
+	[SerializeField] private AudioMixer _mainMixer;
 
-	public static AudioManager2 instance;
+    private AudioMixerSnapshot ambienteMixerSnapshot;
+    private AudioMixerSnapshot animaliMixerSnapshot;
+
 
     // Start is called before the first frame update
-    void Awake()
-    {
-        if(instance == null)
-        	instance = this;
-        else 
-        {
-        	Destroy(gameObject);
-        	return;
-    	}
-
-        DontDestroyOnLoad(gameObject);
-
-        foreach (Sound s in sounds)
-        {
-        	s.source = gameObject.AddComponent<AudioSource>();
-        	s.source.clip = s.clip;
-
-        	s.source.volume = s.volume;
-        	s.source.pitch = s.pitch;
-        	s.source.loop = s.loop;
-    	}
-    }
+    
 
     void Start () {
      	
-     	Play("Wind");
+     	ambienteMixerSnapshot = _mainMixer.FindSnapshot("Ambiente");
+        animaliMixerSnapshot = _mainMixer.FindSnapshot("Animali");
 
     }
 
-   public void Play (string name)
-   {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        	return;
-        s.source.Play();
-    }
+  
 }
