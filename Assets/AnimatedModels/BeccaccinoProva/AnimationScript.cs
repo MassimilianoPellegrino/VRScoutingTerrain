@@ -10,6 +10,8 @@ public class AnimationScript : MonoBehaviour
     bool questNotOver;
     bool questCompleted;
 
+    int animIndex = 0;
+
  void Start()
  {
      animator = GetComponent<Animator>();
@@ -22,15 +24,17 @@ public class AnimationScript : MonoBehaviour
 
         if (Interaction.PointingNPC != null)
         {
-            if (Input.GetKeyDown(KeyCode.E) && questIndex == -1)
+            if (Input.GetKeyDown(KeyCode.E) && animIndex == 0)
             {
                 animator.SetBool("IsActive", true);
+                animIndex++;
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && questIndex == 0)
+        if (Input.GetMouseButtonDown(0) && animIndex == 1)
         {
             animator.SetBool("isStopped", true);
+            animIndex++;
         }
         
 
