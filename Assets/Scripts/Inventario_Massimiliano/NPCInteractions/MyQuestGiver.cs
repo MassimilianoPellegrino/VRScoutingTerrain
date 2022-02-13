@@ -17,6 +17,13 @@ public class MyQuestGiver : MyNPC
 
     [HideInInspector] public bool AllQuestsCompleted;
 
+    AnimationScript animationScript;
+
+    private void Start()
+    {
+        animationScript = GetComponent<AnimationScript>();
+    }
+
     public override void Interact()
     {
         if(!AssignedQuest && questIndex < Quests.Length-1 )
@@ -53,10 +60,17 @@ public class MyQuestGiver : MyNPC
             AssignedQuest = false;
             Quests[questIndex].enabled = false;
             MyDialogueSystem.Instance.AddNewDialogue(new string[] {"Ottimo! Sei riuscito a svolgere il compito che ti ho assegnato. Eccoti un distintivo, premi F per vederlo sul diario."});
+            animationScript.StartInteracting3();
         }
         else
         {
             MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Non hai ancora completato il tuo compito" });
+            animationScript.StartInteracting2();
         }
+    }
+
+    public int getQuestIndex()
+    {
+        return questIndex;
     }
 }

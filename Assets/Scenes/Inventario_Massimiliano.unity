@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.17516503, g: 0.2353498, b: 0.3004114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -287,6 +287,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &205674469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205674465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.53, y: 4.42, z: 4.22}
+  m_Center: {x: 0, y: 0, z: -0.15}
+--- !u!114 &205674470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205674465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540512b90e3924248bafc44fd48e1cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 1653532593}
+  Quests:
+  - {fileID: 1653532603}
+  - {fileID: 1653532601}
+  - {fileID: 1653532602}
+  - {fileID: 1653532600}
+  AllQuestsCompleted: 0
 --- !u!1001 &368360891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -686,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prova4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fb9e55340e43b4043b5a82a9448c76a5, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8417361359673230750, guid: fb9e55340e43b4043b5a82a9448c76a5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -791,17 +827,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1088616912 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8349894031263845826, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
-  m_PrefabInstance: {fileID: 8349894032331125778}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540512b90e3924248bafc44fd48e1cff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1164704558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1760,7 +1785,7 @@ PrefabInstance:
     - target: {fileID: 212509344695766262, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
       propertyPath: questGiver
       value: 
-      objectReference: {fileID: 1088616912}
+      objectReference: {fileID: 205674470}
     - target: {fileID: 212509344695766262, guid: 24988c6f6fdddea4bb0e798a25bbd2ae, type: 3}
       propertyPath: constellations
       value: 
@@ -2824,13 +2849,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8349894031263845848, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8349894031263845852, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8349894031263845852, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.83
+      value: 22.03
       objectReference: {fileID: 0}
     - target: {fileID: 8349894031263845852, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2838,7 +2867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8349894031263845852, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.91
+      value: 4.24
       objectReference: {fileID: 0}
     - target: {fileID: 8349894031263845852, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2868,5 +2897,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8349894031263845826, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d942b7b05022b0e47a8cec44ec826ec7, type: 3}
