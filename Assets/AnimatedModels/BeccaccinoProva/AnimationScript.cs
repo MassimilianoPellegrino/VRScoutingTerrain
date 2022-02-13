@@ -20,35 +20,21 @@ public class AnimationScript : MonoBehaviour
  {
         questIndex = questGiver.getQuestIndex();
 
-        /*if(Input.GetKey("e") && counter == 0)
+        if (Interaction.PointingNPC != null)
         {
-            animator.SetBool("IsActive", true);
-        } 
-
-        if(Input.GetMouseButtonDown(0))
-        {
-            animator.SetBool("isStopped",true);
-            counter++;
-        } 
-        if(Input.GetKey("e") && counter >= 1)
-        {
-            animator.SetBool("isInteracting2", true);
-        } else
-        {
-            animator.SetBool("isInteracting2", false);
-        }*/
-
-        if (Input.GetKeyDown(KeyCode.E) && questIndex == 0)
-        {
-            animator.SetBool("IsActive", true);
+            if (Input.GetKeyDown(KeyCode.E) && questIndex == -1)
+            {
+                animator.SetBool("IsActive", true);
+            }
         }
 
         if (Input.GetMouseButtonDown(0) && questIndex == 0)
         {
             animator.SetBool("isStopped", true);
         }
+        
 
-        if(Input.GetKeyUp(KeyCode.E) && questNotOver)
+        if (Input.GetKeyUp(KeyCode.E) && questNotOver)
         {
             animator.SetBool("isInteracting2", false);
             questNotOver = false;
@@ -59,6 +45,7 @@ public class AnimationScript : MonoBehaviour
             animator.SetBool("isInteracting3", false);
             questCompleted = false;
         }
+        
     }
 
     public void StartInteracting2()
