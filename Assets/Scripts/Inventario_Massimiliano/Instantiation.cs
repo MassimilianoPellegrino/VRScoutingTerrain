@@ -39,7 +39,7 @@ public class Instantiation : MonoBehaviour
 
     private void Start()
     {
-        TentPosition = NPC.GetChild(2);
+        TentPosition = NPC.Find("TentPlace");
         FirePosition = TentPosition.GetChild(0);
 
     }
