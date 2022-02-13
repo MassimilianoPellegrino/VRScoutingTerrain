@@ -19,8 +19,11 @@ public class MyQuestGiver : MyNPC
 
     AnimationScript animationScript;
 
+    public string[] indicazioniIniziali;
+
     private void Start()
     {
+        MyDialogueSystem.Instance.AddNewDialogue(indicazioniIniziali);
         animationScript = GetComponent<AnimationScript>();
     }
 
