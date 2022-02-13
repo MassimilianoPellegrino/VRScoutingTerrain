@@ -82,7 +82,7 @@ public class Instantiation : MonoBehaviour
 
             //var fire = Instantiate(bonefire, new Vector3(player.transform.position.x + 2f, 0.5f, player.transform.position.z + FireForward), bonefire.transform.rotation);
 
-            var fire = Instantiate(bonefire, FirePosition.position, bonefire.transform.rotation);
+            var fire = Instantiate(bonefire, FirePosition.position, FirePosition.rotation);
 
             if (fire.GetComponent<AssignItem>() != null)
             {
@@ -106,7 +106,7 @@ public class Instantiation : MonoBehaviour
 
             //var hut = Instantiate(tent, new Vector3(player.transform.position.x + 2f, 0f, player.transform.position.z + TentForward), tent.transform.rotation);
 
-            var hut = Instantiate(tent, TentPosition.position, tent.transform.rotation);
+            var hut = Instantiate(tent, TentPosition.position, TentPosition.rotation);
 
             if (hut.GetComponent<AssignItem>() != null)
             {
