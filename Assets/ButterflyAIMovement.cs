@@ -71,7 +71,7 @@ public class ButterflyAIMovement : MonoBehaviour
             isRotatingLeft = true;
             yield return new WaitForSeconds(rotationTime);
             isRotatingLeft = false;
-            Debug.Log("+1 con 1");
+          //  Debug.Log("+1 con 1");
             countTrue += 2;
             countFalse--;
         
@@ -82,27 +82,27 @@ public class ButterflyAIMovement : MonoBehaviour
             isRotatingRight = true;
             yield return new WaitForSeconds(rotationTime);
             isRotatingRight = false;
-            Debug.Log("+1 con 2");
+         //   Debug.Log("+1 con 2");
             countTrue--;
             countFalse++;      
         }
 
         if(countTrue >= 2)
         {
-            Debug.Log("Switch true");
+        //    Debug.Log("Switch true");
             animator.SetBool("IsMoving", true);
         } else
         {
-            Debug.Log("No switch");
+         //   Debug.Log("No switch");
             animator.SetBool("IsMoving", false);
         }
         if(countFalse >= 3)
         {
-            Debug.Log("Switch false");
+         //   Debug.Log("Switch false");
             animator.SetBool("IsMoving", false);
         } else
         {
-            Debug.Log("No switch");
+         //   Debug.Log("No switch");
             animator.SetBool("IsMoving", true);
         }
 
