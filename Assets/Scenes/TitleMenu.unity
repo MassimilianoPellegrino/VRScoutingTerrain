@@ -610,6 +610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cartello_di_legno1
       objectReference: {fileID: 0}
+    - target: {fileID: 824384886845849899, guid: 8eb398545e038b346ba9d3975a97ef32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8eb398545e038b346ba9d3975a97ef32, type: 3}
 --- !u!1 &441328226
