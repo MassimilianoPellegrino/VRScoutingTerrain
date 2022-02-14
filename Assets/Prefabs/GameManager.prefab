@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  bonefire: {fileID: 2482101471119900573, guid: 2f48f566db5bcf44dad5fca233ac2a42, type: 3}
+  bonefire: {fileID: 2301558679007343913, guid: 175634c5e586f934d8a8da25220ea429, type: 3}
   tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
   cloth: {fileID: 0}
   NPC: {fileID: 0}
