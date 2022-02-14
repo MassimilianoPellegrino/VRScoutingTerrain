@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 993535067263979417}
   m_Layer: 0
   m_Name: BeccaccinoAnimatoConTextureNew
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,6 @@ Transform:
   m_Children:
   - {fileID: 7109144005563001259}
   - {fileID: 1722301391491154644}
-  - {fileID: 7327297948629369986}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -509,36 +508,6 @@ MonoBehaviour:
   AllQuestsCompleted: 0
   indicazioniIniziali: []
   GuideSound: {fileID: 0}
---- !u!1 &3266860715031013403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1836149727973110602}
-  m_Layer: 0
-  m_Name: FirePlace
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1836149727973110602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3266860715031013403}
-  m_LocalRotation: {x: -0.015327991, y: -0.40342966, z: 0.0042994525, w: 0.91487217}
-  m_LocalPosition: {x: -1.4856343, y: 1.8406509, z: -14.252121}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7327297948629369986}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3427709490781195326
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,37 +864,6 @@ Transform:
   - {fileID: 3489067205756390476}
   m_Father: {fileID: 3884725259220847445}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6538412172715841092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7327297948629369986}
-  m_Layer: 0
-  m_Name: TentPlace
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7327297948629369986
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6538412172715841092}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.881985, y: -1.7199998, z: 8.336805}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1836149727973110602}
-  m_Father: {fileID: 2564643236580743601}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6559445679926729200
 GameObject:
