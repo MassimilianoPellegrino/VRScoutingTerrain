@@ -22,10 +22,10 @@ public class Interaction : MonoBehaviour
 
     private void Start()
     {
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+        /*foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
         {
             indicazioni.Add(go.GetComponent<Text>());
-        }
+        }*/
     }
 
     void Update()
