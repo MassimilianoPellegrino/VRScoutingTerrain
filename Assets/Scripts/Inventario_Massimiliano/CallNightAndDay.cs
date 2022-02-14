@@ -27,10 +27,15 @@ public class CallNightAndDay : MonoBehaviour
 
     public MyQuestGiver questGiver;
 
+    public Light dirLight;
+    public Light skyLight;
 
     // Update is called once per frame
     void Update()
     {
+        dirLight.transform.rotation = skyLight.transform.rotation;
+        dirLight.color = skyLight.color;
+
         if (!NoonCalled && GetComponent<FlowersQuest>().enabled)
         {
             azt.enabled = true;

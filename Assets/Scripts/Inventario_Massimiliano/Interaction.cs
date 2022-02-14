@@ -16,7 +16,18 @@ public class Interaction : MonoBehaviour
 
     public float PickUpDistance;
 
+    public List<Text> indicazioni;
+
     // Update is called once per frame
+
+    private void Start()
+    {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
+        {
+            indicazioni.Add(go.GetComponent<Text>());
+        }
+    }
+
     void Update()
     {
 
@@ -45,6 +56,9 @@ public class Interaction : MonoBehaviour
 
                 if (item.isFlower && GetComponent<FlowersQuest>().enabled)
                 {
+                    foreach (Text ind in indicazioni)
+                        ind.enabled = false;
+
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
                         if (go.name == "PremiF_fiore")
@@ -54,6 +68,9 @@ public class Interaction : MonoBehaviour
                 }
                 else if (!HandsOccupied.handsOccupied && !item.isFlower)
                 {
+                    foreach (Text ind in indicazioni)
+                        ind.enabled = false;
+
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
                         if (go.name == "PremiE")
@@ -63,6 +80,9 @@ public class Interaction : MonoBehaviour
                 }
                 else if(CallBonefire.LighterIsInHand() && item.neededForBonfire && GetComponent<FireQuest>().enabled)
                 {
+                    foreach (Text ind in indicazioni)
+                        ind.enabled = false;
+
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
                         if (go.name == "PremiQ_fuoco")
@@ -72,6 +92,9 @@ public class Interaction : MonoBehaviour
                 }
                 else if (CallTent.RopeIsInHand() && item.neededForTent && GetComponent<TentQuest>().enabled)
                 {
+                    foreach (Text ind in indicazioni)
+                        ind.enabled = false;
+
                     foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                     {
                         if (go.name == "PremiQ_tenda")
@@ -87,6 +110,9 @@ public class Interaction : MonoBehaviour
                 crosshair.GetComponent<Image>().color = Color.red;
                 PointingNPC = pointing;
                 isPointing = true;
+
+                foreach (Text ind in indicazioni)
+                    ind.enabled = false;
 
                 foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                 {
