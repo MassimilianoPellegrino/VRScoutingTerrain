@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MyQuestGiver : MyNPC
 {
@@ -21,6 +22,8 @@ public class MyQuestGiver : MyNPC
 
     public string[] indicazioniIniziali;
 
+    public AudioSource GuideSound;
+
     private void Start()
     {
         MyDialogueSystem.Instance.AddNewDialogue(indicazioniIniziali);
@@ -29,6 +32,9 @@ public class MyQuestGiver : MyNPC
 
     public override void Interact()
     {
+
+        GuideSound.Play();
+
         if(!AssignedQuest && questIndex < Quests.Length-1 )
         {
             questIndex++;

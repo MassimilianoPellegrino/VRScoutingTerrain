@@ -9,6 +9,7 @@ public class AudioManager2 : MonoBehaviour
 
     private AudioMixerSnapshot ambienteMixerSnapshot;
     private AudioMixerSnapshot animaliMixerSnapshot;
+    private AudioMixerSnapshot effettiMixerSnapshot;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class AudioManager2 : MonoBehaviour
      	
      	ambienteMixerSnapshot = _mainMixer.FindSnapshot("Ambiente");
         animaliMixerSnapshot = _mainMixer.FindSnapshot("Animali");
+        effettiMixerSnapshot = _mainMixer.FindSnapshot("Effetti");
 
     }
 
