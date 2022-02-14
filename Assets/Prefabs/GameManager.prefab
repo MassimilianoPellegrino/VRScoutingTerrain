@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crosshair: {fileID: 0}
   PickUpDistance: 0
+  indicazioni: []
 --- !u!114 &212509344695766258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  bonefire: {fileID: 3853028513862226227, guid: f21afe870fb69a142aeef8e4c84b9180, type: 3}
+  bonefire: {fileID: 2482101471119900573, guid: 2f48f566db5bcf44dad5fca233ac2a42, type: 3}
   tent: {fileID: 1204396150461184293, guid: a65ca54c31b73e247b178ff8029dbbba, type: 3}
   cloth: {fileID: 0}
   NPC: {fileID: 0}
@@ -103,6 +104,8 @@ MonoBehaviour:
   azt: {fileID: 0}
   constellations: {fileID: 0}
   questGiver: {fileID: 0}
+  dirLight: {fileID: 0}
+  skyLight: {fileID: 0}
 --- !u!114 &212509344695766263
 MonoBehaviour:
   m_ObjectHideFlags: 0
