@@ -145,7 +145,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8782836867798483962}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!65 &8769443036739218967
 BoxCollider:
   m_ObjectHideFlags: 0
