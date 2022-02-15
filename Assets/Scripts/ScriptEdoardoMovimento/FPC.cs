@@ -62,6 +62,9 @@ public class FPC : MonoBehaviour
    [SerializeField] private float sleepHeight = 0.1f;    //Sleep height
    [SerializeField] private float standingHeightNotSleep = 2f;     // Stand Height
    private bool isSleeping;    // Is sleeping
+
+   private bool dialogueON;
+
    private bool duringSleepAnimation;    //Is in sleep animation
    [SerializeField] private float timeToSleep = 0.5f;  //Time to sleep/stand
    [SerializeField] private Vector3 standingCenterNotSleep = new Vector3(0,0,0);  //standing center point
@@ -149,10 +152,17 @@ public class FPC : MonoBehaviour
     {
         if(CanMove)
         {
+            if (MyDialogueSystem.dialogueON)
+                dialogueON = true;
+            else
+                dialogueON = false;
+
             HandleMovementInput();
             HandleMouseLock();
 
-            if(canJump)
+            HandleDialogueMouseLock();
+
+            if (canJump)
                HandleJump();
 
             if(canCrouch)
@@ -187,7 +197,7 @@ public class FPC : MonoBehaviour
 
     private void HandleMouseLock()
     {
-      if(!isSleeping)
+      if(!isSleeping && !dialogueON)
        {
         rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
         rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
@@ -205,7 +215,27 @@ public class FPC : MonoBehaviour
         
 
 
-    } 
+    }
+    
+    private void HandleDialogueMouseLock()
+    {
+        if (!dialogueON && !isSleeping)
+        {
+            rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
+            rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
+        }
+        else if (dialogueON)
+        {
+            float camerax = Camera.main.transform.eulerAngles.x;
+
+            rotationY -= Input.GetAxis("Mouse X") * lookSpeedX;
+            rotationY = Mathf.Clamp(-upperLookLimitSleep, lowerLookLimitSleep, rotationY);
+            playerCamera.transform.localRotation = Quaternion.Euler(camerax, 0, 0);
+            transform.rotation *= Quaternion.Euler(0, 0, 0);
+        }
+    }
 
     private void HandleJump()
     {
