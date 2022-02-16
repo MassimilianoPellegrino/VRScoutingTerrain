@@ -21,7 +21,8 @@ public class MyQuestGiver : MyNPC
     AnimationScript animationScript;
 
     public string[] indicazioniIniziali;
-    public string[] dialogoFinale;
+    public string[] fineMissione;
+    public string[] dialogoFineGioco;
 
     public AudioSource GuideSound;
 
@@ -50,7 +51,7 @@ public class MyQuestGiver : MyNPC
         }
         else if(questIndex == Quests.Length- 1)
         {
-            MyDialogueSystem.Instance.AddNewDialogue(dialogoFinale);
+            MyDialogueSystem.Instance.AddNewDialogue(dialogoFineGioco);
             //MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Congratulazione hai svolto tutti i tuoi compiti. Ora sei un vero esploratore!" });
             AllQuestsCompleted = true;
         }
@@ -70,7 +71,7 @@ public class MyQuestGiver : MyNPC
             Quest.GiveReward(questIndex);
             AssignedQuest = false;
             Quests[questIndex].enabled = false;
-            MyDialogueSystem.Instance.AddNewDialogue(new string[] {"Ottimo! Sei riuscito a svolgere il compito che ti ho assegnato. Eccoti un distintivo, premi F per vederlo sul diario."});
+            MyDialogueSystem.Instance.AddNewDialogue(fineMissione);
             animationScript.StartInteracting3();
         }
         else
