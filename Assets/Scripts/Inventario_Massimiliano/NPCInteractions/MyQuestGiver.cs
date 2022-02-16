@@ -21,6 +21,7 @@ public class MyQuestGiver : MyNPC
     AnimationScript animationScript;
 
     public string[] indicazioniIniziali;
+    public string[] dialogoFinale;
 
     public AudioSource GuideSound;
 
@@ -49,7 +50,8 @@ public class MyQuestGiver : MyNPC
         }
         else if(questIndex == Quests.Length- 1)
         {
-            MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Congratulazione hai svolto tutti i tuoi compiti. Ora sei un vero esploratore!" });
+            MyDialogueSystem.Instance.AddNewDialogue(dialogoFinale);
+            //MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Congratulazione hai svolto tutti i tuoi compiti. Ora sei un vero esploratore!" });
             AllQuestsCompleted = true;
         }
 
@@ -73,7 +75,8 @@ public class MyQuestGiver : MyNPC
         }
         else
         {
-            MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Non hai ancora completato il tuo compito" });
+            MyDialogueSystem.Instance.AddNewDialogue(Quests[questIndex].CheckDialogue);
+            //MyDialogueSystem.Instance.AddNewDialogue(new string[] { "Non hai ancora completato il tuo compito" });
             animationScript.StartInteracting2();
         }
     }

@@ -18,6 +18,7 @@ TagManager:
   - Interactable Object
   - NPC
   - Manager
+  - Entrance
   layers:
   - Default
   - TransparentFX

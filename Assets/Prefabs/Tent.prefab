@@ -1,5 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &336003874984963716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8507553976899660238}
+  - component: {fileID: 1530607786008839558}
+  - component: {fileID: 4001935689324518991}
+  m_Layer: 0
+  m_Name: triggerAbbassati (1)
+  m_TagString: Entrance
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8507553976899660238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336003874984963716}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0001, y: 0.01365, z: -0.02744}
+  m_LocalScale: {x: 0.028984996, y: 0.02898502, z: 0.02898502}
+  m_Children: []
+  m_Father: {fileID: 1204396150460827269}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1530607786008839558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336003874984963716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.51582074, z: 0.33622488}
+  m_Center: {x: 0, y: -0.24208963, z: 0.27072802}
+--- !u!114 &4001935689324518991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336003874984963716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0020bee78bd0cb4a9f485fd69a786df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avvisoTenda:
+  - Abbassati con ctrl sinistro per entrare nella tenda
 --- !u!1 &1204396150461112823
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +263,8 @@ Transform:
   - {fileID: 8856765019738987782}
   - {fileID: 3787695283484745322}
   - {fileID: 6117180106874984464}
+  - {fileID: 5748396199341711162}
+  - {fileID: 8507553976899660238}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -540,6 +601,65 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06654639, y: 0.15612438, z: 0.060548734}
   m_Center: {x: 0.104154795, y: -0.42694247, z: 0.58942693}
+--- !u!1 &6475751702062041672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5748396199341711162}
+  - component: {fileID: 673933042813868705}
+  - component: {fileID: 4150148751582020744}
+  m_Layer: 0
+  m_Name: triggerAbbassati
+  m_TagString: Entrance
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5748396199341711162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475751702062041672}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0001, y: 0.01365, z: 0.0123}
+  m_LocalScale: {x: 0.028984996, y: 0.02898502, z: 0.02898502}
+  m_Children: []
+  m_Father: {fileID: 1204396150460827269}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &673933042813868705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475751702062041672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.51582074, z: 0.33622488}
+  m_Center: {x: 0, y: -0.24208963, z: 0.27072802}
+--- !u!114 &4150148751582020744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475751702062041672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0020bee78bd0cb4a9f485fd69a786df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avvisoTenda:
+  - Abbassati con ctrl sinistro per passare nell'ingresso della tenda.
 --- !u!1 &7125933893609450595
 GameObject:
   m_ObjectHideFlags: 0

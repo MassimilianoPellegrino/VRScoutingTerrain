@@ -11,6 +11,7 @@ public class MyQuest : MonoBehaviour
     public Item Medal { get; set; }
     public bool Completed { get; set; }
     public string[] IntroductionDialogue;
+    public string[] CheckDialogue;
 
     public void CheckGoals()
     {
