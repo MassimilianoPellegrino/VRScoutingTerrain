@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2280706014010849375}
   - component: {fileID: 942494881368982595}
   - component: {fileID: 3460518752795460757}
+  - component: {fileID: 3885856446545646415}
   m_Layer: 0
   m_Name: BonfireAnimazione
   m_TagString: Untagged
@@ -94,7 +95,7 @@ SphereCollider:
   m_GameObject: {fileID: 2301558679007343913}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.8299888
   m_Center: {x: 0.06513372, y: -0.11451232, z: 0.019367494}
@@ -111,6 +112,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
+--- !u!65 &3885856446545646415
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301558679007343913}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1553347, y: 2.3192873, z: 1.3060739}
+  m_Center: {x: 0, y: 0.73126805, z: 0}
 --- !u!1 &3064825337590806774
 GameObject:
   m_ObjectHideFlags: 0
