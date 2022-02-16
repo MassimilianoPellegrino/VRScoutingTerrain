@@ -105,7 +105,7 @@ public class Interaction : MonoBehaviour
                 PointingItem = pointing;
                 isPointing = true;
             }
-            else if(pointing.CompareTag("NPC") && !Diary.DiarioON && !InventoryUI.InventarioON && !MyDialogueSystem.dialogueON)
+            else if(pointing.CompareTag("NPC") && !Diary.DiarioON && !InventoryUI.InventarioON)
             {
                 crosshair.GetComponent<Image>().color = Color.red;
                 PointingNPC = pointing;
@@ -116,7 +116,7 @@ public class Interaction : MonoBehaviour
 
                 foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                 {
-                    if (go.name == "PremiE_npc")
+                    if (go.name == "PremiE_npc" && !MyDialogueSystem.dialogueON)
                         go.GetComponent<Text>().enabled = true;
 
                 }

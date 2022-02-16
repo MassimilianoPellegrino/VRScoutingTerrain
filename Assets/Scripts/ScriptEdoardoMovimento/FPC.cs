@@ -66,6 +66,7 @@ public class FPC : MonoBehaviour
    private bool dialogueON;
    private bool diaryON;
    private bool inventoryON;
+   private bool pauseON;
 
    private bool duringSleepAnimation;    //Is in sleep animation
    [SerializeField] private float timeToSleep = 0.5f;  //Time to sleep/stand
@@ -169,12 +170,18 @@ public class FPC : MonoBehaviour
             else
                 diaryON = false;
 
+            if (PauseMenu.GameIsPaused)
+                pauseON = true;
+            else
+                pauseON = false;
+
             HandleMovementInput();
             HandleMouseLock();
 
             HandleUIMouseLock(dialogueON);
             HandleUIMouseLock(inventoryON);
             HandleUIMouseLock(diaryON);
+            HandleUIMouseLock(pauseON);
 
             if (canJump)
                HandleJump();
@@ -209,9 +216,17 @@ public class FPC : MonoBehaviour
         moveDirection.y = moveDirectionY;
     }
 
+    private bool UIInactive()
+    {
+        if (!isSleeping && !dialogueON && !diaryON && !inventoryON && !pauseON)
+            return true;
+        else
+            return false;
+    }
+
     private void HandleMouseLock()
     {
-      if(!isSleeping && !dialogueON && !diaryON && !inventoryON)
+      if(UIInactive())
        {
         rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
         rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
@@ -233,14 +248,7 @@ public class FPC : MonoBehaviour
 
     private void HandleUIMouseLock(bool isUIActive)
     {
-        if (!isSleeping && !dialogueON && !diaryON && !inventoryON)
-        {
-            rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
-            rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
-        }
-        else if (isUIActive)
+        if (isUIActive)
         {
             float camerax = Camera.main.transform.eulerAngles.x;
 

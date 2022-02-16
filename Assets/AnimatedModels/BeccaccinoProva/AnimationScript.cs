@@ -24,8 +24,15 @@ public class AnimationScript : MonoBehaviour
 
         if (Interaction.PointingNPC != null)
         {
+
+            if (Input.GetKey(KeyCode.E))
+                
+
+
             if (Input.GetKeyDown(KeyCode.E) && animIndex == 0)
             {
+                
+
                 animator.SetBool("IsActive", true);
                 animIndex++;
             }
