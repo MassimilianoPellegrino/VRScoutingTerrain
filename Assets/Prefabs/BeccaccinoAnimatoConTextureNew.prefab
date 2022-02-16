@@ -370,7 +370,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6842161226604527855, guid: 77175eb62d84a584599a016a223105c1, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4fb135d3c45ee7343ba34122f8adc35f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 78e7cc32ec00238469842931f82a76b9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -507,6 +507,8 @@ MonoBehaviour:
   - {fileID: 0}
   AllQuestsCompleted: 0
   indicazioniIniziali: []
+  fineMissione: []
+  dialogoFineGioco: []
   GuideSound: {fileID: 0}
 --- !u!1 &3427709490781195326
 GameObject:
