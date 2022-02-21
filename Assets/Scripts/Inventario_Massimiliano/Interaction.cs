@@ -48,16 +48,20 @@ public class Interaction : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, PickUpDistance))
         {
-            if (lastPointed != null)
-            {
-                lastPointed.GetComponentInChildren<Outline>().enabled = false;
-                lastPointed = null;
-            }
 
             Transform pointing = hit.transform;
 
             if (pointing.CompareTag("Selectable") && pointing.GetComponent<ItemPickup>()!= null && !InventoryUI.InventarioON)
             {
+                if (lastPointed != null)
+                {
+                    if (!lastPointed.gameObject.Equals(pointing.gameObject))
+                    {
+                        lastPointed.GetComponentInChildren<Outline>().enabled = false;
+                        lastPointed = null;
+                    }
+                }
+
                 item = pointing.GetComponent<ItemPickup>().item;
 
                 crosshair.GetComponent<Image>().color = Color.red;
