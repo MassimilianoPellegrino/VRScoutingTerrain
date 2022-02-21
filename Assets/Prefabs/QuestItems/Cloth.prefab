@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6025223413919121609}
   - component: {fileID: -3185415428982814194}
   - component: {fileID: -1315557912915902258}
+  - component: {fileID: 6598930047444819131}
   m_Layer: 0
   m_Name: Cloth
   m_TagString: Selectable
@@ -94,6 +95,24 @@ MonoBehaviour:
   radiusItems: 10
   radiusNPC: 20
   sticksNeeded: 5
+--- !u!114 &6598930047444819131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6706960577965856075}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.9529412, g: 0.9529412, b: 0.47058824, a: 1}
+  outlineWidth: 1.5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6706960577966074525
 GameObject:
   m_ObjectHideFlags: 0

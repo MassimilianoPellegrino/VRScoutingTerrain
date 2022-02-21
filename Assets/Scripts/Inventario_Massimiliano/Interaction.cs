@@ -18,6 +18,8 @@ public class Interaction : MonoBehaviour
 
     public List<Text> indicazioni;
 
+    Transform lastPointed;
+
     // Update is called once per frame
 
     private void Start()
@@ -46,6 +48,12 @@ public class Interaction : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, PickUpDistance))
         {
+            if (lastPointed != null)
+            {
+                lastPointed.GetComponentInChildren<Outline>().enabled = false;
+                lastPointed = null;
+            }
+
             Transform pointing = hit.transform;
 
             if (pointing.CompareTag("Selectable") && pointing.GetComponent<ItemPickup>()!= null && !InventoryUI.InventarioON)
@@ -53,6 +61,10 @@ public class Interaction : MonoBehaviour
                 item = pointing.GetComponent<ItemPickup>().item;
 
                 crosshair.GetComponent<Image>().color = Color.red;
+
+                pointing.GetComponentInChildren<Outline>().enabled = true;
+
+                lastPointed = pointing;
 
                 if (item.isFlower && GetComponent<FlowersQuest>().enabled)
                 {
@@ -179,6 +191,12 @@ public class Interaction : MonoBehaviour
             }
             PointingItem = null;
             PointingNPC = null;
+
+            if(lastPointed != null)
+            {
+                lastPointed.GetComponentInChildren<Outline>().enabled = false;
+                lastPointed = null;
+            }
         }
     }
 

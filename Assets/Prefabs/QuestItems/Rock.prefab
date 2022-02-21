@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8769443036739218962}
   - component: {fileID: 8725638111221187839}
   - component: {fileID: 2775174539289077452}
+  - component: {fileID: 111784542560697642}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Selectable
@@ -206,6 +207,24 @@ MonoBehaviour:
   radiusNPC: 20
   rocksNeeded: 5
   branchesNeeded: 5
+--- !u!114 &111784542560697642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768750895911578766}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.9529412, g: 0.9529412, b: 0.47058824, a: 1}
+  outlineWidth: 1.5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8768750897422464972
 GameObject:
   m_ObjectHideFlags: 0
