@@ -223,7 +223,8 @@ public class Outline : MonoBehaviour {
       var smoothNormal = Vector3.zero;
 
       foreach (var pair in group) {
-        smoothNormal += mesh.normals[pair.Value];
+        //smoothNormal += mesh.normals[pair.Value];
+        smoothNormal += smoothNormals[pair.Value];
       }
 
       smoothNormal.Normalize();
