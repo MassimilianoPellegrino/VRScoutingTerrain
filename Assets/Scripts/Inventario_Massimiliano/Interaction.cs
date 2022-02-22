@@ -152,10 +152,23 @@ public class Interaction : MonoBehaviour
 
             if (pointing.CompareTag("Constellation") && pointing.GetComponent<ItemPickup>() != null && !Diary.DiarioON && !InventoryUI.InventarioON && ShowMouse.isLaying)
             {
+                if (lastPointed != null)
+                {
+                    if (!lastPointed.gameObject.Equals(pointing.gameObject))
+                    {
+                        lastPointed.GetComponentInChildren<Outline>().enabled = false;
+                        lastPointed = null;
+                    }
+                }
+
 
                 item = pointing.GetComponent<ItemPickup>().item;
 
                 crosshair.GetComponent<Image>().color = Color.red;
+
+                pointing.GetComponentInChildren<Outline>().enabled = true;
+
+                lastPointed = pointing;
 
                 if (item.isConstellation && GetComponent<StarsQuest>().enabled)
                 {
