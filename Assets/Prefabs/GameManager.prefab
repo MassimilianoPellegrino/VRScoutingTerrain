@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 212509344695766265}
   - component: {fileID: 212509344695766266}
   - component: {fileID: 212509344695766264}
+  - component: {fileID: 1727784202206902328}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -139,6 +140,7 @@ MonoBehaviour:
   - Una volta trovati posali sul terreno vicino a loro, posa anche il telo e prendi
     la corda in mano.
   - Ora premendo Q riuscirai a montare la tua tenda.
+  CheckDialogue: []
   TentMedal: {fileID: 11400000, guid: 8ec3fb4ed036c394cbda92fca1f9869f, type: 2}
   Tent: {fileID: 11400000, guid: bcdf2033ca18327499d59d4d39359ee8, type: 2}
 --- !u!114 &212509344695766265
@@ -156,6 +158,7 @@ MonoBehaviour:
   IntroductionDialogue:
   - "Il tuo prossimo compito sar\xE0 catalogare 4 fiori."
   - Cercali nel bosco e leggi le informazioni che appariranno sul diario.
+  CheckDialogue: []
   FlowerMedal: {fileID: 11400000, guid: bcda2da1541e3c14fb9d5a6f7ab913b7, type: 2}
   Flower: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}
 --- !u!114 &212509344695766266
@@ -175,6 +178,7 @@ MonoBehaviour:
     e allontanare gli animali."
   - Cerca 5 rami e 5 rocce, e una volta trovati posali nel terreno vicini a loro.
   - A questo punto prendi l'accendino e premi Q per accendere il fuoco.
+  CheckDialogue: []
   FireMedal: {fileID: 11400000, guid: 11fbe6c0f3b1b694ca84dd5e5f31b7f7, type: 2}
   Bonfire: {fileID: 11400000, guid: f6246166985e5f947ac2f40193e7fef4, type: 2}
 --- !u!114 &212509344695766264
@@ -194,5 +198,19 @@ MonoBehaviour:
   - Le stelle si raggruppano in costellazioni, individuane 5.
   - "Per fare ci\xF2 guarda le stelle e premi Z."
   - Scruta il cielo e leggi le informazioni delle costellazioni sul diario.
+  CheckDialogue: []
   StarMedal: {fileID: 11400000, guid: 9724ff68560291842822d9935166e61f, type: 2}
   Star: {fileID: 11400000, guid: c628bd63a0f8b294997b9055c7d87377, type: 2}
+--- !u!114 &1727784202206902328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212509344695766257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02aba94fe68ba24ca9f664451d2add1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editedMeshes: []

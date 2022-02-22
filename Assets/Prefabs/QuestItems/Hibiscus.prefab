@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4182401630109926296}
   - component: {fileID: 8743778955074287549}
   - component: {fileID: 4937388476923850685}
-  - component: {fileID: 663240645109084921}
   m_Layer: 0
   m_Name: flovers00
   m_TagString: Untagged
@@ -88,24 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &663240645109084921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4718346366548128085}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.9529412, g: 0.9529412, b: 0.47058824, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &5768843153516194064
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +99,7 @@ GameObject:
   - component: {fileID: -2006684983295361465}
   - component: {fileID: 2245296991371130849}
   - component: {fileID: 3122266409120391942}
+  - component: {fileID: 7902437222091138600}
   m_Layer: 0
   m_Name: Hibiscus
   m_TagString: Selectable
@@ -180,3 +162,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 6f68963be86069445911177444802ac4, type: 2}
+--- !u!114 &7902437222091138600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768843153516194064}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.9529412, g: 0.9529412, b: 0.47058824, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
