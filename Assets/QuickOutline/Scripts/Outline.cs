@@ -82,6 +82,15 @@ public class Outline : MonoBehaviour {
 
   void Awake() {
 
+        MeshFilter[] meshFilter = GetComponentsInChildren<MeshFilter>();
+        for (int i = 0; i < meshFilter.Length; i++)
+        {
+            if (meshFilter[i].sharedMesh.subMeshCount > 1)
+            {
+                meshFilter[i].sharedMesh.SetTriangles(meshFilter[i].sharedMesh.triangles, meshFilter[i].sharedMesh.subMeshCount - 1);
+            }
+        }
+
     // Cache renderers
     renderers = GetComponentsInChildren<Renderer>();
 
