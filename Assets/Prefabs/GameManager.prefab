@@ -213,4 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02aba94fe68ba24ca9f664451d2add1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tulipMesh: {fileID: 5358217654758574749, guid: 48f5fc8ff23cfeb4697b569b8379b0a7, type: 3}
+  ibiscusMesh: {fileID: 2078131841128754624, guid: ae90818114c749e478889e1b4411bbe3, type: 3}
   editedMeshes: []

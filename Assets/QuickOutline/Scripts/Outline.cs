@@ -80,11 +80,11 @@ public class Outline : MonoBehaviour {
 
   private bool needsUpdate;
 
-  void Awake() {
+  
 
-        var meshList = MeshController.instance.editedMeshes;
+    void Awake() {
 
-        SkinnedMeshRenderer[] skinnedMeshRenderer = GetComponentsInChildren<SkinnedMeshRenderer>();
+        /*SkinnedMeshRenderer[] skinnedMeshRenderer = GetComponentsInChildren<SkinnedMeshRenderer>();
         for (int i = 0; i < skinnedMeshRenderer.Length; i++)
         {
             if (skinnedMeshRenderer[i].sharedMesh.subMeshCount > 1)
@@ -94,16 +94,18 @@ public class Outline : MonoBehaviour {
             }
         }
 
+        //meshList = MeshController.instance.editedMeshes;
+
         MeshFilter[] meshFilter = GetComponentsInChildren<MeshFilter>();
         for (int i = 0; i < meshFilter.Length; i++)
         {
-            if (meshFilter[i].sharedMesh.subMeshCount > 1 && !meshList.Contains(meshFilter[i].sharedMesh))
+            if (meshFilter[i].sharedMesh.subMeshCount > 1 && !MeshController.instance.ContainsMesh(meshFilter[i].sharedMesh))
             {
                 meshFilter[i].sharedMesh.subMeshCount = meshFilter[i].sharedMesh.subMeshCount + 1;
                 meshFilter[i].sharedMesh.SetTriangles(meshFilter[i].sharedMesh.triangles, meshFilter[i].sharedMesh.subMeshCount - 1);
-                meshList.Add(meshFilter[i].sharedMesh);
+                MeshController.instance.AddMesh(meshFilter[i].sharedMesh);
             }
-        }
+        }*/
 
     // Cache renderers
     renderers = GetComponentsInChildren<Renderer>();
