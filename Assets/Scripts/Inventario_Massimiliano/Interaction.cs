@@ -132,7 +132,7 @@ public class Interaction : MonoBehaviour
 
                 foreach (GameObject go in GameObject.FindGameObjectsWithTag("Indicazione"))
                 {
-                    if (go.name == "PremiE_npc" && !MyDialogueSystem.dialogueON)
+                    if (go.name == "PremiE_npc" && !MyDialogueSystem.dialogueON && !ShowMouse.isLaying)
                         go.GetComponent<Text>().enabled = true;
 
                 }

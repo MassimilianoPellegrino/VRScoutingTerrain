@@ -12,6 +12,9 @@ public class AnimationScript : MonoBehaviour
 
     int animIndex = 0;
 
+    public AudioSource missioneNonCompletata;
+    public AudioSource missioneCompletata;
+
  void Start()
  {
      animator = GetComponent<Animator>();
@@ -62,12 +65,18 @@ public class AnimationScript : MonoBehaviour
     public void StartInteracting2()
     {
         animator.SetBool("isInteracting2", true);
+
+        missioneNonCompletata.Play();
+
         questNotOver = true;
     }
 
     public void StartInteracting3()
     {
         animator.SetBool("isInteracting3", true);
+
+        missioneCompletata.Play();
+
         questCompleted = true;
     }
 }
