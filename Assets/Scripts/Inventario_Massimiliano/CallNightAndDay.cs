@@ -30,6 +30,8 @@ public class CallNightAndDay : MonoBehaviour
     public GameObject gufo;
     public GameObject uccelli;
 
+    public List<AudioSource> grilli;
+
     public MyQuestGiver questGiver;
 
     public Light dirLight;
@@ -87,6 +89,11 @@ public class CallNightAndDay : MonoBehaviour
             ventoNotte.SetActive(true);
             gufo.SetActive(true);
 
+            foreach(AudioSource audiosource in grilli)
+            {
+                audiosource.enabled = true;
+            }
+
             constellations.SetActive(true);
         }
 
@@ -99,6 +106,11 @@ public class CallNightAndDay : MonoBehaviour
 
             ventoNotte.SetActive(false);
             gufo.SetActive(false);
+
+            foreach (AudioSource audiosource in grilli)
+            {
+                audiosource.enabled = false;
+            }
 
             AfterGameTimeCalled = true;
         }
