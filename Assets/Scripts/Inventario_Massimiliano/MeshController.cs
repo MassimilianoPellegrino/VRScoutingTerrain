@@ -35,7 +35,7 @@ public class MeshController : MonoBehaviour
 
         //dopo il primo play, commentare da qui...
 
-        if (tulipMesh.subMeshCount < 4)
+        /*if (tulipMesh.subMeshCount < 4)
         {
             tulipMesh.subMeshCount = tulipMesh.subMeshCount + 1;
             tulipMesh.SetTriangles(tulipMesh.triangles, tulipMesh.subMeshCount - 1);
@@ -105,7 +105,7 @@ public class MeshController : MonoBehaviour
         {
             leoneMinore.subMeshCount = leoneMinore.subMeshCount + 1;
             leoneMinore.SetTriangles(leoneMinore.triangles, leoneMinore.subMeshCount - 1);
-        }
+        }*/
 
         //...a qui
     }
