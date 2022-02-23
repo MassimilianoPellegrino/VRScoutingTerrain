@@ -25,6 +25,11 @@ public class CallNightAndDay : MonoBehaviour
     public AzureTimeController azt;
     public GameObject constellations;
 
+    public GameObject ventoGiorno;
+    public GameObject ventoNotte;
+    public GameObject gufo;
+    public GameObject uccelli;
+
     public MyQuestGiver questGiver;
 
     public Light dirLight;
@@ -69,12 +74,19 @@ public class CallNightAndDay : MonoBehaviour
             azt.enabled = true;
             azt.StartTimelineTransition(NightTime + 1, 00, 100, AzureTimeDirection.Forward);
 
+            ventoGiorno.SetActive(false);
+            uccelli.SetActive(false);
+
             NightCalled = true;
         }
         if (NightCalled && azt.GetTimeline() > NightTime)
         {
             NightCalled = false;
             azt.enabled = false;
+
+            ventoNotte.SetActive(true);
+            gufo.SetActive(true);
+
             constellations.SetActive(true);
         }
 
@@ -85,12 +97,18 @@ public class CallNightAndDay : MonoBehaviour
             constellations.SetActive(false);
             azt.StartTimelineTransition(AfterGameTime - 1, 00, 100, AzureTimeDirection.Backward);
 
+            ventoNotte.SetActive(false);
+            gufo.SetActive(false);
+
             AfterGameTimeCalled = true;
         }
         if(AfterGameTimeCalled && azt.GetTimeline() < AfterGameTime)
         {
             AfterGameTimeCalled = false;
             azt.enabled = false;
+
+            ventoGiorno.SetActive(true);
+            uccelli.SetActive(true);
         }
 
     }
