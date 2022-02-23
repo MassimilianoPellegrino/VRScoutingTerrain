@@ -35,8 +35,6 @@ public class MyQuestGiver : MyNPC
     public override void Interact()
     {
 
-        GuideSound.Play();
-
         if(!AssignedQuest && questIndex < Quests.Length-1 )
         {
             questIndex++;
@@ -60,6 +58,8 @@ public class MyQuestGiver : MyNPC
 
     void AssignQuest()
     {
+        GuideSound.Play();
+
         AssignedQuest = true;
         Quest = Quests[questIndex];
     }

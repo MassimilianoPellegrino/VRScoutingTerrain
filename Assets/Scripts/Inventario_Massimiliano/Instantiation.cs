@@ -37,6 +37,8 @@ public class Instantiation : MonoBehaviour
 
     public float spawnHeight;
 
+    public static GameObject fire;
+
     private void Start()
     {
         TentPosition = NPC.Find("TentPlace");
@@ -82,7 +84,7 @@ public class Instantiation : MonoBehaviour
 
             //var fire = Instantiate(bonefire, new Vector3(player.transform.position.x + 2f, 0.5f, player.transform.position.z + FireForward), bonefire.transform.rotation);
 
-            var fire = Instantiate(bonefire, FirePosition.position, FirePosition.rotation);
+            fire = Instantiate(bonefire, FirePosition.position, FirePosition.rotation);
 
             if (fire.GetComponent<AssignItem>() != null)
             {

@@ -30,6 +30,8 @@ public class CallNightAndDay : MonoBehaviour
     public GameObject gufo;
     public GameObject uccelli;
 
+    public GameObject uccelli2;
+
     public List<AudioSource> grilli;
 
     public MyQuestGiver questGiver;
@@ -78,6 +80,7 @@ public class CallNightAndDay : MonoBehaviour
 
             ventoGiorno.SetActive(false);
             uccelli.SetActive(false);
+            uccelli2.SetActive(false);
 
             NightCalled = true;
         }
@@ -112,6 +115,13 @@ public class CallNightAndDay : MonoBehaviour
                 audiosource.enabled = false;
             }
 
+            if (Instantiation.fire != null)
+            {
+                Instantiation.fire.transform.GetChild(0).gameObject.SetActive(false);
+                Instantiation.fire.transform.GetChild(1).gameObject.SetActive(false);
+            }
+
+
             AfterGameTimeCalled = true;
         }
         if(AfterGameTimeCalled && azt.GetTimeline() < AfterGameTime)
@@ -121,6 +131,7 @@ public class CallNightAndDay : MonoBehaviour
 
             ventoGiorno.SetActive(true);
             uccelli.SetActive(true);
+            uccelli2.SetActive(true);
         }
 
     }
