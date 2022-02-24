@@ -12,10 +12,10 @@ public class ItemPickup : MonoBehaviour
 
     private void Start()
     {
-        /*if (!Instantiation.CalledFromInventory())
+        if (!Instantiation.CalledFromInventory())
         {
             item.quantity = 0;
-        }*/
+        }
 
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Manager"))
         {

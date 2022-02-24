@@ -34,20 +34,7 @@ public class InventoryUI : MonoBehaviour
         foreach(Item item in defaultItems)
         {
             item.quantity = 0;
-
-            if (item.toPlaceInHand || item.name == "Cloth")
-            {
-                Inventory.instance.Add(item);
-            }
-            else
-            {
-                Inventory.instance.Add(item);
-                Inventory.instance.Add(item);
-                Inventory.instance.Add(item);
-                Inventory.instance.Add(item);
-                Inventory.instance.Add(item);
-            }
-
+            Inventory.instance.Add(item);
             
         }
     }
